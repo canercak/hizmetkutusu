@@ -1,0 +1,18 @@
+- title t('.pay_with_credit_card')
+.spacer
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+.row
+  .span12
+    = bootstrap_form_for @credit_card, :as => :credit_card, :url => spreedly.transparent_redirect_form_action, html: {  class: 'form-horizontal' } do |f|
+      = f.error_messages
+      = render 'transactions/hidden_form_fields'
+      = render 'transactions/payment_form_fields', :f => f
+      .form-actions
+        = f.submit t('helpers.pay'), id: 'provider_submit', class: 'btn btn-primary', disable_with: t('helpers.disable_with')
+        %p.help-block 
+          %small
+            = '*' + t('.pay') 
+ 

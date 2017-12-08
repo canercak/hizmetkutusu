@@ -1,0 +1,44 @@
+- title t('.manually_add_credits_to_user')
+.spacer
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+.row
+  .span12
+    = bootstrap_form_for @user, :url => refunds_admin_user_path, html: {  class: 'form-horizontal' } do |f|
+      = f.error_messages
+      %legend= t('.payment_details')
+      %fieldset
+        .control-group
+          = f.label :credits_remaining_user,t('.user_credits'), class: 'control-label'
+          .controls
+            .input-append
+              %span.add-on>
+                = f.label :credit_count, @user.credits
+            %p.help-block
+              %small
+                = t('.add_credits_exp') 
+        .control-group
+          = f.label :manual_payment_type, t('.payment_type') , class: 'control-label'
+          .controls
+            = select_tag :manual_payment_type, options_for_select(manual_pay_array,manual_pay_array[2] ), class: 'input-large'
+        .control-group
+          = f.label :write_amount,t('.amount_to_add') , class: 'control-label'
+          .controls
+            .input-prepend.input-append
+              = number_field_tag "amount", :id => "amount", autocomplete: 'off', class: "input-mini" 
+              %span.add-on>
+                \.00 TL
+          .controls
+            %p.help-block
+              %small
+                = t('.amount_to_add_user_minus_plus') 
+      .form-actions
+        = f.submit t('.add_credit'), id: 'admin_user_submit', class: 'btn btn-primary', disable_with: t('helpers.disable_with')
+
+            
+            
+            
+            
+             

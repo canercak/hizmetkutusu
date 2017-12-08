@@ -1,0 +1,21 @@
+= bootstrap_form_for "provider_user",  html: { id: "provider_user", class: 'form-horizontal' } do |f|
+	.control-group
+		= f.label :phn, "Telefon",  class: 'control-label'
+		.controls 
+			= f.default_tag :text_field, :verification_phone, placeholder: '05XX XXXXXXX', value: (@user.telephone if @user.present?), id: 'person_phone' ,:class => "{mask:'(0569) 9999999'} input-medium", :alt=> "(0569) 9999999'"  
+	.control-group
+		= f.label :email, "E-posta",  class: 'control-label'
+		.controls
+			= email_field_tag :person_email, (@user.email if @user.present?), class: "input-medium"
+	.control-group
+		= f.label :name, "Ad Soyad",  class: 'control-label'
+		.controls
+			= text_field_tag :person_name, (@user.name if @user.present?) 
+	.control-group
+		= f.label :addr, "Adres",    class: 'control-label'
+		.controls
+			= text_field_tag :person_address, (@user.address if @user.present?), class:"input-large"
+			=hidden_field_tag :person_user_id, (@user._id if @user.present?)
+	.control-group
+		.controls
+			%button.btn.btn-medium.btn-primary{:id=> "save_person", type: "button"} Müşteriyi Kaydet

@@ -1,0 +1,32 @@
+.control-group
+	= label_tag "label_foursquare",  t("providers.form.social_foursquare"), class: 'control-label'
+	.controls
+		= text_field_tag :foursquare_data, (@provider.foursquare_data.present? ? @provider.foursquare_data[:uri] : ""), :class=>"input-xxlarge" 
+.control-group
+	= label_tag "label_facebook",  t("providers.form.social_facebook"), class: 'control-label'
+	.controls
+		= text_field_tag :facebook_data, (@provider.facebook_data.present? ? @provider.facebook_data[:uri] : ""), :class=>"input-xxlarge" 
+.control-group
+	= label_tag "label_twitter",  t("providers.form.social_twitter"), class: 'control-label'
+	.controls
+		= text_field_tag :twitter_data, (@provider.twitter_data.present? ? @provider.twitter_data[:uri] : ""), :class=>"input-xxlarge" 
+.control-group
+	= label_tag "label_googleplus",  t("providers.form.social_googleplus"), class: 'control-label'
+	.controls
+		= text_field_tag :googleplus_data, (@provider.googleplus_data.present? ? @provider.googleplus_data[:uri] : ""), :class=>"input-xxlarge" 
+.control-group
+	= label_tag "label_instagram",  t("providers.form.social_instagram"), class: 'control-label'
+	.controls
+		= text_field_tag :instagram_data, (@provider.instagram_data.present? ? @provider.instagram_data[:uri] : ""), :class=>"input-xxlarge" 
+
+
+
+
+
+
+
+/ .controls
+/ 	%p.help-block 
+/ 		%small
+/ 			= t('.social_info') 
+

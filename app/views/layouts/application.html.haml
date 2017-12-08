@@ -1,0 +1,34 @@
+!!! RDFa
+%html{ lang: I18n.locale.to_s, version: "XHTML+RDFa 1.0", "xml:lang" => "tr", xmlns: "https://www.w3.org/1999/xhtml" }
+	%head{ prefix: "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# #{APP_CONFIG.facebook.namespace}: http://ogp.me/ns/fb/#{APP_CONFIG.facebook.namespace}#" }
+		%title= yield_or_default :title, controller.action_name.titlecase
+		%meta{ name: 'viewport', "http-equiv" => "Content-Type", content: 'application/xhtml+xml;charset=UTF-8, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' }
+		= csrf_meta_tags    
+		= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700|Pacifico', 'application', media: 'all'
+		= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry,places&language=tr', 'application' 
+		= yield :head
+		/[if lt IE 9]
+			= javascript_include_tag "https://html5shim.googlecode.com/svn/trunk/html5.js"
+		 
+		%link{ href: asset_path('apple-touch-icon.png'), rel: 'apple-touch-icon' }
+		%link{ href: asset_path('apple-touch-icon-72x72.png'), rel: 'apple-touch-icon', sizes: '72x72' }
+		%link{ href: asset_path('apple-touch-icon-114x114.png'), rel: 'apple-touch-icon', sizes: '114x114' }
+		%link{ href: asset_path('apple-touch-icon-144x144.png'), rel: 'apple-touch-icon', sizes: '144x144' }
+		= analytics_init if APP_CONFIG.google_analytics_id.present?
+		- unless is_mobile_device? == true
+			:javascript
+				var _glc = _glc || [];
+				_glc.push('all_ag9zfmNsaWNrZGVza2NoYXRyDwsSBXVzZXJzGJeg35wBDA');
+				var glcpath = (('https:' == document.location.protocol) ? 'https://my.clickdesk.com/clickdesk-ui/browser/' : 'http://my.clickdesk.com/clickdesk-ui/browser/');
+				var glcp = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+				var glcspt = document.createElement('script');
+				glcspt.type = 'text/javascript';
+				glcspt.async = true;
+				glcspt.src = glcpath + 'livechat-new.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(glcspt, s); 
+	%body 
+		= render 'shared/navbar'        
+		#main-container.container= yield       
+		#footer= render 'shared/footer'
+ 

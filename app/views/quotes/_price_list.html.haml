@@ -1,0 +1,15 @@
+#user_prices.modal.hide.fade{tabindex: -1, role: 'dialog', 'aria-labelledby' => t('events'), 'aria-hidden' => true }
+	.modal-header
+		%button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+		=t("quotes.new.add_service")
+	.modal-body{id: "userpricesbody"} 
+	.modal-footer
+		.pagination-centered
+			%form.form-inline
+				%fieldset
+					=label_tag t("quotes.new.total_price") ,nil,  style:";font-size:16px;" 
+					=label_tag "",nil, id:"total_price", style:"font-weight:bold;font-size:16px;"
+					%span{style:"font-weight:bold;font-size:16px;"}=t("quotes.new.currency")
+			=submit_tag t('quotes.new.confirm_and_share'), class: 'btn btn-large btn-success', id: 'new_price_submit' 
+ 
+ 

@@ -1,0 +1,1384 @@
+tr:
+  transactions:
+    payment_form_fields:
+      card_details: Kredi Kartı Bilgileriniz*
+      amount_you_want_to_pay: Ödemek İstediğiniz Miktar
+    list:
+      credit_card_transaction: Kredi kartı İle
+      state: Ödeme Yapıldı
+    transaction:
+      pay_with_credit_card: Kredi Kartı ile Ödeme Yapın
+      pay: Hizmetkutusu olarak kredi kartı bilgilerinizi sistemimizde KESİNLİKLE kaydetmiyoruz ve işlemiyoruz. Girdiğiniz kart bilgileri güvenli linkler ile uluslararası güvenlik standartlarına uygun ödeme sağlayıcımıza aktarılmakta, ödeme sağlayıcımız üzerinden sorgulanmakta ve işlenmektedir. 
+  date:
+    formats:
+      full_day: ! '%A %B %e'
+      birthday: ! '%B %-d, %Y'
+      month_year: ! '%B %Y'
+  routes:
+    users: kullanici
+    new: yeni
+    providers: fiyat-veren
+    quotes: fiyat
+    references: yorum
+    show: goster
+    prices: fiyatlar
+    conversations: sohbet
+    update: guncelle
+    edit: duzenle
+    destroy: sil
+    dashboard: aldigim-fiyatlar
+    settings: ayarlar
+    financialsettings: odeme-bilgileri 
+    banned: atılmis
+    verified: onayli
+    about: hakkimizda
+    how_it_works: hizmet-alanlar
+    how_it_works_provider: hizmet-verenler
+    policy: gizlilik 
+    terms: kullanim 
+    blog: blog 
+    faq: sss 
+    contact: iletisim 
+  time:
+    ampm: true
+    formats:
+      time_only: '%I:%M %p'
+      message: ! '%d %m 20%-y, %H:%M'
+  datetime:
+    formats:
+      message: ! '%-d %B %e, %I:%M'
+  boolean:
+    "true": "Evet"
+    "false": "Hayır"
+  helpers:
+    disable_with: Lütfen bekleyiniz...
+    save: Kaydet
+    correct: Lütfen * ile işaretli yerleri doldurduğunuzdan emin olunuz.
+    pay: Ödeme Yap    
+    form:
+      error: Lütfen şu eksiklikleri gideriniz...
+    links:      
+      new: New
+      share_on_facebook_timeline: Facebook'da Paylaş
+      call_with_phone: Telefonla Arasınlar
+      add_new: Yeni Telefon Ekle
+      confirm: Emin misiniz?
+      show: Göster
+      edit: Düzenle
+      destroy: Sil
+      user:
+        ban: Yasakla
+        unban: Yasağı Kaldır
+        verify: Onayla
+        unverify: Onayı Kaldır
+        name: Adı Soyad
+        email: E-posta
+        phone: Cep Telefonu
+        address: Adress
+        show_profile: Profili Gör
+        edit: Düzenle
+      provider:
+        verified: Onaylı
+        title: Hizmet Sağlayıcılarım
+        details: Profili Görüntüle
+        unverified: Onaysız
+        isverified: Onaylı mı?
+        businessphone: İletişim Telefonu
+        businesstype: Şirket Türü
+        personel_providers: Personeli olduğum hizmet sağlayıcılar
+        customer_providers: Müşterisi olduğum hizmet sağlayıcılar
+        my_providers: Kendi hizmet sağlayıcılarım
+        businessname: Ticari Ünvan
+        createdate: Oluşturulma Tarihi
+        quotegiven: Randevu Sayısı
+        quotedone: Hizmet Sayısı
+    titles:
+      new: "Yeni %{model}"
+      edit: Düzenle
+      prices: Fiyatlarım 
+      quotes: Randevularım  
+      appointments: Ajandam
+  views:
+    pagination:
+      first: "&laquo; Birinci"
+      last: "Sonuncu &raquo;"
+      previous: "&lsaquo; Önceki"
+      next: "Sonraki &rsaquo;"
+      truncate: "&hellip;"
+  templates:
+    quotes:
+      read_more: Daha Fazla
+      show_on_map: Haritada Göster
+      facebook_verified: Facebook Onaylı
+    providers:
+      edit_provider: Profilimi Düzenle
+      service_score: Kalite Puanı
+      price_score: Fiyat Puanı
+      speed_score: Hız Puanı
+      quote_given: Randevu Verdi
+      quote_done: Hizmet Verdi
+      person: Kişi
+      company: Şirket
+      gave_service: Hizmet vermiş
+      appname_score: Hizmetkutusu Puanı
+      comment_avg: yorumda ortalama
+      no_comment: Değerlendirmesi yok
+      no_quote_done: Hizmet vermedi
+      expertise: Uzmanlık Alanları
+      overview: Genel Bakış
+      activities: Faaliyetleri
+      no_quote_given: Teklif vermedi
+      star: yıldız
+      about: Hakkında
+      references: Yorumları
+      quotes: Yorumları
+      certificates: Sertifikaları
+      photos: Fotoğrafları
+      give_quote: Teklif Versin 
+
+  meta_description: "Hizmetkutusu ile hizmetlerin kalitesini ve fiyatını kıyaslayıp randevu alabilirsiniz."
+  login: Giriş
+  login_with_facebook: Facebook ile Giriş Yap
+  login_with_twitter: Twitter ile Giriş Yap
+  logout: Çıkış
+  face_5_sec: 10 Saniyede
+  we_will_never_post: İzniniz olmadan hiçbir paylaşımda bulunmuyoruz.
+  why_facebook: "Neden Facebook?"
+  not_in_social_media: "Hizmetkutusu ile "
+  register_now: Kayıt Ol
+  login_now: Giriş Yap
+  why_facebook_exp1: "Biliyoruz ki bazılarımız Facebook kullanmıyor."
+  why_facebook_exp2: "Fakat şunu da biliyoruz ki; güvenliğiniz bizim için önemli. Size hizmet sağlayacak kişilere güvenmeniz gerektiği gibi, hizmet sağlayacak kişilerin de size güvenmesi gerekli. Facebook, bu konuda yaptığımız kontrollerden sadece biri."
+  why_facebook_exp3: "Ayrıca; yeni bir profil yaratmak için kişisel bilgilerin girilmesi, kullanıcı adı seçilmesi, şifre belirlenmesi, fotoğraf yüklenmesi, aktivasyon e-postasının beklenmesi ve onaylanması gerekiyor. Tüm bu sıkıcı süreci Facebook ile Hizmetkutusuna girerek atlayabilirsiniz."
+  why_facebook_exp4: "Dahası; Facebook ile Hizmetkutusu kullanan arkadaşlarınızı görebilir, kendilerinden çalıştıkları kişilerle ilgili bilgi alabilirsiniz."
+  why_facebook_exp5: "ÖNEMLİ BİLGİ: İzniniz olmadan sizin adınıza kesinlikle hiçbir Facebook paylaşımında bulunmuyoruz."
+  whatis_appscore: Hizmetkutusu Puanı
+  whatis_appscore05: Hizmetkutusu Puanı Nedir?
+  whatis_appscore10: "Hizmet sağlayıcının güvenilirliğinin, yaptığı faaliyetlerin ve müşterilerin yaptığı yorumların ortalama bir ölçümüdür. "
+  whatis_appscore20: "Her hizmet sağlayıcı kayıt olduğunda 10 puanla başlar. Hizmetkutusunda aktif olduğu, bizden onay aldığı ve müşterilerden yorumlar aldığı sürece Hizmetkutusu puanı artar veya azalır."
+  whatis_appscore30: "Hizmetkutusu puanınını arttıran faktörler"
+  whatis_appscore40: "Hizmetkutusundan kişi olarak onay almak: +100"
+  whatis_appscore50: "Hizmetkutusundan şirket olarak onay almak: +150"
+  whatis_appscore60: "Müşterinin rezervasyon yapması: +10"
+  whatis_appscore70: "Rezervasyon sonrası müşterinin hizmet alması: +10"
+  whatis_appscore80: "Müşterinin yaptığı 5 üzerinden 3 yıldızlı yorum: +5"
+  whatis_appscore90: "Müşterinin yaptığı 5 üzerinden 4 yıldızlı yorum: +10"
+  whatis_appscore100: "Müşterinin yaptığı 5 üzerinden 5 yıldızlı yorum: +15"
+  whatis_appscore110: "Hizmetkutusunu kendi iç işlerinde kullanarak rezervasyon yapmak:  +5" 
+  whatis_appscore120: "Hizmetkutusu puanınını düşüren faktörler"
+  whatis_appscore130: "Müşterinin yaptığı 5 üzerinden 2 yıldızlı yorum: -5"
+  whatis_appscore140: "Müşterinin yaptığı 5 üzerinden 1 yıldızlı yorum: -10"
+  whatis_appscore150: "Hizmet sağlayıcının sahte müşteri oluşturarak kendine yorum yapması: -100"
+  whatis_appscore160: "Hizmet sağlayıcının gerçekleşen randevuyu iptal edilmiş göstermesi: -100" 
+  whatis_appscore170: "Hizmetkutusu puanından şu sonuçları çıkarabilirsiniz"
+  whatis_appscore180: "Olumlu puanlar olumsuz puanları götürür."
+  whatis_appscore190: "Müşteriler randevu aldığı ve olumlu yorumlar bıraktığı sürece puan artar."
+  whatis_appscore200: "Az hizmet verip iyi iş yapan yüksek puan alabilir."
+  whatis_appscore210: "Şirket olmayıp iyi iş yapan kişi, şirketleri geride bırakabilir."
+  whatis_appscore220: "Mevcut müşterilere randevu verirken Hizmetkutusu kullanılırsa puan artar."
+  whatis_appscore230: "Mevcut müşterilerin Hizmetkutusu üzerinden randevu almaları sağlarsa puan artar."
+  whatis_appscore240: "Hizmet alan verdiği puanı istediği zaman değiştirebilir."
+  whatis_appscore250: "Örnek olarak;"
+  whatis_appscore260: "Neşe hanım Derya Kuaför'e hizmet bitiminde olumlu puan vermiştir. Fakat 2 gün sonra aldığı hizmetten memnun olmadığı düşünürse Hizmetkutusu'na girip olumlu puan yerine olumsuz puan verebilir."
+  whatis_appscore270: "Hizmetkutusu onayı ve puanları tasdik veya tavsiye nitelikli değildir."
+  whatis_appscore280: "Hizmetkutusu hiçbir hizmet sağlayıcıyı tasdik veya tavsiye etmez, hizmet sağlayıcıyı seçme insiyatifi tamamiyle hizmet alana aittir."
+  select_image: Resim Seç
+  select_profile_image: Profil Resmi Seç*
+  remove_image: Kaldır
+  change_image: Değiştir
+  select_certificate: Sertifika Seç
+  select_licence: Lisans Seç
+  oda_kayit: Oda Kayıt Belgesi
+  ustalik_belge: Ustalık Belgesi
+  egitim_sertifika: Eğitim Sertifikası
+  adli_sicil: Adli Sicil Kaydı
+  image_info: Profil resminiz sizi müşterilerinize karşı temsil eder. Şirket logonuzu, kişisel resminizi veya verdiğiniz hizmet ile ilgili bir resmi kullanabilirsiniz. 
+  certificate_info: Belgelerinizi müşterileriniz görüyor olacaktır. 4 belgeden 3'ünü yüklediğinizde tarafımızdan onay alıyor olacaksınız. Lütfen taranmış veya fotoğraf olarak resim formatında yükleyiniz.
+  business_description_placeholder: Verdiğiniz hizmetler, yaptığınız işler, uzmanlık alanlarınız gibi konularda açıklama girebilirsiniz. 
+  official_name_placeholder: "Şirket iseniz 'Ltd.', 'A.Ş.' gibi uzantılar olmadan şirketinizin kısa adını, birey iseniz ad-soyadınızı yazmanızı rica ediyoruz." 
+  please_enter_work_type_provider: Verdiğiniz hizmetleri listeden seçerek işaretleyiniz.
+  please_select_or_search: "arama yapabilirsiniz..."
+  tax_info: Girdiğiniz bilgiler tarafımızdan kontrol edilecektir. 
+  about1: Hakkımızda
+  how_it_works1: Hizmet Alanlar için Nedir?
+  how_it_works_provider1: Hizmet Verenler için Nedir?
+  policy1: Gizlilik Politikamızı
+  contactus1: Bize Ulaşın
+  terms1: Kullanım Şartlarımızı
+  demo_term1s: Demo Şartlarımız
+  faq1: Sıkça Sorulan Sorular
+  blog1: Blog
+  contact1: İletişim
+  last_modified: "Son değişiklik: %{date}"
+  save: Kaydet
+  close: Kapat
+  delete_account: Hesabı Sil
+
+  demo_mode: Demo Sürümüdür
+  verification_message: "Hizmetkutusu onay kodunuz: "
+  flash:
+    admin:
+      users:
+        success:
+          ban: Kullanıcı yasaklanmıştır.
+          unban: Kullanıcı yasağı kaldırılmıştır.
+          manageuser: Kullanıcı İşlemleri
+          payments: Ödeme İşlemleri
+          adduser: Kullanıcı Ekle
+          refund: Geri Ödeme
+          refund_transaction: Geri Öde
+          removecredits: Kredi Çıkar
+          credits: Kredi Miktarı
+          addcreditsconfirm: Kredi eklemek istiyor musunuz?
+          removecreditsconfirm: Kredi silmek istiyor musunuz?
+          creditadded: Kredi başarıyla eklenmiştir.
+          creditremoved: Kredi başarıyla silinmiştir.
+        error:
+          ban: Kullanıcıyı yasaklarken bir hata oluştu.
+          unban: Kullanıcı yasağını kaldırırken bir hata oluştu.
+          creditnotadded: Kredi eklerken bir hata oluştu.
+          creditnotaddedminus: Kredi 0'ın altına düşecektir. Kredi eklemesi iptal edilmiştir.
+    users:
+      success:
+        update: Başarıyla Kullanıcı güncellediniz.
+        destroy: Başarıyla kullanıcıyı sildiniz.
+      error:
+        update: Kullanıcıyı güncellerken bir hata oluştu.
+    feedbacks:
+      success:
+        create: Geri bildirimi başarıyla oluşturdunuz.
+        update: Geri bildirimi başarıyla güncellediniz..
+        destroy: Geri bildirimi başarıyla sildiniz.
+      error:
+        create: Geri bildirim oluşturulurken hata oluştu.
+        update: Geri bildirim güncellenirken hata oluştu.
+        destroy: Geri bildirim silinirken hata oluştu.
+    quotes:
+      success:
+        update: Başarıyla teklif kaydınızı güncellediniz.
+        destroy: Teklifi başarıyla sildiniz
+        price_based: "Seçtiğiniz saat için Randevunuzu yapmış bulunmaktayız. Şimdi Ödemesini yapın, siz hizmeti aldıktan sonra ödemesini yapalım ve çeşitli avantajlardan faydalanın."
+        cancel_reservation: "Randevunuzu başarıyla iptal ettiniz. "
+        destroy: Teklif kaydını silerken hata oluştu.
+      error:
+        cancel_reservation: "Rezervasyon İptali Yaparken bir sorun oluştu."
+    references:
+      success:
+        create: Başarıyla yorum bıraktınız.Yorumunuz için teşekkürler.
+        update: Başarıyla yorum güncellediniz.
+    customers:
+      success:
+        create_new_user: Seçtiğiniz kişi sistemde mevcut bir kullanıcıydı. Başarıyla bu kullanıcyı kişilerinize eklediniz.
+        create_customer_user: Başarıyla yeni bir kişi yarattınız. Kişiyi sistemi kullanması için eposta ile haberdar ettik.
+        destroy: Başarıyla kişiyi sildiniz. Kişi sistemde mevcut olarak kalacak fakat sizinle bir ilgisi olmayacaktır. İstediğiniz zaman bu kişiyi tekrar ekleyebilirsiniz.
+      error:
+        cannot_save_customer_without_user: Girdiğiniz kişi sistemde mevcut bir kullanıcıydı. Başarıyla bu kullanıcyı kişilerinize eklediniz. 
+        cannot_save_customer_with_user: Kişi oluştururken bir sorun oluştu. Lütfen tekrar deneyiniz.
+        customer_exists: Bu kullanıcı kişilerinizde mevcuttur.
+    providers:
+      success:
+        create: Başarıyla hizmet sağlayıcımız oldunuz.
+        update: Başarıyla hizmet sağlayıcı profilinizi güncellediniz.
+        destroy: Başarıyla hizmet sağlayıcı profilinizi deaktive ettiniz.
+        price: Başarıyla fiyatlarınızı güncellediniz.
+      error:
+        create: Kayıt yapılırken bir hata oluştu. Lütfen girdiğiniz bilgileri kontrol edip tekrar deneyiniz.
+        destroy: Hizmet sağlayıcıyı deaktive ederken bir hata oluştu.
+        wrong_size: "geçersiz boyuttadır (boyut %{file_size} mb olmalıdır)"
+        size_too_small: "yüklediğiniz dosyanın boyutu çok küçüktür (en az %{file_size} mb olmalıdır)"
+        size_too_big: "yüklediğiniz dosyanın boyutu çok büyüktür (en fazla %{file_size} mb olmalıdır.)"
+        image: "yüklediğiniz dosyalardan biri resim değil. Lütfen Kontrol ediniz."
+        price: Fiyat güncellerken hata oluştu. Lütfen tekrar deneyiniz.
+    sessions:
+      error:
+        create: Hizmetkutusu'na bağlanırken hata oluştu.
+        restricted: "Hizmetkutusu'na bağlanırken hata oluştu"
+        email_exists: "Girdiğiniz eposta kullanılmaktadır. Bu eposta sizinse ve şifrenizi unuttuysanız lütfen giriş ekranında -şifremi unuttum- bağlantısına tıklayınız."
+        email_exists_otp: "Davet kodunuzu yanlış girdiniz. Lütfen kontrol ediniz."
+    messages:
+      error:
+        create: Mesajı yaratırken bir hata oluştu.
+    errors:
+      not_authenticated: Lütfen öncelikle giriş yapın.
+      not_allowed: Bu sayfaya erişim izniniz yoktur.
+      cannot_select_more_than4: En fazla 4 hizmet sağlayıcı seçebilirsiniz.
+      messages:
+        business_phone: "Geçerli telefon numarası değildir"
+  
+  shared:
+    navbar:
+      new_identity: Kullanıcı Kayıt
+      login_identity: Giriş Yapın
+      login_before_booking: Randevunuzun Onaylanması için giriş yapmalısınız.
+      new_event: Yeni Randevu
+      done_event: Hizmet Verildi
+      paid_event: Müşteri Ödeme Yaptı
+      customer: Müşteri
+      staff_member: Personel
+      person_type: Kişi Türü
+      cancel_event: Randevu İptal Edildi
+      register: Kayıt Olun
+      name: İsminiz
+      login: Giriş Yapın
+      email: E-posta adresiniz
+      password: Şifreniz
+      reset_password: Şifremi Sıfırla
+      password_again: Şifrenizi Tekrar Yazınız
+      forgot_password: Şifrenizi unuttuysanız tıklayın
+      name: Ad Soyad*
+      email: E-posta*
+      sign_up: Üye Ol
+      sign_up_hk: Yeni Üyelik
+      pass_confirm: "girdiğiniz şifreler birbiryle aynı değil."
+      name_blank: Ad soyad kısmını boş bıraktınız.
+      email_blank: "Epostayı boş bıraktınız."
+      email_use: Girdiğiniz eposta sistemde mevcuttur.
+      pass_blank: "Şifreyi boş bıraktınız."
+      otp_code: "Davetiye Kodu (var ise)"
+      pass_confirm_blank: "Şifre tekrarını boş bıraktınız."
+      pass_r: hata, kaydı engelledi. Lütfen kontrol ediniz.
+      pass: Şifre*
+      passrep: Şifre Tekrarı*
+      new_user: Yeni Üye Olun
+      sign_in: Giriş Yapın
+      sign_in_fail: Lütfen kullanıcı bilgilerinizi doğru girdiğinizden emin olunuz.
+      wrong_password: Kullanıcı bilgilerinizi yanlış girdiniz. 
+      account_settings: Kullanıcı Ayarlarım
+      financial_settings: Ödeme İşlemlerim
+      provider_settings: Hizmet Sağlayıcılarım
+      provider_add: Hizmet Sağlayıcı Ol
+      company_limited: Limited
+      company_personal: Şahıs
+      new_quote: Yeni Fiyat Al
+      quote_history: Aldığım Fiyatlar
+      company_anonymous: Anonim
+      company_personal: Şahıs
+      company_no: Şirketim Yok     
+      admin_users: Kullanıcıları Yönet
+      language: Dil Seçeneği
+      no_new_messages: Yeni Mesaj Yok
+      see_all_messages: Tümünü Gör
+      please_select: Lütfen
+      no_matches_found: Hiçbir hizmet türü bulunamadı
+      you_can_only_select: Sadece
+      loading_more_results: Yükleniyor...
+      searching: Aranıyor...
+      more_characters: harf daha yazınız
+      item: hizmet seçebilirsiniz 
+    footer:
+      message: dsads
+     
+  pages:
+    home:
+      tagline: "Herşey bir Hizmettir."
+      learn_more: "Hizmetkutusu Nedir?"
+      what_is_appname: "%{appname} Nedir?"
+      main_features: "Neden %{appname}?"
+      step1_title: Hizmeti Seçin
+      step2_title: Karşılaştırın
+      step3_title: Randevu Alın
+      step1_content: "Almak istediğiniz hizmeti seçin, yaşadığınız yerdeki en iyi hizmet sağlayıcıların en uygun fiyatlarını size sunalım."
+      step2_content: Sunduğumuz hizmet sağlayıcılar arasından müşteri yorumları ve hizmetkutusu puanına göre size en uygun fiyatı seçin.
+      step3_content: "Seçtiğiniz hizmet sağlayıcının hizmet verdiği zamanları görün, randevu alın, isterseniz taksitli ödeme yapın."
+      get_quality_service_title: Anında İyisini Bulun
+      get_quality_service_content: Herşey bir hizmetse işinin ehli profesyonellerden hizmet almalısınız. Tüm bu kontrol sürecini üstleniyoruz. Size puanlamamızı ve müşteri yorumlarını incelemek kalıyor. 
+      get_quality_for_less_title: Anında Fiyata Ulaşın
+      get_quality_for_less_content: Herşey bir hizmetse herhangi bir hizmetin fiyatına ulaşmak için sokak sokak dolaşmamalı veya saatlerce beklememelisiniz. Anında fiyata ulaşmalısınız. İşte bu konuda uzmanız. 
+      multiply_choices_title: Anında Randevu Alın
+      multiply_choices_content: Herşey bir hizmetse hizmet almak için sayısız sorular ve telefon trafiği olmamalı. Karar vermeniz için gerekli herşeyle birlikte hizmet verenin randevu takvimini de size sunuyoruz. 
+      thats_easy_title: "Kolay"
+      thats_easy_content: Önce çocuklara, sonra yaşlılara danıştık. Annelerimizle uzun uzun konuştuk. Kendimize hep şu 2 soruyu sorduk. Bu şey çok basit mi? bu şey gerçekten gerekli mi? 
+      its_free_title: "Ücretsiz"
+      its_free_content: Hayatta en güzel şeyler ücretsiz olanlarıdır klişesi çok doğrudur. Sağlık, sevgi, özgürlük...koruduğunuz sürece hepsi ücretsizdir. Biz en çok özgürlüğe hitap ettiğimizi düşünüyoruz.
+      nese_title: "Neşeli"
+      what_users_say: Kullananlar Ne Diyor?
+      out_of: üzerinden
+      nese_content: Neşeli değilse yanlıştır. Bizle çalışanların ortak özelliği neşeli olmalarıdır. Belkide neşe, neşeyi getiriyor. Bu arada, içeride maskotumuz Hasanla tanışmayı unutmayın!
+      signin_terms: Giriş yaparak %{terms_link} ve %{policy_link} kabul etmiş olursunuz.
+      demo_mode: "Bu hizmetkutusunun demo sürümüdür. \"Facebook ile Gir\" butonuan tıklayarak %{demo_terms_link} şartlarımızı kabul etmiş olursunuz."
+      join_us_today: "Sizi Bekliyoruz!"
+    policy:
+      title: Hizmetkutusu Gizlilik Politikası
+      policy_10: Topladığımız Bilgiler
+      policy_20: Kullanıcılarımıza hizmet verebilmek için bazı bilgiler topluyoruz.
+      policy_30: Bu bilgileri şu yollarla topluyoruz;
+      policy_40: Bize sağladığınız bilgiler. 
+      policy_45: Bu bilgiler şunlardır; 
+      policy_50: Cep Telefonunuz, hizmet almak istediğiniz yaklaşık konumlar, almak istediğiniz hizmetler, seçtiğiniz hizmet sağlayıcılar, verdiğiniz puanlar. Tüm bu bilgiler veritabanımızda saklanmaktadır.
+      policy_60: Facebook aracılığı ile aldığımız bilgiler.
+      policy_70: Bu bilgiler şunlardır; 
+      policy_80: Profil resminiz, epostanız, adınız, doğum tarihiniz, işiniz, eğitiminiz, toplam arkadaş sayınız, konuştuğunuz diller. Tüm bu bilgiler veritabanımızda saklanmakta ve siteye her girişinizde güncellenmektedir.
+      policy_90: Beğendikleriniz ve Hizmetkutusu kullanan diğer arkadaşlarınız. Bu bilgiler profiliniz kontrol edildiğinde Facebook'dan gösterilmektedir.
+      policy_100: Topladığımız bilgileri nasıl kullanıyoruz
+      policy_110: Topladığımız bilgileri Hizmetkutusu hizmetlerini sizlere ulaştırmak, devam ettirmek, korumak ve iyileştirmek için kullanıyoruz. Bilgilerinizi işlediğimiz Hizmetkutusu sunucuları dünyanın herhangi bir yerinde olabilir.
+      policy_120: Şeffaflık Seçeneğiniz
+      policy_130: Amacımız topladığımız bilgiler hakkında açık ve net olmak. İsterseniz bilgi toplamamızı şöyle engelleyebilirsiniz;
+      policy_140: Hesabınızı Dondurarak. 
+      policy_145: Hesabınızı dondurduğunuzdan itibaren sizin hakkınızda hiçbir bilgi toplamıyoruz.
+      policy_150: İnternet tarayıcınızın çerez toplama ayarını kapatarak. 
+      policy_155: Facebook'a giremeyeceksiniz ve bir çok servisimiz çalışmayacaktır. Bu nedenden dolayı bilgilerinizi toplayamıyoruz.
+      policy_160: Bilgilerinizin Paylaşımı
+      policy_170: Bilgilerinizi sadece sizin hizmet almak için seçtiğiniz hizmet sağlayıcılar ile paylaşıyoruz.
+      policy_175: Her hizmet sağlayıcımız ile bilgilerinizin güvenliğini koruyacakları ve diğer kişilerle paylaşmayacakları konusunda anlaşma yapıyoruz. Hizmet sağlayıcılarımız yukarıda belirttiğimiz Facebook profil bilgilerinize Hizmetkutusu hesaplarını kullanarak, Hizmetkutusu üzerinden, kendilerine özel güvenli linkler ile ulaşıyorlar. Seçtiğiniz hizmet sağlayıcının cep telefonuna sadece adınızı ve cep telefon numaranızı gönderiyoruz. Bilgilerinizin başka kişilerle paylaşımı, başka Hizmetkutusu kullanıcılarıyla paylaşımı, seçmediğiniz Hizmetkutusu hizmet sağlayıcılarıyla paylaşımı, hizmet sağlayıcının arkadaşınız olmadan Facebook profilinize girmesi, bilgilerinizin İnternette açık olarak yayınlanması, bilgilerinizin arama motorlarında çıkması kesinlikle söz konusu değildir.
+      policy_180: Bilgilerinize ulaşmanız ve güncellemeniz
+      policy_190: Profil ayarlarınızdan bize sağladığınız bazı bilgileri güncelleyebilirsiniz. Facebook'dan aldığımız bilgileri güncellemeniz için Facebook'dan güncelleme yaptıktan sonra Hizmetkutusuna tekrar giriniz.
+      policy_200: İletişim Bilgilerinizi Kullanarak Sizi Bilgilendirmemiz
+      policy_210: İletişim bilgilerinizi kullanarak sizi eposta veya sms yoluyla Hizmetkutusu hakkında bilgilendirebiliriz. Bu bilgilendirmeler reklam amacı değil, sizi bilgilendirme amacı taşımaktadır. Bu bilgilendirmelere örnek olarak sizi aydınlatacak blog yazılarımızı ve Hizmetkutusunu kullanım istatistiklerinizi verebiliriz.
+      policy_220: Değişiklikler
+      policy_230: Gizlilik Politikamız zaman zaman değişebilir. Sizi haberdar etmeden herhangi bir hakkınızı kısıtlamayacağız. Gizlilik Politikamızdaki değişiklikleri bu sayfadan yayınlıyor ve sizi eposta ile haberdar ediyor olacağız.
+    terms:
+      title: Hizmetkutusu Kullanım Şartları
+      terms_10: Yasal olmayan yayın
+      terms_20: Hizmetkutusunu kullanırken Türk Ceza Kanunu, Türk Ticaret Kanunu, Fikir ve Sanat Eserleri Kanunu, Markalar, Patent hakları, kişisel hayata ve haklara tecavüz ve diğer ilgili yasa ve mevzuat hükümlerini ihlal edecek tüm aktiviteler yasaklanmıştır. Buna rağmen Hizmetkutusu üyesi, yasaları ihlal edecek şekilde sms gönderimi, web profili yayınlama, telefon etme veya benzeri bir aktiviteyi gerçekleştirmesi durumunda doğacak her türlü sorumluluğun kendisine ait olduğunu kabul eder. 
+      terms_30: Genel ahlak ve görgü kurallarına aykırı yayın
+      terms_40: Hizmetkutusu kullanırken Türk toplumu tarafından kabul görmüş yazılı veya yazılı olmayan ahlak ve görgü kurallarına aykırı, kişisel hayata ve haklara tecavüz anlamına gelebilecek tüm aktiviteler yasaklanmıştır.
+      terms_50: Saldırı ve Kötü Amaçlı Kullanım
+      terms_60: Hizmetkutusu servislerinden faydalanarak, üçüncü kişilerin Internet üzerinde veya farklı noktalardaki haklarına saldırı yapılması yasaktır. Üçüncü kişilerin Internet üzerinde yaptıkları yayınları, verdikleri servisleri veya ürettikleri hizmetleri kesmeye veya yavaşlatmaya yönelik tüm kullanım tipleri tamamen yasaklanmıştır. -Hack- olarak nitelendirilebilecek ve üçüncü kişilerin veya Internet.gen.tr sistemlerinde bulunan servis, hizmet, yayın gibi Internet aktivitelerini bozma ya da yavaşlatma amaçlı kullanılabilecek tüm eylemlerin yapılması yasaktır. Ayrıca bu gibi eylemlerin yapılmasına yardımcı olabilecek dosya, bilgi dökümanları ve benzeri yardım edici verilerin üyelerin hizmet aldıkları ortamlarda bulundurması, indirilmesini sağlaması veya bir şekilde kullanımı sağlaması yasaklanmıştır. 
+      terms_70: Diğer yasa dışı eylemler
+      terms_80: Kullanım şartlarında herhangi bir şekilde belirtilmemiş olsa da varolan Türkiye Cumhuriyeti kanunlarına ve anayasasına karşı olacak ve suç teşkil edecek tüm eylemler yasaklanmıştır. Buna rağmen üye, yasaları ihlal edecek bir eylemi gerçekleştirmesi durumunda doğacak her türlü sorumluluğun kendisine ait olduğunu kabul eder. 
+      terms_90: Hizmet alan kişi veya şirketin hizmet veren kişi veya şirketten hizmet talebinde bulunması
+      terms_100: Herhangi bir Hizmetkutusu kullanıcısı seçtiği hizmet sağlayıcılardan hizmet alma talebinde bulunabilir. Hizmet almak isteyen kullanıcı -gerçekten almak istediği hizmeti- yasalara ve ahlak kurallarına uygun olarak açıklamak zorundadır. Almak istediği açıklarken; konuda uzman olmadığından kaynaklanan yanlış açıklama veya yönlendirme durumlarında veya gerçekten almak istediği hizmeti açıklamama durumunda; hizmet veren kişi hizmet alandan ve Hizmetkutusundan herhangi bir hak talep edemez. Bu gibi durumlardan dolayı çıkan sorunlarda Hizmetkutusu kesinlikle sorumlu değildir. 
+      terms_110: Hizmet alan kişi veya şirketin hizmet veren kişi veya şirketle çalışma şartları
+      terms_120: Hizmetkutusu, hizmet veren hakkında araştırma yapar. Hizmet vereni kendi yaptığı araştırmaya ve kullanıcılarından gelen geri bildirimlere göre de puanlar. Buna rağmen Hizmetkutusu, hizmet verenin hizmetlerini tasdik veya tavsiye etmez. Hizmet sağlayıcı ile doğrudan temas kurmak veya anlaşmaya varmak tamamen hizmet alanın insiyatifindedir. Hizmet almak isteyen, hizmet vermek isteyen ile çalışma kararını tamamiyle kendisi verir. Hizmetkutusu bu karardan doğacak sonuçlardan kesinlikle sorumlu değildir.    
+      terms_130: Hizmet veren kişi veya şirketin araştırılması
+      terms_140: Hizmetkutusu, hizmet alanlara iyi hizmet sunabilmek için hizmet veren hakkında araştırma yapacaktır. Bu araştırmayı yaparken hizmet veren şirketlerden şirket evraklarını, kişilerden sabıka kayıtlarını isteyebilir. Bunların yanında her Türk vatandaşının erişebileceği mercilerden şirket ve kişiler hakkında bilgileri sorgulayabilir. Hizmetkutusu bu yaptığı araştırmalardan doğacak sonuçlardan kesinlikle sorumlu değildir. Hizmetkutusunun yaptığı araştırma tamamiyle kendi çapında temsilidir, kimseye tasdik veya tavsiye amaçlı değildir.
+      terms_customer: Hizmet alan kişi veya şirkete özel kurallar
+      terms_customer10: Hizmetkutusu üzerinden hizmet almak isteyen kişi veya şirketler kendilerine hizmet vermek isteyen kişi veya şirketlerle muhattap olurken şu kurallara uymak zorundadırlar.
+      terms_customer20: Gerçekten ihtiyacı olan bir hizmet için hizmet verenle muhattap olmak.
+      terms_customer30: Yaklaşık konumunu gerçekten belirtmek.
+      terms_customer40: Hizmet talebini açıkça belirtmek.
+      terms_customer50: Hizmet vermek isteyene karşı saygılı davranmak.
+      terms_customer60: Hizmet vermek isteyene karşı yasalara uygun davranmak.
+      terms_customer200: Saydığımız durumları kontrol etmek için gelişmiş sistemlerimiz olduğu gibi bu konuda sürekli çalışan uzman bir ekibimiz vardır. Bu kurallardan herhangi birine uyulmadığının rahatlıkla farkına varıyor; yasa dışı durumlar dışında 1. defa uyulmaması durumunda hizmet almak isteyeni uyarıyor, 2. defa uygulmaması durumunda Hizmetkutusu üyeliğine son vererek siteye girişini engelliyoruz. Yasa dışı durumları direk olarak ilgili devlet birimine bildiriyoruz. Bu kurallara uyulmamasından ortaya çıkabilecek herhangi bir sorun için kesinlikle sorumluluk üstlenmiyoruz.
+      terms_provider: Hizmet veren kişi veya şirkete özel kurallar
+      terms_provider10: "Hizmetkutusu üzerinden hizmet veren kişi veya şirketler Hizmetkutusu Profillerini oluştururken veya düzenlerken aşağıdaki kurallara uymak zorundadırlar:"
+      terms_provider20: Profillerinde sahte olan hiçbir bilgiye yer vermemek.
+      terms_provider30: Sadece uzman oldukları hizmet kategorilerini seçmek.
+      terms_provider40: Hizmet verdikleri konumu doğru girmek.
+      terms_provider50: Profillerinde herhangi bir markanın reklamını yapmamak.
+      terms_provider60: Kendi web siteleri dışında 3. parti bir websitesine link vermemek.
+      terms_provider70: Profillerinde verdikleri hizmeti yanlış veya yanlış anlaşılmaya yol verecek biçimde tanıtmamak.
+      terms_provider80: "Hizmetkutusu üzerinden hizmet veren kişi veya şirketler Hizmetkutusu üzerinden kendilerinden hizmet almak isteyen kişi veya şirketlerle muhattap olurken şu kurallara uymak zorundadırlar:"
+      terms_provider90: Hizmetkutusu aracılığı ile verdiği hizmeti Hizmetkutusu'na bildirmek (randevuyu tamamlandı olarak işaretleyerek).
+      terms_provider100: Müşterinin gerçekten katılmadığı randevuları Hizmetkutusu'na bildirmek (randevuyu iptal ederek).
+      terms_provider115: Hizmet almak isteyen kişinin kişinin kişisel bilgilerinin güvenliğini korumak.
+      terms_provider110: Hizmet almak isteyene karşı yasalara uygun davranmak.
+      terms_provider120: Hizmet almak isteyene karşı görgülü ve saygılı davranmak.
+      terms_provider130: Hizmet almak isteyenle Hizmetkutusunda yayınladığı fiyat üzerinden iş yapmak.
+      terms_provider300: Saydığımız durumları kontrol etmek için gelişmiş sistemlerimiz olduğu gibi bu konuda sürekli çalışan uzman bir ekibimiz vardır. Bu kurallardan herhangi birine uyulmadığının rahatlıkla farkına varıyor; yasa dışı durumlar dışında 1. defa uyulmaması durumunda hizmet sağlayıcıyı uyarıyor, 2. defa uygulmaması durumunda Hizmetkutusu üyeliğine son vererek siteye girişini engelliyor, kendisine bağlı profilleri kapatıyoruz. Yasa dışı durumları direk olarak ilgili devlet birimine bildiriyoruz. Bu kurallara uyulmamasından ortaya çıkabilecek herhangi bir sorun için kesinlikle sorumluluk üstlenmiyoruz.
+    how_it_works:
+      title: Hizmet Alanlar İçin Nasıl Çalışıyoruz?
+      customer1_more: Nasıl Çalışıyoruz?
+      customer2_more: Size Yararları
+      customer3_more: Doğru Hizmet
+      customer1_work_header: Hizmet Alanlar İçin Hizmetkutusu Nedir?
+      customer1_work_body: "Hizmetkutusu ile hizmetlerin kalitesini ve fiyatını kıyaslayıp randevu alabilirsiniz. Örneğin; Kadıköy'de yaşıyor ve saç bakımı hizmeti almak istiyorsunuz. Hizmetkutusu size yakın tüm kuaförlerin saç bakımı fiyatlarını karşılaştırır, müşteri yorumlarıyla size sunar. Size, en uygununu seçip randevu almak kalır."
+      customer1_work_button: Simdi Yeni Fiyat Alın
+      customer1_title: Almak istediğiniz hizmeti belirtin
+      customer1_content10: Konumunuzu biz bulalım veya haritadan seçin.
+      customer1_content20: Hizmet almayı öngördüğünüz tarihi seçin.
+      customer1_content30: Almak istediğiniz hizmeti seçin.
+      customer2_title: Fiyatları Karşılaştırın
+      customer2_content10: Size en yakın ve en iyi hizmet sağlayıcıları fiyatlarına göre listeleyelim.
+      customer2_content20: Profillerini inceleyin, müşteri yorumlarını okuyun, Hizmetkutusu puanına bakın.
+      customer2_content30: Size en uygun olanı seçin.
+      customer3_title: Randevu Alın
+      customer3_content10: Hizmet sağlayıcının uygun olduğu saatleri görün.
+      customer3_content20: Bu saatler arasından size uygun olanı seçin.
+      customer3_content30: Randevuyu Onaylayın.
+      customer4_title: Bize Ödeyin, Memnun Kalırsanız Gönderelim
+      customer4_content10: "Hizmeti almadan önce bize veya hizmeti aldıktan sonra hizmet sağlayıcıya ödeme yapabilirsiniz."
+      customer4_content20: "Bize ödeme yaparsanız; hem taksit yapıyoruz, hem hizmet bitiminde parasını gönderiyoruz, hem hizmet sağlayıcı size iyi hizmet vermek için bize karşı da sorumlu oluyor."
+      customer4_content30: "Her iki durumda da mutlaka aldığınız hizmet hakkında bize yorum bırakın. Yorumlarınız diğer hizmet alanlar ve hizmet sağlayıcı hakkında değerlendirme yapmamız için çok önemlidir."
+      appname_score: Hizmetkutusu Puanı
+      benefits_customer_10: Hizmet verenleri karşılaştırır
+      benefits_customer_20: Seçtiğiniz hizmeti veren hizmet sağlayıcıları yaşadığınız yere, kaliteye, fiyata ve uygunluklarına göre anında karşılaştırır. Bir hizmeti almadan önce danışmanız gereken en yararlı şeydir.
+      benefits_customer_30: Tüm yorumları tek bir yerde toplar
+      benefits_customer_40: Hizmet sağlayıcıların Hizmetkusunda ve Foursquare gibi diğer sosyal platformlarda aldığı yorumlara tek bir yerden ulaşırsınız. Seçim yapmadan önce başka insanların tecrübelerini bilirsiniz.
+      benefits_customer_45: Uygun Zamanları Gösterir
+      benefits_customer_47: Hizmet sağlayıcıların uygun olduğu zamanları görebilir, size uygun zamana randevu alabilirsiniz. Ayrıca hizmet sağlayıcının o hizmeti ortalama ne kadar zamanda verdiğini de öğrenirsiniz. Yoğun günlerde yardımcınızdır. 
+      benefits_customer_50: Güvenilirliği kontrol eder
+      benefits_customer_60: Hizmet sağlayıcıların güvenilirliğini sizin için kontrol eder. Şirket, kimlik, sicil, geçmiş işler, vb. bilgileri sizin için kontrol eder ve onay verir. 'Fiyatı uygun ama güvenirmiyim?', 'Evime çağrırsam sorun olur mu?' gibi sorular için yanıttır.
+      benefits_customer_70: Ödemeyi kolaylaştırır ve güvenli kılar
+      benefits_customer_80: Randevu aldıktan sonra; ister bize taksitli ödeme yapın; hizmet verildikten sonra ödemeyi ulaştıralım, isterseniz hizmet sağlayıcının kendisine ödeme yapın. Her iki durumda da arada Hizmetkutusu olduğu için daha güvendesiniz. 
+      benefits_customer_90: Ücretsizdir.
+      benefits_customer_100: Hizmetkutusu'nu kullanmak tamamiyle ücretsizdir ve ücretsiz kalacaktır.
+      how_select_provider_title: Doğru hizmet sağlayıcıyı nasıl seçerim?
+      how_select_provider_content10: Hizmetkutusu Puanına bakın
+      how_select_provider_content20: '%{appscore_modal} yüksek olan hizmet sağlayıcının size daha kaliteli hizmet verme ihtimali yüksektir. Seçtiğiniz hizmet sağlayıcının puanı diğerlerine göre yüksekse bizden onay almış, daha çeşitli hizmetler vermiş ve müşterilerden daha olumlu yorumlar almış olabilir. Nasıl değerlendirme yaptığımızı öğrenmek için %{appscore_modal} hakkında bilgi edinin.'
+      how_select_provider_content25: Hizmetkutusu Onayına Bakın
+      how_select_provider_content28: Hizmetkutusu onayı almış hizmet sağlayıcı, tarafımızdan; şirket evrakları, ticari kusur, geçmiş iş tecrübesi, TC Kimlik ve sabıka kaydı gibi kıstaslarda kontrol edilmiştir. Bu nedenle diğer hizmet sağlayıcılara göre daha güvenilir olma ihtimali yüksektir. Hizmetkutusu Onayının resmi boyutu yoktur ve tavsiye niteliğinde değildir, fakat seçim yaparken dikkat etmeniz size yardımcı olabilir.
+      how_select_provider_content30: Hizmetkutusu Profilini İnceleyin
+      how_select_provider_content40: İlgi ile hazırlanmış bir profil her zaman dikkatinizi çekecektir. Hizmet sağlayıcının kendisini veya şirketini nasıl tanıttığına dikkat edin, yaptığı işleri inceleyin ve fotoğraflarına bakın. Sertifikalarını ve Lisanslarını inceleyin. Bu kişiden hizmet almış diğer kişilerin nasıl puanlar vermiş bir bakın. İşinin ehli mi karar verin.
+      how_select_provider_content50: Fiyata değil, kaliteye öncelik verin
+      how_select_provider_content60: Düşük fiyatın kalitesiz, yüksek fiyatın kaliteli olduğu düşüncesini aklınızdan çıkarın. Yaptığımız araştırmalarda en memnun müşterlerin orta seviyeli fiyat veren şirketlerle çalıştıklarını orataya çıkardık. Objektif olarak fiyatları karşılaştırın ve kaliteyi ön planda tutarak bütçenize en uygun fiyatı seçin.
+    faq:
+      title: Sıkça Sorular Sorular
+      faq_header: Sıkça Sorular Sorular
+      faq_customer_more: Hizmet Alıyorum
+      faq_provider_more: Hizmet Veriyorum
+      faq_body: İnsanın aklına sorular geliyor değil mi? Bakın, ekranın sağ alt köşesinde Hasan var. Her zaman her sorunuzu cevaplamak için bekliyor. Hasan'ı telefonda tutmuyoruz çünkü herşey yazılı olsun istiyoruz; verdiğimiz cevapları bu sayfadan yayınlayalım ki size daha hızlı yardımcı olalım. Bu cevapları incelemek isterseniz sizi ilgilendiren butona basınız.
+      faq_customer_title: Hizmet alıyorum
+      faq_customer10: Herhangi bir ücret ödüyor muyum?
+      faq_customer20: Hayır. Hizmet almak isteyenler için Hizmetkutusu tamamiyle ücretsizdir. 
+      faq_customer30: Aradığım hizmeti bulamıyorum.
+      faq_customer40: Hizmetkutusu olarak öncelikle kişisel hizmetler sektörüne yoğunlaşıyoruz. Bu alanda aradığınız hizmeti bulacağınıza inanıyoruz. Diğer sektörler için lütfen bizi takip etmeye devam edin. 
+      faq_customer50: Aradığım hizmeti buldum, fakat yaşadığım şehirde hizmet verenleri göremiyorum.
+      faq_customer60: Hizmetkutusu olarak öncelikle İzmir, İstanbul ve Ankara illerine yoğunlaşıyoruz. Bu şehirlerde aradığınız hizmet sağlayıclara ulaşacağınıza inanıyoruz. Diğer şehirler için lütfen bizi takip etmeye devam edin. 
+      faq_customer70: Facebook bilgilerim güvende mi?
+      faq_customer80: Facebook ile profil resminizi, epostanızı, adınızı, doğum tarihinizi, işinizi, eğitiminizi, toplam arkadaş sayınızı ve konuştuğunuz dil bilgisini toplamakta ve güvenli sunucularda uluslararası standartlara göre saklamaktayız. Bu bilgilerinizi sadece randevu aldığınız hizmet sağlayıcının görmesine izin veriyoruz. Siz de kendisinin bilgilerini görebilirsiniz. Ayrıca, siz izin vermediğiniz sürece sizin adınıza hiçbir paylaşımda bulunmuyoruz.
+      faq_customer90: İletişim bilgilerim güvende mi?
+      faq_customer100: Cep telefonu bilginizi randevu aldığınız hizmet sağlayıcı ile gizliliğinizi koruyacağına dair anlaşarak paylaşıyoruz.
+      faq_customer105: Kredi kartı bilgilerim güvende mi?
+      faq_customer107: Kredi kartı bilgilerinizi biz tutumuyoruz ve bilmiyoruz. Tüm işlemler ortak çalıştığımız İyzico şirketinin uluslararası PCI standartları ile güvenliği belgelenmiş altyapısı üzerinden olmakta. 
+      faq_customer110: İstediğim saatte randevu alamadım
+      faq_customer120: Bazı hizmet sağlayıcılarımız Hizmetkutusu randevu sistemini kullanmayabilir. Fakat, randevu aldığınız saat kendisi için uygun değilse hizmet sağlayıcımız mutlaka sizinle iletişime geçecek ve uygun olduğunuz bir saate randevu verecektir. Bunun yanında randevu sistemimizi kullanan hizmet sağlayıcılarımız da şehir koşullarından dolayı zamanında haraket edemeyebilirler. Randevularınızda olabilecek sapmalar konusunda bizi anlayacağınızı umuyor, bu konudaki hassasiyetleri için hizmet sağlayıcılarımızı özellikle teşvik ediyoruz.
+      faq_customer130: Hizmet sağlayıcıları nasıl seçiyorsunuz?
+      faq_customer140: Hizmet sağlayıcılarımızı öncelikle siz nasıl nasıl seçiyorsanız biz de öyle seçiyoruz. Ardından kendilerine onay vermek için gerekli evrakları istiyoruz. Bu evrakları sağlayan şirket veya kişilerin şirket evraklarını, ticari kusurlarını, iş tecrübelerini, TC Kimliklerini ve sabıka kayıtlarını araştırıyoruz. Müşterinin güvenini kıracak bir durum yoksa onay veriyoruz. Verdiğimiz onay tasdik ve tavsiye amaçlı değildir. Onaysız şirket ve kişiler de Hizmetkutusunda iş yapabiliyorlar. Amacımız herkese eşit hak tanımak ve seçimi müşteriye bırakmak.
+      faq_provider_title: Hizmet veriyorum  
+      faq_provider10: Herhangi bir ücret ödüyor muyum?
+      faq_provider20: Sadece müşterinin aldığı randevuya hizmet verdiğinizde %5 + KDV komisyon alınır. Sizin oluşturduğunuz randevular ücretsizdir. Yani size iş getirdiğimizde ve bu işi tamamladığınızda toplam fiyat üzerinden %5 + KDV komisyon alıyoruz, siz kendi işlerinizde bizi kullandığınızda ücretsiziz. 
+      faq_provider30: Sizden nasıl ödeme alıyorum?
+      faq_provider40: Müşteri, hizmet almadan önce hizmetkutusuna ödeme yapabilir. Yapılan ödeme siz müşteriye hizmet verdikten sonra geçerli olur ve tarafımızdan %5 + KDV komisyon kesilerek 1 hafta sonra banka hesabınıza gönderilir. 
+      faq_provider50: Size nasıl ödeme yapıyorum? 
+      faq_provider60: Müşteri, hizmet almadan önce hizmetkutusuna ödeme yapmamış ise; siz bu kişiye hizmet verdikten sonra Hizmetkutusu'nun toplam miktar üzerinden %5 + KDV komisyon hakkı doğar. Hizmetkutusu bu hakların toplam miktarı üzerinden size aylık fatura keser ve adresinize gönderir.
+      faq_provider70: Hizmetkutusu aracılığı ile randevu vermek istemiyorum. 
+      faq_provider80: Hizmetkutusu'nun öncelikli amacı verdiğiniz hizmetlerin kalitesine biçtiğiniz fiyatları diğer hizmet sağlayıcıların fiyatlarıyla karşılaştırmaktır. Randevu ikinci plandadır ve hizmetkutusu aracılığı ile randevu vermek zorunda kesinlikle değilsiniz. Müşteriye, randevu saatlerinde değişiklik olabileceğini belirtiyoruz. Müşterinin sizden randevu alması, müşteriye uygun zamanı öğrenmenizdir. Bu durumda kendisine telefon edip ortak bir zamanda karar kılabilirsiniz. Sizden yapmanızı istediğimiz sadece iki şey var. Randevu saatinde değişiklik varsa bunu ajandanızda güncelleyin ve verdiğiniz hizmeti ajandanızda tamamlanmış olarak işaretleyin. Tabiki müşteri her zaman haklıdır; istediğiz zaman hizmetkutusu randevu sistemini kullanarak kendisine daha gerçekçi zamanlar sunabilirsiniz. 
+      faq_provider90: Hizmetkutusu aracılığı ile fiyatlarımı paylaşmak istemiyorum.
+      faq_provider100: Fiyatlarım sayfasına girerek yayınlamak istemediğiniz fiyatları işaretleyebilirsiniz. Hizmetkutusu'nun öncelikli amacı verdiğiniz hizmetlerin kalitesine biçtiğiniz fiyatları diğer hizmet sağlayıcıların fiyatlarıyla karşılaştırmaktır. Bu nedenle fiyat yayınlamadığınız hizmet kategorilerinde müşterilere gözükmeyeceksiniz.  
+      faq_provider110: Müşterinin oluşturduğu randevu için verdiğim hizmeti ajandamda tamamlandı olarak işaretlemezsem ne olur?
+      faq_provider120: Müşterinin oluşturduğu randevuyu sadece müşteri iptal edebilir. Bu nedenle müşterinin aldığı randevu, randevu bitiminden 2 gün sonraya kadar sizin tarafınızdan tamamlandı olarak işaretlenmemiş ise; Hizmetkutusu bunu bir unutkanlık olarak kabul eder ve öncelikle siz, ardından müşteri ile iletişime geçer. Bu gibi durumların tekrarlanması veya suistimal durumunda Hizmetkutusu müşterinin ve sizin sistem kullanım istatistikleriniz ile lokasyonel bilgilerinizi karşılaştırarak cezai şarta ve üyeliğinizi tek taraflı sonlandırma kararına gidebilir. Detaylı bilgi için Kullanım Şartlarımızı okuyunuz.             
+      faq_provider130: Şirketim ve hizmet vermek istiyorum, beni nasıl inceliyorsunuz?
+      faq_provider140: Hemen şimdi profilinizi oluşturup ve fiyatlarınızı günceleyip hizmet vermeye başlayabilirsiniz. Fakat bizden onay almanız için ticari sicilinizi ve verdiğiniz hizmetlerdeki uzmanlığınızı belgeleyen evrakları kontrol ediyoruz. 
+      faq_provider150: Kişiyim ve hizmet vermek istiyorum, beni nasıl inceliyorsunuz?
+      faq_provider160: Hemen şimdi profilinizi oluşturup ve fiyatlarınızı günceleyip hizmet vermeye başlayabilirsiniz. Fakat bizden onay almanız için sabıka kaydınızı ve verdiğiniz hizmetlerdeki uzmanlığınızı belgeleyen evrakları kontrol ediyoruz.
+    how_it_works_provider:
+      title: Hizmet Verenler İçin Hizmetkutusu
+      appname_score: Hizmetkutusu Puanı
+      provider1_work_button: Şimdi Üye Olun
+      provider1_work_header: Hizmet Verenler İçin Hizmetkutusu
+      provider1_work_body: Hizmetkutusu, verdiğiniz hizmeti satın almaya hazır müşteriyle sizi buluşturur. Yapılan araştırmalara göre müşteriler satın alma kararı vermeden önce özelliğe, uygunluğa ve fiyata bakmaktalar. Hizmetkutusu ile verdiğiniz hizmetlerin bu üç özelliğini anında müşteriye sunar ve kendinize çekersiniz.
+      provider1_more: Nasıl Çalışıyoruz?
+      provider2_more: Size Yararları
+      provider3_more: Nasıl İş Alabilirim?
+      provider1_how_works: Hizmet Verenler için Nasıl Çalışıyoruz?
+      provider1_title: Profilinizi Oluşturursunuz
+      provider1_content10: İşyeri üyelik formunu doldurarak Hizmetkutusu profilinizi oluşturur ve 10 hizmetlutusu puanı ile hizmet vermeye başlarsınız.
+      provider1_content20: Oda Kayıt, Ustalık, Eğitim Sertifikası ve Adli Sicil belgelerinizden üçünü profilinize yüklediğinizde Hizmetkutusu inceleme yapar ve size 100 Hizmetkutusu puanı ve onay verir.
+      provider1_content30: Şirket olmanız önemli değildir. Şirket iseniz onaydan sonra 50 Hizmetkutusu puanı daha kazanırsınız. 
+      provider2_title: Fiyatlarınızı Güncellersiniz
+      provider2_content10: Profilinizi oluşturduğunuzda seçtiğiniz hizmetlere bulunduğunuz bölgedeki piyasa fiyatları otomatik olarak atanır.
+      provider2_content20: Sizden hizmet almak isteyen müşteriler otomatik atanmış fiyatları göreceklerdir.
+      provider2_content30: Otomatik atanmış fiyatları kendi fiyatlarınız ile güncellemeniz gereklidir. Böylelikle müşterileriniz sizin fiyatlarınızı görürler. 
+      provider3_title: Ajandanızı Kontrol edersiniz
+      provider3_content10: Ajandanız; çalıştığınız ve çalışmadığınız zamanlar ile randevularınızı gösterir. Bu zamanlara göre müşteriler sizden randevu alırlar.
+      provider3_content20: Müşterilerin sizden aldığı randevular ajandanızda gözükecektir. Ajandanızı düzenleyebilir, mevcut müşterilerinizle randevularınızı burda ücretsiz tutabilirsiniz.
+      provider3_content30: Hizmetkutusunu kullanarak randevularınızı takip etmek ve müşterilerinize randevu vermek zorunda değilsiniz. Müşteri sizden randevu alırken saatlerde değişiklik olabileceği belirtilir.
+      provider3_content40: Hizmetkutusunu kullanarak randevularınız takip ederseniz hem müşteriye zamanında randevu verirsiniz, hem ücretsiz bir sistemle iç işlerinizi kolaylaştırırsınız.
+      provider4_title: Müşteri Arama Yapar
+      provider4_content10: Müşteri, verdiğiniz hizmetlerden birini seçtiyse, iş adresiniz en fazla 10km uzağında ise ve o gün uygunsanız; arama sonucunda çıkarsınız.
+      provider4_content20: Arama sonucunda başka hizmet sağlayıcılar da çıkacaktır. Hizmetkutusu Puanı en yüksek olan ilk sırada görülür.
+      provider4_content30: Müşteri; profiliniz, hizmetkutusu puanınız ve fiyatınız arasında bir karşılaştırma yapar ve sizi seçer.
+      provider4_content40: Müşteri randevu ekranına yönlendirilir.
+      provider5_title: Müşteri Sizden Randevu Alır
+      provider5_content10: Ajandanızdaki uygun saatler işin bitiş süresi de göz önünde bulundurularak müşteriye sunulur.
+      provider5_content20: Randevu saatlerinde değişiklik olabileceği müşteriye bildirilir, fakat müşteri seçtiği saatte hizmet almak isteyecektir.
+      provider5_content30: Müşteri randevu alır. Randevu bilgisi ajandanızda gözükür, iki tarafa da sms ve email yoluyla gönderilir.
+      provider5_content40: Müşteri randevu saatinde güncelleme yapabilir veya randevuyu iptal edebilir. Bu durumlarda iki taraf da bilgilendirilir.
+      provider5_content50: Müşteri Hizmeti almadan önce Hizmetkutusuna ödeme yapabilir. Bu durumda Hizmetkutusu toplam fiyat üzerinden %5 + KDV komisyon alır ve 1 hafta içinde paranızı gönderir.
+      provider6_title: Müşteriye Hizmeti Verirsiniz
+      provider6_content10: Müşteriye hizmet vermeden önce telefon ederek hizmetin gerçekleşeceğinden emin olursunuz. Değişiklik varsa ajandanızda güncellersiniz. 
+      provider6_content20: Müşteriye verebileceğiniz en iyi hizmeti veririsiniz.
+      provider6_content30: Hizmet tamamlandığında ajandanızda hizmeti -Tamamlandı- olarak işaretlersiniz.
+      provider6_content40: Hizmeti tamamladığınızda; müşteriye aldığı hizmet hakkında yorumda bulunması için mesaj gönderilir.
+      provider6_content50: Hizmeti tamamladığınızda; müşteri Hizmetkutusu'na ödeme yapmamış ise, sizden toplam fiyat üzerinden %5 + KDV komisyon talep ederiz. 
+      provider7_title: Müşteri Aldığı Hizmete Yorum Yapar
+      provider7_content10: Müşterinin size yaptığı yorum Hizmetkutusu puanınızı etkileyecek ve sonraki müşterilere referans olacaktır.
+      provider7_content20: Hizmetkutusu dışındaki sosyal medya sitelerinden de yorumlarınızı toplamaya çalışırız.  
+      provider7_content30: Müşterinin yorumda bulunmadığı durumlarda müşteriye telefon edip durum bilgisi almaya çalışırız.
+      how_get_hired_title: Nasıl iş alabilirim?
+      how_get_hired_content10: Kendinizi olduğunuz gibi anlatan bir profil oluşturun.
+      how_get_hired_content20: Kendinizi müşterinin yerine koyun. Müşterilerimiz, doğru kişilerle, kaliteli ve makul fiyata çalışmak istiyorlar. Niye sizi seçsinler ki? işte bunun cevabını önce profilinizde verin. Hizmetkutusu profiliniz, potansiyel müşterinizle olan ilk bağınızdır. Her şeyden önce kendinizi olduğunuz gibi tanıtın. Verdiğiniz hizmetlerden, iş tecrübelerinizden kısaca bahsedin. Şirketiniz veya kendiniz ile ilgili güzel bir profil resmi ekleyin. Yaptığınız işlerle ilgili fotograflarınız ve videolarınızla onları etkileyin. Kendinizi değerli kılın; sertifika ve lisanslarınızı ekleyin. Düzgün bir profil her zaman dikkat çekecektir. 
+      how_get_hired_content30: Müşteriyle açık ve profesyonelce konuşun.
+      how_get_hired_content40: Her işin başı güvendir. Profiliniz belirli bir güveni yakalamış ve müşteriyi size çekmiş olabilir. Randevudan önce mutlaka müşteriyi arayın ve kendisiyle konuşun. Unutmayın, müşteri her an randevuyu iptal edebilir. Telefondaki ses tonunuz, kendinizi anlatmanız ve iş hakkındaki konuşmanız müşteriye profilinizden daha fazla güven verir. Müşteriye karşı saygılı ve profesyonel olmayı unutmayın. Biliyorsunuz, müşteri her zaman haklıdır. 
+      how_get_hired_content50: Hedef müşteriye göre fiyat biçin.
+      how_get_hired_content60: Müşterinin sizi tercih etmesinde verdiğiniz fiyatın %66 etkisi vardır fakat burda önemli olan kalitenizle hedef müşteri kitlenizi yakalamaktır. Çeşitli araştırmalar ortalama gelirin %80'ini %20'lik müşteri kitlesinin yaptığını kanıtlar. Bu nedenle fiyatlarınızı kalitenizle iyi oranlayın. Sadece kalite diyorsanız profilinize ayrı bir özen verin. Verdiğiniz fiyatın arkasında durun. Fiyatlarınızı sürekli güncellemeyin. Kısacası, istikrarlı bir kalite-fiyat politikası izleyin.
+      how_get_hired_content70: Hizmetkutusu puanınızı yüksek tutun.
+      how_get_hired_content80: '%{appscore_modal}, müşterinin doğru hizmet sağlayıcıyı seçmesinde ana etkendir. %{appscore_modal} nedir iyi anlayın. Verdiğiniz hizmetlerden para kazanıyor ama şirket değilseniz, şirketleşin. Geçmişte yaptığınız kaliteli, makul ve hızlı işlerin bugün alacağınız işleri etkilediğini unutmayın. İyi iş yapın ve müşterilerinizden size olumlu puanlar vermelerini rica edin.'
+      how_get_hired_content90: Hizmetkutusu'na uzun soluklu bakın.
+      how_get_hired_content100: Hizmetkutusu'nun asıl yararını görmeniz belli bir süre alacaktır. Özellikle yeni kurulduğumuz ve müşterilerinizi değil, hizmet verenleri toplamaya yoğunlaştığımız şu dönemde. İyi bir profil oluşturun ve bırakın gerisini Hizmetkutusu yapsın. Randevu sistemimizi hemen kullanmaya başlayabilirsiniz, fakat size yeni müşteriler bulmamız için bize uzun soluklu bakın.
+      how_get_hired_content110: Üye Olun!
+      benefits_provider_10: Verdiğiniz hizmeti satın almaya hazır müşteriyi size getirir.
+      benefits_provider_20: Yapılan araştırmalara göre müşteriler satın alma kararı vermeden önce özelliğe, uygunluğa ve fiyata bakmaktalar. %66'sı fiyat konusunda hassas, %88'i en iyisini, iyi fiyata almak istiyor ve %91'i satın almadan önce karşılaştırma yapıyor. Ayrıca, kalite ve fiyat konusunda ürün ve hizmetleri birbirlerinden ayırmıyorlar.  Yani müşteri, bir kozmetik ürünün fiyatını anında öğrenmek istediği gibi, cilt bakımı hizmetinin fiyatını da anında öğrenmek istiyor.
+      benefits_provider_30: Hizmetkutusu ile sizin ve verdiğiniz hizmetin bütün özelliklerini, yorumlarıyla birlikte müşteriye sunarsınız.
+      benefits_provider_40: Hizmetkutusu ile verdiğiniz hizmetin kalitesine biçtiğiniz son fiyatı müşteriye sunarsınız.
+      benefits_provider_50: Hizmetkutusu ile hizmeti vermeye uygun olduğunuz zamanları ve kendisine olan uzaklığınızı müşteriye sunarsınız.
+      benefits_provider_60: Dolayısıyla müşteri, hizmeti satın almadan önce; sizin ona en uygun hizmet sağlayıcı olduğunuzu bilir ve en iyi reklam olan referansla, hizmeti satın almaya hazır halde size gelir. Hizmetkutusu'nun size sunduğu bu yöntemle yeni müşteriler bulacağınıza, ideal müşteri kitlenizi genişleteceğinize ve müşterilerinizi elinizde tutacağınıza inanıyoruz.
+      benefits_provider_70: Randevularınızı otomatize eder.
+      benefits_provider_80: Mevcut müşterilerinize verdiğiniz ve telefonla aldığınız randevuları Hizmetkutusu ile ücretsiz yönetebilisiniz. Tam sizin ihtiyacınıza göre olduğunu kullandıkça anlayacaksınız. Ayrıca Hizmetkutusu'nu websitenize entegre ederek yazılım, sunucu, güvenlik, sanal pos, banka komisyonu gibi sürekli masraflar ödemeden %5 + KDV komisyonla mevcut müşterilerinize online randevu verebilirsiniz.
+      benefits_provider_90: Google'da yer edindirir.
+      benefits_provider_100: Özellikle fiyat bazlı ve il-ilçe-semt aramalarında size yer edindirmek için HizmetKutusu Google'a linkler gönderir. Bunun yanında kendisi ve link aldığı-verdiği siteler üzerinden Google itibarınızı arttırır. Bir nevi otomatik SEO aracınızdır ve sizi yukarılara taşımak için ücretsiz reklam yapar.
+      benefits_provider_110: Sosyal medyada yer edindirir.
+      benefits_provider_120: "Facebook ve Twitter'da randevu verdiğiniz kişilerin izin verdiği kadar ücretsiz reklamınızı yapar. -X kişisi Y şirketinden Hizmetkutusu aracılığı ile Z hizmetini aldı ve 5 yıldız verdi. Siz de Y şirketinden hizmet alın- paylaşımının bir anda binlerce kişiye yayıldığını biliyor musunuz?"
+      benefits_provider_130: Rakiplerinizden haber eder.
+      benefits_provider_140: Hizmetkutusundaki hizmet sağlayıcıların bulundukları yer bilgisi, profilleri, yorumları, fiyatları herkese açıktır. Böylelikle bulunduğunuz bölgedeki rakiplerin durumundan ve piyasa fiyatlarından haberdar olursunuz. 
+      benefits_provider_150: Kazan-Kazandır.
+      benefits_provider_160: Sadece müşterinin aldığı randevuya hizmet verdiğinizde %5 + KDV komisyon alınır. Yani size iş getirdiğimizde komisyon alırız. Sizin oluşturduğunuz randevular ve Hhizmetkutusu'nu kullanmak tamamiyle ücretsizdir.
+    about:
+      title: Hakkımızda
+      aboutus_header: Hakkımızda
+      aboutus_body: Vizyonumuz, insanların en iyi hizmeti almalarını sağlamaktır. Misyonumuz, insanların istedikleri gibi hizmetleri karşılaştırmalarını mümkün kılmaktır. Değerlerimiz, insanların hayatlarında bıraktığımız olumlu izlerdir. Herşeyin bir hizmet olduğunu ve başarının zorluklar çekilerek insanlara verilen iyi değerler olduğunu düşünüyoruz. Kişisel hizmetler sektörüyle yürümeye başladık. İnsanların hayatına etki ettiğimiz sürece genişlemeye devam ediyoruz.
+      aboutus_more1: Herşey bir Hizmettir
+      aboutus_more2: Başarı Anlayışımız
+      aboutus_1280: Herşey bir Hizmettir.
+      aboutus_1290: Nasıl mı?
+      aboutus_1300: Bilimsel olarak.
+      aboutus_1310: Bilimsel olarak,
+      aboutus_1320: Her insan,
+      aboutus_1330: Beyninde oluşan alemi seyreder, 
+      aboutus_1340: Beyninde oluşan alemi duyar,
+      aboutus_1350: Beyninde oluşan alemi koklar, 
+      aboutus_1360: Beyninde oluşan alemi tadar, 
+      aboutus_1370: Beyninde oluşan aleme dokunur.
+      aboutus_1380: Görme olayını ele alalım.
+      aboutus_1390: Baktığımız cisimden gelen ışık demetleri,
+      aboutus_1400: Gözün önündeki lensin içinden geçerek,
+      aboutus_1410: Retinaya ters olarak düşerler.
+      aboutus_1420: Retina bu uyarıları elektrik sinyallerine dönüştürür,
+      aboutus_1440: Ve beynin görme merkezine aktarır.
+      aboutus_1450: İşte burada,
+      aboutus_1460: Elektrik sinyalleri bir dizi işlemden geçer,
+      aboutus_1470: Ve görüntü olarak algılanır. 
+      aboutus_1480: Görme olayı gerçekte; 
+      aboutus_1490: Beynin arkasındaki,
+      aboutus_1500: Küçücük, 
+      aboutus_1510: Işığın hiçbir şekilde giremediği,
+      aboutus_1520: Kapkaranlık bir noktada yaşanır.
+      aboutus_1530: Gören gözlerimiz değildir,
+      aboutus_1540: Görüntü beynimizde oluşur.
+      aboutus_1550: Beynimizin diğer noktalarında aynı şekilde oluşan,
+      aboutus_1560: Başka olaylar da vardır.
+      aboutus_1570: Duyma, Koklama, Tatma, Dokunma.
+      aboutus_1580: Ne kadar gerçekçi olursa olsun,
+      aboutus_1590: Dış dünya,
+      aboutus_1600: Sadece,
+      aboutus_1610: Beynimizin birer yorumudur.
+      aboutus_1620: Dünyanın gerçek görüntüsünü gördüğümüze dair,
+      aboutus_1630: Bizi ikna eden beş duyumuz, 
+      aboutus_1640: Elektrik sinyallerinden mahrum kaldığında, 
+      aboutus_1650: Dış dünya da ortadan kalkar.
+      aboutus_1660: Biz, dünyayı, dışımızda zannederiz. 
+      aboutus_1670: Oysa, dünya herşeyiyle bizim içimizdedir. 
+      aboutus_1680: Dışarıda yaşadığımız dünyayı aslında içimizde, 
+      aboutus_1690: Beynimizdeki küçücük bir noktada yaşarız. 
+      aboutus_1700: Burada anlattığımız,
+      aboutus_1710: Her insanın üzerinde büyük bir ciddiyetle düşünmesi gereken,
+      aboutus_1720: Çok önemli bir bilimsel gerçektir. 
+      aboutus_1730: Çünkü bu gerçeği görmezden gelen her insan, 
+      aboutus_1740: Ömrü boyunca küçücük bir noktada oluşan görüntüyü,
+      aboutus_1750: Gerçek zannederek yanılmaktadır. 
+      aboutus_1760: Beyninde oluşan nesnelere sahip olduğunu zanneden kişi,
+      aboutus_1770: Bu görüntülerden dolayı mutlu olur.
+      aboutus_1780: Beyninde oluşan nesnelere sahip olmadığını zanneden kişi,
+      aboutus_1790: Bu görüntülerden dolayı mutsuz olur.
+      aboutus_1800: Bu nesnelerin aslını, dışarıdaki gerçek halini,
+      aboutus_1810: Hiç kimse, hiçbir zaman bilemez ve göremez. 
+      aboutus_1820: Peki.
+      aboutus_1830: Gören gözlerimiz değilse, 
+      aboutus_1840: Gördüğü manzaradan zevk alan kimdir? 
+      aboutus_1850: Hayatı boyunca, 
+      aboutus_1860: Kapkaranlık, sessiz kafatasının içinde,
+      aboutus_1870: Kendisine gösterilen görüntüleri;
+      aboutus_1880: İzleyen, 
+      aboutus_1890: Düşünen, 
+      aboutus_1900: Sonuç çıkaran, 
+      aboutus_1910: Karar veren,
+      aboutus_1920: ve hisseden kimdir?
+      aboutus_1930: Materyalistlerin içinden çıkamadıkları,
+      aboutus_1940: Asıl nokta işte burasıdır.
+      aboutus_1950: Çevremizde gördüğümüz herşeyle birlikte, 
+      aboutus_1960: Biz de bir görüntüysek.
+      aboutus_1970: Yani beynimiz de,
+      aboutus_1980: Bir görüntü ise; 
+      aboutus_1990: Görüntü olan bir varlığın,
+      aboutus_2000: Görüntü meydana getirdiğini,
+      aboutus_2010: Söyleyemeyiz. 
+      aboutus_2020: O zaman bu görüntüleri kesintisiz olarak devam ettiren kimdir?
+      aboutus_2030: Din, “Ruh” der.
+      aboutus_2040: Felsefe, “Ruh” der.
+      aboutus_2050: Bilim de “Ruh”u ima eder.
+      aboutus_2060: Hep Ruh'dan bahsediliyorsa,
+      aboutus_2070: Bir bildikleri vardır.
+      aboutus_2080: Bizim de bir bildiğimiz var.
+      aboutus_2090: Biz görsek de görmesek de nesnel bir dünya vardır. 
+      aboutus_2100: Ancak biz bu dünyayı beynimizin içinde bir kopya,
+      aboutus_2110: Diğer bir deyişle algılarımızın yorumu olarak görürüz.
+      aboutus_2120: Dolayısıyla nesne, bizim için bir hayaldir.
+      aboutus_2130: Önemli olan ruhumuz sayesinde hissettiklerimizdir.  
+
+      aboutus_2140: Her nesne, içine gömülü hizmetlerle kullanıcısına ulaşır.
+      aboutus_2150: Oluşturulmasında, çeşitli kişilerden hizmet alınmıştır.
+      aboutus_2160: Bu hizmetlerin sonucu, kullananın alacağı hizmeti belirler.
+      aboutus_2170: Araba, ulaşım hizmetleri sağlar.
+      aboutus_2180: Ev, yaşam hizmetleri sunar. 
+      aboutus_2200: Telefon, iletişim hizmetleri verir.
+      aboutus_2210: Nesne olan araba, ev ve telefon birer araçtır, 
+      aboutus_2220: Amaç, hizmeti karşılamaktır.
+      aboutus_2230: Hizmet nesnenin içine gömülü gelir.
+      aboutus_2240: Kişi, iyi hissetmek için satın alır, hizmeti yaşar.
+
+      aboutus_2340: İnsanlar, genelde nesnel olmayan hizmetleri bilirler.
+      aboutus_2350: Restoranda iyi servis,
+      aboutus_2360: İtina ile verilen bir eğitim. 
+      aboutus_2365: Satış sonrası destek.
+      aboutus_2370: Halbuki hizmetler canlı cansız herşeyle alakalıdır.
+      aboutus_2380: Aile bireylerinin birbirlerine desteği aileye, 'aile kurumuna' hizmettir.
+      aboutus_2390: Spor ayakkabının zor koşullarda sunduğu rahatlıktan farklı değildir.
+      aboutus_2400: Kuaförün saç kesimi müşteriye verilen hizmettir.
+      aboutus_2410: Siyasetçinin ülkesine iyi hizmet vermesinden farklı değildir.
+      aboutus_2420: Hepsini hizmetler yaratır, hepsi hizmet sunar, hepsi hislere hitap eder. 
+      aboutus_2430: Hissi, hizmeti yaşamak verir.
+
+      aboutus_3240: Ekonomik boyuttan bakarsak;
+      aboutus_3250: Hizmetler önce paraya çevrilir.
+      aboutus_3260: Sonra başka birinin harcadığı hizmet olan;
+      aboutus_3270: Eve, arabaya, telefona; geri çevrilir.
+      aboutus_3285: Ekonomi derler buna.
+      aboutus_3290: Sosyal boyuttan bakarsak;
+      aboutus_3300: Her kişi, genlerinde yer etmiş hizmetleri sağlama özellikleriyle doğar.
+      aboutus_3310: Yaşamı boyunca yeni hizmetler öğrenir, çevresine hizmetler verir ve alır.
+      aboutus_3340: Tüm bu hizmetler, onun yaşam tecrübesini belirler.
+      aboutus_3350: Hayat derler buna. 
+
+      aboutus_3430: Karşılıklı hizmetler sayesinde,
+      aboutus_3440: Hem Ekonomi çarkı,
+      aboutus_3450: Hem Hayat çarkı,
+      aboutus_3460: Döner durur.      
+      aboutus_3470: Çarklar,
+      aboutus_3480: Gücünü,
+      aboutus_3490: Hislerden alır.  
+      aboutus_3500: Peki,
+      aboutus_3510: Nesnel dünya aslında beynimizde oluşuyorsa,
+      aboutus_3520: Her nesnenin bir hizmet amacı varsa,
+      aboutus_3530: Hissetmek için hizmet veriyor,
+      aboutus_3540: Hissetmek için hizmet alıyor,
+      aboutus_3550: Hissetmek için yaşıyorsak.
+      aboutus_3560: Bunları yaparken de;
+      aboutus_3570: Aklımızı,
+      aboutus_3580: Bedenimizi,
+      aboutus_3590: Ruhumuzu,
+      aboutus_3600: Yani;
+      aboutus_3610: Beynimizin, ellerimizin, ayaklarımızın hizmetini kullanıyor,
+      aboutus_3620: Ruhumunuzla hissediyorsak,
+      aboutus_3630: Geriye ne kalıyor?      
+      aboutus_3640: HERŞEY BİR HİZMETTİR.
+
+      aboutus_3650: Hizmetkutusu olarak;
+      aboutus_3660: HerşeyİN bir Hizmet olduğundan yola çıkarak;
+      aboutus_3670: "İnsanları şu konularda aydınlatıyoruz:"
+
+      aboutus_3680: Herşeyin öncesinde hizmet düşünülmelidir.
+      aboutus_3690: Hizmetler her türlü karşılaştırılabilir. 
+      aboutus_3700: Herkes hizmet verebilir ve alabilir. 
+      aboutus_3710: Ürün değil, ürünün sunduğu hizmet vardır.
+ 
+
+      aboutus_3800: "Küçük bir çocuk varmış."
+      aboutus_3810: "Yaz günü, bahçeler arasında geziyormuş."
+      aboutus_3820: "Bir ağaç dalının altında, kelebek kozası görmüş."
+      aboutus_3830: "Kozayı izlemeye başlamış."
+      aboutus_3840: "Kelebek kozadan çıkmaya çalışıyor ama çıkamıyor;"
+      aboutus_3850: "Mücadele ediyor, zorlanıyor, eziyet çekiyormuş."
+      aboutus_3860: "Kelebeğin çektiği acıya dayanamamış."
+      aboutus_3870: "Cebinden bıçağını çıkarmış,"
+      aboutus_3880: "Kozayı kelebeğin çıkması için kesmiş."
+      aboutus_3890: "Kelebek kolaylıkla kozadan çıkmış."
+      aboutus_3900: "Çıkmış ama, çıkar çıkmaz yere düşmüş."
+      aboutus_3910: "Ve bir daha da hiç uçamamış."
+      aboutus_3920: "Çünkü kanatları hiçbir zaman oluşmamış." 
+      aboutus_3930: "Çoçuğun anlamadığı şey,"
+      aboutus_3940: "Kanatlarının oluşması için,"
+      aboutus_3950: "Kelebeğin çekmesi gereken acıymış." 
+      aboutus_3960: "Hayat denilen şey."
+      aboutus_3970: "Sizin için ne anlamı var?"
+      aboutus_3980: "Hayatınızla ne yapıyorsunuz?" 
+      aboutus_3990: "Bizim hayattan anladığımız,"
+      aboutus_4000: "Hayata ne koyarsanız, onu geri verdiği."  
+      aboutus_4010: "Herşeyi bir kenara bırakın."
+      aboutus_3020: "Aslında hepimiz, tek şey için uğraşıyoruz."
+      aboutus_4030: "Hayatımızdan memnun olmak için."
+      aboutus_4040: "Peki memnun olmak için ne yapıyoruz?"
+      aboutus_4050: "Başarılı olmaya çalışıyoruz."
+      aboutus_4060: "Belki işimizle,"
+      aboutus_4070: "Belki ailemizle," 
+      aboutus_4080: "Belki arkadaşlarımızla," 
+      aboutus_4090: "Belki sağlığımızla,"
+      aboutus_4100: "Belki başka şeylerle."  
+      aboutus_4120: "Bilirsiniz, insanlar başarıyı tanımlarlar."
+      aboutus_4130: "Para, evler, arabalar." 
+      aboutus_4140: "İyi eş, iyi aile, iyi arkadaşlar, iyi sağlık."
+      aboutus_4150: "Bunların, hiçbiri, başarı değildir."
+      aboutus_4160: "Bunlar, başarının verdiği ödüllerdir."  
+      aboutus_4170: "Size, başarının tanımını yapma küstahlığını göstermek istiyoruz."
+      aboutus_4180: "Başarı, toplum üzerinde bıraktığınız olumlu izlerin büyüklüğüdür." 
+      aboutus_4190: "Kaç kişinin hayatı üzerinde olumlu etkiniz var?"
+      aboutus_4191: "İş arkadaşlarınızı, dostlarınızı, eşinizi, çocuğunuzu...etrafınızdaki herkesi;"
+      aboutus_4192: "Nasıl değiştirdiniz? Nasıl değiştiriyorsunuz?"
+      aboutus_4193: "Yaptıklarınız, başkalarının hayatını nasıl şekillendiriyor?"
+      aboutus_4195: "Esnaf, sanatçı, memur, ev hanımı, işadamı, öğrenci...kim olursanız olun;" 
+      aboutus_4197: "Bu dünyayı daha iyi bir yer yaptınız mı?"
+      aboutus_4198: "Nasıl yapardınız?"
+      aboutus_4230: "Başarı, işte bu ölçüdür." 
+      aboutus_4250: "Peki hayattan memnun olmak mı?"
+      aboutus_4260: "Başarılı olduğunuz için içinizden gelen mutluluktur."
+      aboutus_4270: "Bu mutluğa ulaşmak içinse..." 
+      aboutus_4280: "Acı çekmeniz gereklidir." 
+      aboutus_4290: "Acı çekmekten bahsediyoruz!" 
+      aboutus_4300: "Mücadeledir."
+      aboutus_4310: "Eziyettir."
+      aboutus_4320: "Durmadan çalışmaktır."
+      aboutus_4330: "Hayal kırıklığıdır."
+      aboutus_4340: "Başarısızlıktır."
+      aboutus_4350: "Yalnızlıktır."
+      aboutus_4360: "Yokluktur."
+      aboutus_4370: "Savaştır." 
+      aboutus_4375: "Acıdır."
+      aboutus_4380: "Kimse bu hayat tarzını anlamaz."
+      aboutus_4390: "Rahatlığı seçerler. Kolaylığı isterler."
+      aboutus_4395: "Düşünmezler; doğarken bile, acıyla doğduklarını."
+      aboutus_4400: "Kimse, bizi, anlamaz!"
+      aboutus_4410: "Ama bizim anladığımız,"
+      aboutus_4420: "Acı çekmenin, başarıya ulaştırdığı."
+      aboutus_4425: "Acı çekmenin, değişimi yaptığı."
+      aboutus_4430: "Doğada olduğu gibi."
+      aboutus_4440: "Savaşlarda olduğu gibi."
+      aboutus_4450: "Hiçbir mücadele, yorgunluktan bitkin düşmüş halde savaşmak kadar verimli değildir."
+      aboutus_4460: "Yemek? Uyku? Tatil? Gezmek? Televizyon? Sohbet? Aile? Dostlar?"
+      aboutus_4470: "Üzgünüz. Biz almayalım."
+      aboutus_4480: "Çünkü biz, bizi yapmamız lazım."
+      aboutus_4490: "Çünkü biz, cumartesi günü sabah 4'te kalkıyoruz."
+      aboutus_4500: "Çünkü biz, cuma akşamı ofiste sabahlıyoruz."
+      aboutus_4510: "Çünkü biz, herhangi bir müşterimizi memnun etmek için 5 saat gidiyoruz."
+      aboutus_4520: "Çünkü biz, insanların hayatlarına etki etmek için burdayız."
+      aboutus_4530: "Çünkü biz, iz bırakmak için burdayız."
+      aboutus_4540: "Çünkü biz, en iyisini, büyük olmak için veriyoruz."
+      aboutus_4543: "Bu hırs değildir."
+      aboutus_4544: "Bu insana verilen değerdir."
+      aboutus_4550: "Bu güçtür."
+      aboutus_4560: "Bu tutkudur."
+      aboutus_4570: "Bu cesarettir."
+      aboutus_4580: "Bu baş eğmemektir."
+      aboutus_4590: "Hayatın da sanatın da özü budur."
+      aboutus_4600: "Yaşatmak ve yaratmak, başkaldırmaktır."
+      aboutus_4610: "Dikilmektir."
+      aboutus_4620: "Karmaşanın tam göbeğine, hiç çekinmeden atlamaktır."
+      aboutus_4625: "Topluma en olumlu etki;"
+      aboutus_4626: "İşte böyle yapılır."
+      aboutus_4630: "Alışılmışı yapmak, kolay bir hayattır."
+      aboutus_4640: "Sıradan şeylerle uğraşmak, kolay bir hayattır."
+      aboutus_4650: "Kaderini başkasının eline bırakmak, kolay bir hayattır."
+      aboutus_4660: "Tembellik, kolay bir hayattır."
+      aboutus_4670: "Elindekiyle yetinmek, kolay bir hayattır."
+      aboutus_4680: "Hazır yemek, kolay bir hayattır."
+      aboutus_4690: "Herkes gibi olmak, kolay bir hayattır."
+      aboutus_4700: "Mücadeleden uzak durmak," 
+      aboutus_4710: "Acıdan kaçmak," 
+      aboutus_4720: "Rahatlığa sığınmak."
+      aboutus_4730: "Kolaydır."
+      aboutus_4740: "Hiçbir kolaylık, hayatınızdan memnun olmanızı sağlamaz."
+      aboutus_4760: "Hayatınızdan memnun olmanızı;"
+      aboutus_4770: "Çektiğiniz acılar sağlar." 
+      aboutus_4780: "Çünkü güneş, sadece aylarca yağmuru gördükten sonra özeldir." 
+      aboutus_4790: "1 kişi, 1 bilgisayar, bankada 416 TL."
+      aboutus_4800: "Hizmetkutusu'nun topluma etki edeceğini biliyorduk."
+      aboutus_4810: "Kolay hayatı seçmedik."
+      aboutus_4820: "Ezildik. Süründük. Emekledik."
+      aboutus_4830: "Şimdi yürüyoruz."
+      aboutus_4840: "Yaşadığımız acılar, bizi biz yaptı."
+      aboutus_4850: "Verdiğimiz savaş, bizi geliştirdi."
+      aboutus_4860: "Şimdi;"
+      aboutus_4870: "Sizi geliştirmek için mücadele ediyoruz." 
+    blog:
+      blog: Blog 
+      blog_header: Blog
+      blog_body: Blog, genellikle güncelden eskiye doğru sıralanmış yazı ve yorumların yayınlandığı, web tabanlı bir yayını belirtir. Çoğunlukla her gönderinin sonunda yazarın adı ve gönderi zamanı belirtilir. Yayıncının seçimine göre okuyucular yazılara yorum yapılabilir. Yorumlar, blog kültürünün çok önemli bir dinamiğidir; bu sayede yazar ve okuyucular arasında iletişim sağlanır.  Hizmetkutusu ve bizle ilgili yazılarımızı buradan yayınlıyoruz.
+    contact:
+      title: İletişim
+      contact_header: İletişim
+      contact_body: "Ekranın sağ alt köşesindeki Hasan'a tıklayarak hemen şimdi bizimle konuşmaya başlayabilirsiniz. Adresimiz; 1440 sokak 21/8 Alsancak-İzmir. Telefonumuz; 0850352443. E-postamız; iletisim@hizmetkutusu.com"
+  admin:
+    users:
+      manualcredits:
+        manually_add_credits_to_user: Havale ve Mobil Ödeme için Kredi İşlemleri
+        payment_details: Ödeme Bilgileri
+        user_credits: Kullanıcının kredi miktarı
+        payment_type: Ödeme türü
+        add_credit: Uygula
+        amount_to_add: Eklenen/Çıkarılan Miktar
+        add_credits_exp: 1 Kredi 1 TL'dir. Ödemeler yönetici tarafından kontrol edilmektedir, havale veya mobil ödeme formunu görmeden ödeme yapmayınız.
+        amount_to_add_user_minus_plus: Kredi düşürmek için "-" yazabilirsiniz. Örn; -20       
+      refunds:
+        refund_to_user: Kredi Kartı İşlemleri İçin Geri Ödeme 
+        refund_details: Ödeme Bilgileri
+        user_credits: Kullanıcının kredi miktarı
+        amount_to_refund: Ödeme türü
+        add_credits_exp: 1 Kredi 1 TL'dir. Geri Ödemeler yönetici tarafından kontrol edilmektedir. Geri Ödemeden Sonra Kredi Miktarı Azalacaktır.
+      index:
+        login_as: Bu kullanıcıyla gir
+  users:
+    banned:
+      title: Durdurulmuş hesap
+      you_were_banned: Siteye girişiniz yasaklandı!
+      contact: Hatalı bir karar verdiğimizi düşünüyorsanız lütfen bizimle iletişime geçiniz.
+    financialsettings:
+      financial_settings: Ödeme Bilgilerim
+      financial_setting_details: Bu sayfada kredi bilgilerinizi görebilir ve ödeme yapabilirsiniz.
+      credits: Kredi Bilgilerim
+      by_credit_card: Kredi Kartı İle
+      by_mobil: Mobil Ödeme İle
+      by_havale: Havale İle
+      order_history: Ödeme Geçmişim
+      credit_card_refund: Kredi Kartına Geri Ödeme
+      credit_card_purchase: Kredi Kartıyla Ödeme
+      bank_transfer_refund: Banka Havalesiyle Geri Ödeme
+      bank_transfer_purchase: Banka Havalesiyle Ödeme
+      mobile_transfer_refund: Mobil Geri Ödeme
+      mobile_transfer_purchase: Mobil Ödeme        
+    dashboard:
+      title: Aldığım Fiyatlar
+      reminder: Hatırlatıcı
+      new_quote: Fiyat Al
+      search_quotes: Teklif Ara
+      your_quotes: Aldığım Fiyatlar
+      new_messages:
+        zero: Yeni mesaj yok
+        one: "%{count} yeni mesaj"
+        other: "%{count} yeni mesaj"
+      new_notifications:
+        zero: Bilgilendirme yok
+        one: "%{count} yeni bilgilendirme"
+        other: "%{count} bilgilendirme"
+      new_references:
+        zero: Yeni referans yok
+        one: "%{count} yeni referans"
+        other: "%{count} yeni referans"
+      latest_quotes: Aldığım Fiyatlar
+      by: tarafından
+    quotes:
+      title: Aldığım Fiyatlar
+    show:
+      comments: Yaptığı Yorumlar
+      taken: Randevu Almış
+      not_taken: Hiç Randevu Almamış
+      not_done: Hiç Hizmet Almamış
+      done: Hizmet Almış
+      quotes: Aktivite
+      total: Toplam
+      category: hizmeti aldı.
+      comment: "%{comment}"
+      no_comment: puanlama ve yorum yapmadı.
+      comment_given: Yorum Yapmış
+      comment_not_given: Hiç Yorum Yapmamış
+      comment_not: Hiç
+      member_since: "%{date} tarihinden beri üye."
+      see_all: Hepsini Gör
+      facebook_verified: "Facebookda cep telefonu ile hesabını onaylayan veya geçerli bir kredi kartı giren kullanıcı facebook onaylı olur"
+      app_verified: "Hizmetkutusunda cep telefonu ile hesabını onaylayan kullanıcı hizmetkutusu onaylı olur."
+      basic_info: Ana bilgiler
+      friends: "%{count} arkadaşı var"
+      age: "%{count} yaşında"
+      language: "%{language} konuşuyor"
+      common_friends: Ortak arkadaşlar
+      likes: Beğeniler
+      and_others:
+        one: ve bir tane daha
+        other: "ve %{count} tane daha"
+    settings:
+      account_settings: Kullanıcı Ayarlarım
+      new_quote: Yeni Fiyat Al
+      quote_history: Teklif Geçmişim
+      general_information: Genel Bilgiler
+      profile_details: Profil Detayları
+      update_pass: Şifre Güncelleme 
+      credits: Kredi Durumu
+      order_history: Sipariş Geçmişi
+      financial_setting_details: Sipariş yapın, sipariş geçmişinizi görün, fatura çıkartın.
+      user_profile_details: Hizmetkutusu'na her girişinizde profil detaylarınız facebook'tan güncellenmektedir.
+      credits_remaining: Krediniz Kaldı
+      credits_remaining_details: 1 kredi 1 TL tutarındadır. İletişim bilgilerini öğrenmek istediğiniz her potansiyel müşteriniz için kredi miktarınızdan 1 kredi düşmekteyiz. 
+      send_email: Şu durumlarda bana email gelsin
+      send_email_at_address: "Şu adrese email göndereceğiz: %{email}"
+      application_settings: Uygulama Ayarları
+      update_profile: Ayarları Güncelle
+      profile_picture: Profil Resminiz
+      select_picture: Resim Seçiniz
+      update_password: Şifre Güncelle
+    providers:
+      new_provider: Hizmet Sağlayıcı Ekle
+  sms:
+    new:
+     notify_provider_sms_price: "Hizmetkutusu ile randevu verdiniz. %{distance}km uzağınızdaki %{customer}, verdiğiniz %{service} hizmeti için %{date_service} saatine randevu aldı. Bu saat size uygun değilse lütfen kendisiyle %{customer_phone} numarasından iletişime geçiniz ve değişiklik varsa randevuyu -Ajandam- sayfasından güncelleyiniz. Detaylar için %{shortlink}  "
+     notify_user_sms_price: "Hizmetkutusu ile randevu aldınız. %{provider} adlı hizmet sağlayıcımızdan %{service} hizmeti için %{date_service} saatine randevu aldınız. Adres ve diğer detaylar için %{shortlink} linkine giriniz."
+     notify_user_email_price: "%{provider} adlı hizmet sağlayıcımızdan %{service} hizmeti için %{date_service} saatine randevu aldınız. Adres ve diğer detaylar için aşağıdaki linke giriniz."
+     notify_provider_sms_price_paid: "%{customer} isimli kişi %{service} hizmeti için %{date_service} zamanına rezervasyon için ödeme yaptı.  sizin için uygun değilse lütfen kendisiyle %{customer_phone}  numarasından iletişime geçiniz ve rezervasyonuu -Rezervasyonlarım- sayfasından güncelleyiniz"
+     notify_user_after_done: "Hizmetkutusu aracılığı ile aldığınız hizmetten memnun kaldığınızı umuyoruz. Şu 3 soruya Evet-Hayır cevabı vererek ipad kazanma şansı yakalayabilirsiniz. 1-Aldığınız hizmetten memnun kaldınız mı? 2-Ödediğiniz fiyat makul muydu? 3-Zamanında hizmet aldınız mı? (Evet Evet Evet veya E E E yazarak cevaplayabilirsiniz). (%{shortlink}) "       
+     notify_welcome_provider: "Hizmetkutusu hizmet sağlayıcısı oldunuz. Epostanız: %{email}, Şifreniz: %{admin_password}. Bu bilgilerle veya epostanıza kayıtlı Facebook hesabınız ile www.hizmetkutusu.com adresinden bize ulaşabilirsiniz. Bu telefon numarasını rehberinize kaydediniz, iş taleplerinizi bu numaradan göndereceğiz."
+  events:
+    service_to_give: Randevuda Verilen Hizmet
+    personel_to_block: Hangi Personeller için Kapansın?
+    person_to_service: Randevu Alan Müşteri
+    person_servicing: Hizmeti Veren Personel
+    appointment_text: Randevu Açıklaması
+    appointment_status: Randevu Durumu
+    services_to_close: Hangi Hizmetler Kapansın?
+    service_close_exp1: "Yukarıda seçtiğiniz zaman aralığı için, aşağıda seçtiğiniz hizmetleri kapattığınızda;"
+    service_close_exp2: "kapanan hizmetleri almak isteyen müşterileriniz seçtiğiniz zaman aralığına randevu alamazlar."
+    close_reason: Kapanma Nedeni
+  quotes:
+    selected_providers:
+      gave_price: Fiyat Teklifi Verdi
+      service_request_sent: Fiyat Teklifi İstenildi
+      gave_price: Fiyat Verdi
+      gave_service: Hizmet Verdi 
+      reservation_made: Randevu Alındı
+      payment_done: Ödeme Alındı
+      reservation_cancelled: Randevu İptal Edildi
+      applied: Hizmet Alındı
+      user_request_sent: Bilgi Gönderildi
+      selected_provider: Hizmet Vermesi İçin Seçildi
+    table:
+      taken_service: Hizmet Alındı
+    search:
+      search: Ara
+      verified_users: Onaylı kullanıcılar
+    booking:     
+      service_single: hizmet
+      service_multi: hizmetler
+    index:
+      title: Search quotes
+    show:
+      edit_reference: Yorumu Güncelle
+      new_reference : Yorum Bırak
+      view_reference: Yorumumu Gör
+      pay_now: Şimdi Ödeyin, Avantajlı Çıkın
+      cancel_reservation: Randevuyu İptal Et
+      reservation_date: Randevu Tarihi
+      create_date: Oluşturulma Tarihi
+      service_place_remote: Hizmet Sağlayıcının Konumu
+      service_place_onsite: Hizmet Almak İsteyenin Konumu
+      app_user: "An user of %{appname}"
+      report_quote: Şikayet Et
+      login_to_contact: Şikeyet etmek için giriş yapınız  
+      selected_providers: Seçilen Hizmet Sağlayıcılar
+      who_wants_service: Hizmet Almak İsteyen
+      the_service: Almak İstenilen Hizmet
+      quote_finish: Müşteriyle Anlaştım ve Hizmeti Tamamladım
+      quote_finsh_exp: Emin misiniz? Gerçekten müşteriyle anlaşıp hizmeti siz mi tamamladınız?  
+    edit:
+      title: "Randevu Düzenle"
+    new:      
+      title: Yeni Fiyat Alın
+      get_quote_fast: Kendisinden Fiyat Al
+      step_1: 1. Adım
+      step_2: 2. Adım
+      step_3: 3. Adım  
+      services: "%{officialname} hizmetleri: "
+      total_price: "Toplam Fiyat :"  
+      currency: " TL"
+      add_service: "Hizmet Ekleyin"
+      insert_quote_details: "Teklif Detaylarınızı Girin"
+      confirm_and_share: "Randevu Alın"
+      next_step: "Sonraki Adım"
+      previous_step: "Tekrar Arayın"
+      missing_publish_stream_permission: "%{appname}'nun facebook duvarınızda paylaşım yapmaya izni yok. Facebook ayarlarınızdan bu izni verebilirsiniz."
+      share_on_timeline_unavailable: "Üzgünüz. %{appname} şu anda facebook duvarınıza paylaşım yapamıyor."
+      hint_privacy_title: "En Yakın Konum"
+      hint_privacy_content: "Konumunuzu alarak size en yakın hizmet sağlayıcıları belirlemek istiyoruz. Gizliliğiniz önemliyse veya adresinizi bulamadıysanız, size en yakın konumu seçebilirsiniz."
+      hint_customize_title: "Aradığınız Hizmet"
+      hint_customize_content: "Aradığınız hizmet ile ilgili size sayısız sorular soracak değiliz. Aklınıza ilk gelen kelimeyle arama yaparak almak istediğiniz hizmeti rahatlıkla seçebilirsiniz."
+      hint_search_before_title: "Size Uygun Tarih"
+      hint_search_before_content: "Hizmet sağlayıcılarımızın seçtiğiniz tarihteki uygunluğunu kontrol etmek istiyoruz. Seçtiğiniz hizmeti almayı öngördüğünüz tarihi yazarak bize yardımcı olabilirsiniz."
+      search_link: "Search"
+      please_enter_work_type_user: lütfen almak istediğiniz hizmeti seçiniz
+      please_select_type: Lütfen seçiniz.
+      please_select_date: Lütfen tarihi seçiniz.
+      info_search_distance: Şu uzaklığa kadar arama yapılsın
+      please_enter_address: Lütfen bulunduğunuz konumu seçiniz.
+      select_service: 1 - İstediğiniz Hizmeti Seçin
+      select_quote: 2 - Fiyat Alın
+      notify_provider_sms: "%{distance}km uzak biri sizden %{service} hizmeti icin Fiyat Almak istiyor. %{description} dedi. Listede %{rank}. ciktiniz ve %{providercount} hizmet saglayici daha secti. Teklif vermek icin %{yes} yaziniz. Krediniz: %{creditcount}. (%{shortlink})"
+      notify_provider_sms_only: "%{distance}km uzak biri sizden %{service} hizmeti icin Fiyat Almak istiyor. %{description} dedi. Listede %{rank}. ciktiniz ve sizden baska kimseyi secmedi. Teklif vermek icin %{yes} yaziniz. Krediniz: %{creditcount}. (%{shortlink})"
+      notify_provider_senduserdetails: "Musteri adi: %{username}, Telefonu: %{telephone}. Sadece kendisiyle anlasip isi bitirmeniz durumunda bu mesaja TAMAM yazarak cevap veriniz."
+      notify_provider_credits: "Krediniz bitmistir. %{creditlink} adresinden kredi satin alabilsiniz. Kredi aldiktan sonra bu mesaja 'Evet' cevabi verebilirsiniz."
+      notify_provider_correct_yes: "Lutfen evet cevabi verdiginizden emin olunuz."
+      notify_user_after_done: "Hizmetkutusu aracılığı ile aldığınız hizmetten memnun kaldığınızı umuyoruz. Şu 3 soruya Evet-Hayır cevabı vererek ipad kazanma şansı yakalayabilirsiniz. 1-Aldığınız hizmetten memnun kaldınız mı? 2-Ödediğiniz fiyat makul muydu? 3-Zamanında hizmet aldınız mı? (Evet Evet Evet veya E E E yazarak cevaplayabilirsiniz). (%{shortlink}) "       
+      notify_provider_email: "%{distance}km uzak biri sizden %{service} hizmeti icin teklif istedi. %{description} dedi. Listede %{rank}. ciktiniz ve %{providercount} hizmet saglayici daha secti."
+      notify_provider_email_only: "%{distance}km uzak biri sizden %{service} hizmeti icin teklif istedi. %{description} dedi. Listede %{rank}. ciktiniz ve sizden baska kimseyi secmedi."
+      notify_provider_senduserdetails_email: "Musteri adi: %{username}, Telefonu: %{telephone}. Sadece kendisiyle anlasip isi bitirmeniz durumunda bu mesaja TAMAM yazarak cevap veriniz."
+      notify_provider_credits_email: "Krediniz bitmistir. %{creditlink} adresinden kredi satin alabilsiniz. Kredi aldiktan sonra bu mesaja 'Evet' cevabi verebilirsiniz."
+      notify_provider_yes: EVET
+      notify_provider_yes2: EVET2
+      notify_provider_yes3: EVET3
+      notify_provider_yes4: EVET4
+      notify_provider_yes5: EVET5 
+    verification:
+      send_code: Onay Kodu Gönder
+      verify_code: Kodu Onayla
+      continue: Devam Et
+      phone_verification: Randevu almadan önce lütfen cep telefon numaranızı onaylayın
+      provider_exp_exists: Hizmet sağlayıcılarımızın size ulaşabilmesi için cep telefon numaranız gerekiyor.
+      provider_exp_exists1: Hizmet sağlayıcınız için girdiğiniz telefonları tespit ettik. Bu telefonlardan birini seçerek veya yeni bir telefon girerek hizmet alabilirsiniz.
+      provider_exp: Hizmet sağlayıcının size ulaşabilmesi için bir kereye mahsus cep telefonu onayınıza ihtiyacımız var.
+      provider_exp1: Telefon numaranızı seçtiğiniz hizmet sağlayıcı dışında kimseyle paylaşmayacağımızdan ve hiçbir ücret ödemeyeceğinizden emin olabilirsiniz.
+  customers:
+    index:
+      title: Kişilerim
+      exp: Çalıştırdığınız personelleri ve müşterilerinizi buradan tanımlayabilirsiniz.
+      new: Yeni Kişi
+      actions: İşlemler
+    new:
+      title: Yeni Kişi
+      email: Eposta
+    edit:
+      title: Kişi Düzenle
+  providers:
+    common:
+      isverified: Hizmetsağlayıcı ve onaylı mı?
+    calendar:
+      my_appointments: Ajandam
+      my_appointments_exp: Bu ekranı kullanarak sizden randevu alan müşterileri görebilir ve kendi randevularınızı oluşturabilirsiniz.
+    prices:
+      my_prices: Fiyatlarım
+      my_prices_exp: "Verdiğiniz hizmetleri fiyatlandırmak için bu bölümü kullanabilirsiniz. Lütfen bu fiyatları uygulama süreleri ve uygulayan personeller ile kendi isteğinize göre güncelleyiniz. Müşteri randevu alırken fiyatınızı ve uygulama sürenizi görecek, randevu uygulayabilen personele atacanacaktır."
+      category: Verdiğiniz Hizmet
+      give_price: Fiyat Verilsin
+      give_price_tooltip: Bu kutudaki işareti kaldırdığınızda profilinizde verdiğiniz hizmet görülecek fakat fiyatı olmadığı için aramalarda çıkmayacaktır. 
+      market_prices: Piyasa Fiyatı
+      pricing: Fiyatlandırma
+      application_hours: Uygulama Süreniz
+      responsible_personel: Uygulayabilen Personel
+      application_hours_tooltip: Bu hizmetin ortalama uygulama süresi.
+      responsible_personel_tooltip: Bu hizmeti verebilecek personeller. Kişilerim sayfasından yeni personel ekleyebilirsiniz.
+      application_type: Türü
+      hours: Saat
+      15min: 15 Dakika
+      30min: 30 Dakika
+      45min: 45 Dakika
+      onehr: 1 Saat 
+      twohr: 2 Saat
+      threehr: 3 Saat 
+      fourhr: 4 Saat 
+      fivehr: 5 Saat
+      sixhr: 6 Saat
+      sevenhr: 7 Saat 
+      eighthr: 8 Saat 
+      minutes: Dakika
+      price: Fiyatınız
+      title: Fiyatlarım
+      price_tooltip: Belirtilen hizmetin KDV dahil fiyatı. 
+      discount: İndirim
+      market_prices_tooltip: Size en fazla 25 Km uzaklıktaki diğer hizmet sağlayıcıların bu hizmet türü için verdiği en düşük ve en yüksek fiyatlar
+      discount_tooltip: "Aynı hizmeti birden fazla kez almak istediklerinde toplam fiyat üzerinden yapılacak indirim oranı. Örnek: %5 + KDV indirim için 1 hizmet 15 TL, 2 Hizmet 28.5 TL, 3 Hizmet 42.25 TL"
+    show:
+      profile: Profil Bilgileri
+      categories: Verdiği Hizmetler
+      history: Teklif Geçmişi
+      statistics: İstatistikleri
+      member_since: "%{date}'den beri üye"
+      workdone: Yaptığı işler
+      service_profile: Hizmetkutusu Profili
+    form:
+      address_information: İletişim Bilgileriniz
+      business_information: İş Bilgileriniz
+      tax_information: Şirket Bilgileriniz
+      social_information: Sosyal Medya Bilgileriniz
+      qualifications: Yetkinlik Bilgileriniz
+      category: Verdiğiniz Hizmetler*
+      no_door: No/Daire
+      street: Sokak/Cadde
+      district: İlçe
+      social_facebook: Facebook Sayfanız
+      social_twitter: Twitter Sayfanız
+      social_foursquare: Foursquare Sayfanız
+      social_googleplus: Google+ Sayfanız
+      social_instagram: Instagram Sayfanız
+      province: İl
+      neigbor: Semt
+      local: Mahalle
+      real_address: İş Adresiniz*
+      business_photos: Sizin ve Hizmetlerinize" Ait Fotoğraflar* 
+      real_address_info: "Lütfen bu bilgileri doğru giriniz. İl, İlçe, semt bazlı Google aramalarında yer edinmeniz için bu bilgileri kaydolurken (ilk seferde) doğru girmeniz önemlidir."
+      business_address_info: "Adresinizi doğrulayarak haritadan konumunuzu seçiniz. Aramalarda bu konuma göre çıkacaksınız. Tam konumunuzu bulmanız önemli değildir. Yaklaşık konumunuzu alarak müşterilerin size olan uzaklığını belirlemek istiyoruz."
+      business_hours: Çalışma Saatleriniz*
+      business_hours_info: "Yeşil renk; çalıştığınız günleri, kırmızı renk; tatil günlerinizi gösterir. Gün açmak/kapatmak için üzerine tıklayınız."
+      business_phone_info: Müşterilerin hizmet isteklerini bu telefona gönderiyor olacağız. Lütfen sürekli kullandığınız bir telefonu girdiğinizden emin olunuz.
+      business_email_info: Müşterilerin hizmet isteklerini ve hizmet sağlayıcınız ile ilgili haberleri bu emaila gönderiyor olacağız. Lütfen hizmet sağlayıcınızın eposta adresini girdiğinizden emin olunuz.
+      category_presence_error: Lütfen verdiğiniz hizmetleri seçiniz.
+      category_maximum_error: Lütfen en fazla 25 hizmet türü seçiniz.
+      file_presence_error: Lütfen hizmet sağlayıcı profil resminizi seçiniz.
+      map_presence_error: Lütfen adresinizi girerek konumunuzu seçiniz.
+      certificates: Belgeleriniz
+      Cep_Telefon_Numaranız: Cep Telefon Numaranız
+      email_presence_error: Girdiğiniz cep telefonu sistemde bir başkası adına kayıtlıdır. Lütfen doğru girdiğinizden emin olunuz.
+      mobilephone_presence_error: Girdiğiniz cep telefonu sistemde bir başkası adına kayıtlıdır. Lütfen doğru girdiğinizden emin olunuz.
+      mobilephone_length_error: 11 rakam girmelisiniz. Lütfen doğru girdiğinizden emin olunuz.
+    edit:
+      title: "Profilimi Düzenle"
+      update: Güncelle
+    new:
+      title: Yeni Hizmet Sağlayıcı
+      create: Kaydet
+      new_provider: Yeni Hizmet Sağlayıcı
+    quotes:
+      my_quotes: Randevularım
+      title: Randevularım   
+    verification:
+      send_code: Onay Kodu Gönder
+      verify_code: Kodu Onayla
+      phone_verification: Lütfen cep telefon numaranızı onaylayın
+      provider_exp: Sizi potansiyel müşterilerinize ulaştırabilmemiz için, bir kereye mahsus cep telefon numaranızı onaylamanızı rica ediyoruz.
+      provider_exp1: Numaranızı kimseyle paylaşmayacağımızdan ve hiçbir ücret ödemeyeceğinizden emin olabilirsiniz.
+  feedbacks:
+    index:
+      new: Yeni
+      hide_fixed: Düzeltilmişleri Sakla
+      show_fixed: Düzeltilmişleri Göster
+  notifications:
+    index:
+      title: Bildirimler
+  conversations:
+    index:
+      title: Sohbetler
+    show:
+      title: Sohbet
+    new:
+      title: Yeni Sohbet
+    messages:
+      time_ago: "%{time} önce"
+      seen: "Görüldü %{date}"
+    form:
+      write_a_message: "Hizmet sağlayıcılara mesaj yazarak seçtiğiniz hizmeti detaylı açıklayın..."
+      send: Mesaj Gönder 
+      send_file: Dosya Yükle
+
+  transactions:
+    successful_transaction:
+      body: Teşekkür ediyoruz.
+      header: Hizmetkutusundan hizmet satın aldınız.
+      makeanother: Tekrar Satın Al
+  references:
+    index:
+      title: Yorumlar
+    show:
+      title: Yorum
+    edit:
+      edit_reference: Yorumu Güncelle
+    new:
+      new_reference: Yeni Yorum
+      title: Yeni Yorum
+      ref1: Aldığınız hizmetin kalitesi ve fiyatına göre değerlendirdiğinizde bu hizmet sağlayıcıya 5 üzerinden kaç yıldız verirsiniz?
+      ref2: Lütfen aldığınız hizmet hakkında kısa bir yorum yazınız. Yorumunuz diğer kullanıcılarımız için çok önemlidir.
+    snippet:
+      positives:
+        zero: 0 pozitif
+        one: "%{count} pozitif"
+        other: "%{count} pozitif"
+      negatives:
+        zero: 0 negatif
+        one: "%{count} negatif"
+        other: "%{count} negatif"
+    form:
+      write_a_reference: Lütfen yazınız..
+      pricerating: dsad sa
+  javascript:
+    no_quotes_found: Teklif bulunamadı
+    an_error_occurred: Ops! Adres ararken bir hata oluştu.
+    not_found: Adres Bulunamadı
+    zero_results: Sonuç Yok
+  provider_mailer:
+    registration_email:
+      subject: Hizmetkutusu hizmet sağlayıcısı oldunuz.
+      body_title: "Merhaba, %{username}"
+      body_subtitle: Bizimle çalışmayı seçtiğiniz için teşekkürler.  
+      body_content: Profilinizi düzenlemek için lütfen Hizmetkutusu'na giriş yapınız. Fiyatlarım sayfasından fiyatlarınızı düzenleyebilir, Ajandam sayfasından müşterilerinize randevu verebilir ve bizim getirdiğimiz randevuları görebilirsiniz. Sizi gelişmelerden eposta ve sms yoluyla haberdar ediyor olacağız.
+      body_callout: Hizmetkutusu ile iş potansiyelinizi arttıracağınıza inanıyor, işlerinizde başarılar diliyoruz.
+      body_link_title: Burdan profilinize erişebilirsiniz. Facebook ile veya şifrenizle giriş yaparak profilizde düzenleme yapabilirsiniz.
+      body_link_title_with_pass: "Epostanız: %{email}, Şifreniz: %{admin_password}. Bu bilgiler ile veya epostanıza kayıtlı Facebook hesabınız ile hizmetkutusu.com adresine girebilirsiniz."
+    new_quote_email:
+      subject: Potansiyel müşteriniz sizden randevu aldı.
+      body_title: "Merhaba, %{username}"
+      body_subtitle: Potansiyel müşteriniz sizden randevu aldı. Lütfen randevu saatinden önce kendisinden teyit alınız ve randevuda değişiklik olursa -Ajandam- ekranından güncelleyiniz.
+      body_callout: "Rendevu detaylarını görmek için lütfen şu linki kullanınız."
+      body_link_title: Burdan randevu detaylarına erişebilirsiniz
+    return_quote_email:
+      subject: Mevcut müşteriniz sizden randevu aldı.
+      body_title: "Merhaba, %{username}"
+      body_subtitle: Potansiyel müşteriniz sizden randevu aldı. Lütfen randevu saatinden önce kendisinden teyit alınız ve randevuda değişiklik olursa -Ajandam- ekranından güncelleyiniz.
+      body_callout: "Rendevu detaylarını görmek için lütfen şu linki kullanınız."
+      body_link_title: Randevu Detayları
+    credit_email:
+      subject: Hizmetkutusu krediniz bitmiştir.
+      body_title: "Merhaba, %{username}"
+      body_subtitle: Hizmetkutusu krediniz bitmiştir. Bize olan ilginiz için teşekkür ediyoruz.
+      body_content: Yeni kredi satın almak için Hizmetlkutusuna girereken anamenüden "Ödeme İşlemlerim" bölümüne giriniz. 
+      body_callout: Ödeme İşlemlerim bölümüne girmek için şu linki de kullanabilirsiniz.
+      body_link_title: Ödeme İşlemlerim
+  user_mailer:
+    new_quote_email:
+      subject: Hizmetkutusu ile randevu aldınız.
+      body_title: "Merhaba, %{username}"
+      body_subtitle: Hizmetkutusu ile randevu aldığınız için teşekkürler. Randevunuzda değişiklik varsa randevu saatinden 24 saat önce değiştirebilir veya istediğiniz zaman randevunuzu iptal edebilirsiniz.
+      body_callout: "Hizmet sağlayıcının iletişim bilgilerini öğrenmek ve diğer rendevu detaylarını görmek için lütfen aşağıdaki linki kullanınız."
+      body_link_title: Randevu detaylarına erişin.
+    comment_email:
+      subject: Aldığınız hizmet hakkında şu kısa soruyu cevaplayın ve Ipad çekilişine katılın 
+      body_subtitle: Hizmetkutusunu tercih ettiğiniz için teşekkürler. Aldığınız hizmetten memnun kaldığınızı umuyoruz. 
+      body_content: Sadece şu kısa soruyu cevaplayarak hemen ipad çekilişine katılabilir, hizmetkutusu puanınızı arttırarak farklı hediyeler kazanabilir ve diğer hizmet alan kişilere yardımcı olabilirisiniz.
+      body_callout: "Hizmet kalitesi ve fiyata göre değerlendirdiğinizde size verilen hizemete 5 üzerinden kaç puan verirsiniz ve yorumunuz ne olur?"
+      body_link_title: Cevap Verin
+    invitation_email:
+      subject: Hizmetkutusu'nu kullanmaya davet edildiniz.
+      body_title: "Merhaba, %{username}"
+      body_subtitle: "%{provider} sizi Hizmetkutusu'nu kullanmaya davet etti. Hizmetkutusu ile fiyat karşılaştırması yapabilir ve hizmet sağlayıcınızdan randevu alabilirsiniz." 
+      body_content: "Hizmetkutusu'na Facebook ile girerek profilinize anında erişebilirsiniz. Facebook kullanmak istemiyorsanız üye olurken lütfen  %{otp}  kodunu kullanınız."
+      body_link_title: Buradan Hizmetkutusuna Giriş Yapabilirsiniz. 
+    add_customer_email:
+      subject: Hizmet sağlayıcınız sizi müşterisi olarak ekledi
+      body_title: "Merhaba, %{username}"
+      body_subtitle: "%{provider} sizi müşterisi olarak ekledi. Artık kendisinin fiyatlarına ve randevu takvimine kolaylıkla erişebilir, kampanyalarından haberdar olabilirsiniz." 
+      body_content:: "Kendisinin profiline erişmek ve fiyat almak lütfen aşağıdaki linke tıklayın."
+      body_link_title: Hizmet Sağlayıcım
+    welcome_email:
+      subject: Hizmetkutusu'na hoşgeldiniz. 
+      body_subtitle: Hizmetkutusuna hoşgeldiniz.  
+      body_content: Hizmetkutusu ile bulunduğunuz yerdeki hizmet sağlayıcıları karşılaştırabilir, kendilerinden fiyat ve randevu alabilirsiniz. Ayrıca hizmet verebileceğinize inandığınız herhangi bir konuda hizmet sağlayıcımız olmayı da düşünebilirsiniz.
+      body_callout: Hizmet denildiğinde bizi hatırlayacağınıza inanıyor, sağlıklı ve mutlu günler diliyoruz. 
+      body_link_title: Buraya Tıklayarak yeni fiyat alabilirsiniz.
+      body_link_title_with_pass: "Epostanız: %{email}, Şifreniz: %{admin_password}. Bu bilgiler ile veya epostanıza kayıtlı Facebook hesabınız ile hizmetkutusu.com adresine girebilirsiniz."
+      welcome_user_follow_us: Bizi Takip Edin
+      welcome_user_contactinfo: Bize Ulaşın
+      welcome_user_contact_phone: "Telefon: (0850) 3026096"
+      welcome_user_contact_address: "Adres: 1440 sok. no 21/8 Alsancak/İzmir"
+      welcome_user_contact_email: "E-posta: "
+      welcome_user_contact_email_address: "iletisim@hizmetkutusu.com"
+      welcome_user_contact_web: "Web: "
+      welcome_user_contact_web_address: "hizmetkutusu.com"
+      welcome_user_terms: Kullanım Şartları
+      welcome_user_privacy: Gizlilik Politikası 
+      welcome_user_unsubscribe: Üyelikten Çık
+    pass_reset:
+      subject: Hizmetkutusu şifrenizi tekrar oluşturmak istediniz.
+      pass_reset_head: Şifrenizi tekrar oluşturmak istediniz.
+      pass_reset_body1: Lütfen aşağıdaki linke tıklayın.
+      pass_reset_link_button: Şifremi Tekrar Oluştur 
+  password_resets:
+    email_sent: Şifrenizi yeniden oluşturmanız için e-postanıza bir link gönderdik. Lütfen epostanızı kontrol ediniz.
+    expired: E-postanıza gönderdiğimiz linkşn süresi geçmiştir. Lütfen tekrar şifre oluşturunuz.
+    password_has_been_reset: Şifrenizi yeniden oluşturduk. Giriş yapabilirsiniz.
+    error_in_password_reset: Şifrenizi oluştururken bir hata oldu. Lütfen tekrar deneyiniz veya bizimle iletişime geçiniz.
+    
+      
+
+      
+    
+

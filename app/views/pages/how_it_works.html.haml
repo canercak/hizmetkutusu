@@ -1,0 +1,143 @@
+= render 'shared/modal_app_score'
+- title t('.title')
+.full-block.upper-page 
+  .birlestir
+    .column-14
+      %h1=t('.customer1_work_header') 
+    .column-header 
+      %p=t('.customer1_work_body') 
+      .damian.image
+        = image_tag asset_path('customer_header.png'), alt: ''
+      %p
+        %button.btn.btn-large.btn-danger.btn-customerhow1{type: "button"}=t('.customer1_more')
+        %button.btn.btn-large.btn-primary.btn-customerhow2{type: "button"}=t('.customer2_more')
+        %button.btn.btn-large.btn-info.btn-customerhow3{type: "button"}=t('.customer3_more')
+.span{id:"customerhow1_span", style:"margin-top: -25px;"}
+.full-block.anasayfa_adimlar.ilk_adim{style: "padding-top: 40px;"}
+  .birlestir
+    %h2
+      %hr.left>/          
+      =t('.customer1_more')
+      %hr.right/ 
+    .satirbasi
+      .takip-adim 01
+      .uzunyazi.body-text
+        %h3=t('.customer1_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer1_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer1_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer1_content30')
+      .image
+        = image_tag asset_path('customer_body_1.png'), alt: ''
+.full-block.anasayfa_adimlar.ikincitur
+  .birlestir
+    .satirbasi
+      .takip-adim 02
+      .uzunyazi.body-text
+        %h3=t('.customer2_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer2_content10') 
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer2_content20', appscore_modal: link_to( t('.appname_score'), '#app-score', data: { toggle: 'modal' } )).html_safe            
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer2_content30')
+      .image
+        = image_tag asset_path('customer_body_2.png'), alt: ''
+.full-block.anasayfa_adimlar
+  .birlestir
+    .satirbasi
+      .takip-adim 03
+      .uzunyazi.body-text
+        %h3=t('.customer3_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer3_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer3_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer3_content30')
+      .image
+        = image_tag asset_path('customer_body_3.png'), alt: ''
+.full-block.anasayfa_adimlar
+  .birlestir
+    .satirbasi
+      .takip-adim 04
+      .uzunyazi.body-text
+        %h3=t('.customer4_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer4_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer4_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.customer4_content30')
+      .image
+        = image_tag asset_path('provider_body_7.png'), alt: ''
+.span{id:"customerhow2_span", style:"margin-top: -25px;"}
+%a#get-hired
+.birlestir.asil_oneriler
+  %h2
+    %hr.left>/          
+    =t('.customer2_more')
+    %hr.right/ 
+  .birlestir
+    .satirbasi
+      .nasilis1
+        %h3=t('.benefits_customer_10') 
+        %p=t('.benefits_customer_20')
+      .nasilis2
+        %h3=t('.benefits_customer_30') 
+        %p=t('.benefits_customer_40')
+      .nasilis3
+        %h3=t('.benefits_customer_50') 
+        %p=t('.benefits_customer_60')
+      .nasilis4
+        %h3=t('.benefits_customer_70') 
+        %p=t('.benefits_customer_80')
+      .nasilis5
+        %h3=t('.benefits_customer_90') 
+        %p=t('.benefits_customer_100')
+.span{id:"customerhow3_span", style:"margin-top: -25px;"}
+%a#get-hired
+.birlestir.asil_oneriler
+  %h2
+    %hr.left>/          
+    =t('.how_select_provider_title')
+    %hr.right/ 
+  .birlestir
+    .satirbasi
+      .nasilis6
+        %h3=t('.how_select_provider_content10', appscore_modal: link_to( t('.appname_score'), '#app-score', data: { toggle: 'modal' } )).html_safe
+        %p=t('.how_select_provider_content20', appscore_modal: link_to( t('.appname_score'), '#app-score', data: { toggle: 'modal' } )).html_safe 
+      .nasilis6
+        %h3=t('.how_select_provider_content25')  
+        %p=t('.how_select_provider_content28')  
+      .nasilis6
+        %h3=t('.how_select_provider_content30')  
+        %p=t('.how_select_provider_content40')  
+      .nasilis6
+        %h3=t('.how_select_provider_content50')
+        %p=t('.how_select_provider_content60')
+
+  %p.footer-text
+    %button.btn.btn-large.btn-primary{href: "/quotes/new", type: "button"}=t('.customer1_work_button')  
+
+
+
+

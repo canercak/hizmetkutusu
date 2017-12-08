@@ -1,0 +1,30 @@
+.row
+  .span4
+    .map_container
+      = image_tag @quote.static_map, class: 'google-static-map', alt: ''
+      /= button_to_function "Yol Tarifi" "window.open(\"http://maps.google.com/maps?saddr=#{URI.escape("Alsancak Mh., İzmir, Türkiye")}&daddr=#{URI.escape("Karşıyaka, Bostanlı Mh., İzmir, Türkiye")}&hl=tr\")" %>
+  .span8
+    %h1.quote-title
+      %small=t('quotes.show.reservation_date') 
+      %span
+        =l(@reservation.start_date.to_datetime, format: :message)
+        -if @reservation.status != 2
+          &nbsp
+          = link_to cancel_reservation_reservation_path(@quote.provider), method: :post, data: { confirm: t('helpers.links.confirm') }, class: 'btn btn-small btn-danger' do
+            =t('quotes.show.cancel_reservation')  
+        %p
+        - if @category.business_function.onsite?
+          %small=t('quotes.show.service_place_onsite') 
+          %span= @quote.customer_address
+        - else
+          %small=t('quotes.show.service_place_remote') 
+          %span= @quote.provider.business_address
+      %p
+      %small=t('quotes.show.the_service') 
+      %span= @variation
+ 
+
+
+ 
+
+ 

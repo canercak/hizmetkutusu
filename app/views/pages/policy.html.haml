@@ -1,0 +1,47 @@
+- title t('.title')
+.row
+  .span12
+    %h1= yield :title
+    %h5.muted= t('last_modified', date: l(Time.zone.parse('11-11-2013'), format: :long))
+    %h3= t('.policy_10')  
+    %p= t('.policy_20') 
+    %p
+      = t('.policy_30') 
+      %ul
+        %li
+          %b= t('.policy_40')  
+          = t('.policy_45')  
+          %ul
+            %li
+              = t('.policy_50') 
+        %li
+          %b= t('.policy_60')  
+          = t('.policy_70')  
+          %ul
+            %li
+              = t('.policy_80') 
+            %li
+              = t('.policy_90') 
+    %h3= t('.policy_100') 
+    %p= t('.policy_110')
+    %h3= t('.policy_120') 
+    %p
+      = t('.policy_130') 
+      %ul
+        %li
+          %b= t('.policy_140')
+          = t('.policy_145')
+        %li
+          %b= t('.policy_150') 
+          = t('.policy_155') 
+    %h3= t('.policy_160')  
+    %p
+      %b= t('.policy_170') 
+      = t('.policy_175')
+    %h3= t('.policy_180') 
+    %p= t('.policy_190')   
+    %h3= t('.policy_200') 
+    %p= t('.policy_210')   
+    %h3= t('.policy_220')  
+    %p= t('.policy_230')  
+ 

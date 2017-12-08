@@ -1,0 +1,32 @@
+%table.table.table-quote{id:"tableity"}
+	%thead
+		%tr
+			%th
+				%i.fa.fa-filter
+				= Quote.human_attribute_name(:uid)
+			%th
+				%i.fa.fa-filter
+				= Quote.human_attribute_name(:created_at)
+			%th
+				%i.fa.fa-filter
+				= Quote.human_attribute_name(:customer_address)
+			%th
+				%i.fa.fa-filter
+				= Quote.human_attribute_name(:category)
+			%th
+				%i.fa.fa-filter
+				= Quote.human_attribute_name(:provider)
+			%th
+				%i.fa.fa-filter
+				= Quote.human_attribute_name(:status)
+	%tbody
+		- if quotes.present?
+			- quotes.each_with_index do |quote, index|
+				%tr.vertical-align-middle
+					%td= link_to quote.uid, quote_path(quote)
+					%td= link_to l(quote.created_at.to_datetime, format: :message), quote_path(quote)
+					%td= link_to quote.customer_address, quote_path(quote)
+					%td= link_to Variation.find_variation(quote.variation_id).join(","), quote_path(quote)
+					%td= link_to get_quote_providers(quote), quote_path(quote)
+					%td= link_to get_quote_status(quote), quote_path(quote)    
+ 

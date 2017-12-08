@@ -1,0 +1,16 @@
+- title t('.new_provider')
+.spacer
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+.row
+  .span12
+    = bootstrap_form_for @provider, html: {edit: "false", id: "reg1_form",   class: 'form-horizontal' } do |f|
+      = f.error_messages
+      = render 'form', f: f
+      .form-actions
+        = f.submit t('.create'), id: 'form1_submit', class: 'btn btn-large btn-primary', disable_with: t('helpers.disable_with')
+        %span#general-error.help-inline{style: "display:none;color: #b44337"}=t('helpers.correct') 
+    = transloadit_jquerify :reg1_form, :wait => true, :modal=>false
+= render 'shared/modal_phone_verification'     

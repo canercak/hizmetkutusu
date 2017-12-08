@@ -1,0 +1,257 @@
+az:
+  errors:
+    format: "%{message}"
+    expired: lütfen son kullanma tarihi için geçerli bir tarih giriniz.
+  mongoid:
+    models:
+      user:
+        one: Kullanıcı
+        other: Kullanıcılar
+      reference:
+        one: Yorum
+        other: Yorumlar
+      quote:
+        one: Fiyat Al
+        other: Teklif Geçmişi
+      feedback:
+        one: Geri Bildirim
+        other: Geri Bildirimler
+      notification:
+        one: Bildirimler
+        other: Bildirimler
+      conversation:
+        one: Sohbet
+        other: Sohbetler 
+      message:
+        one: Mesaj
+        other: Mesajlar
+      provider:
+        one: Hizmet Sağlayıcı
+        other: Hizmet Sağlayıcılar
+    attributes:
+      user:
+        email: Eposta
+        name: Adı
+        facebook_verified: Facebook Onaylı
+        app_verified: Hizmetkutusu Onaylı
+        about: Hakkında
+        username: Kullanıcı Adı
+        gender: Cinsiyeti
+        age: Yaşı
+        locale: Konuştuğum Dil
+        gender_male: Erkek
+        gender_female: Bayan
+        birthday: Birthday
+        education: Eğitimi
+        work: İşi    
+        time_zone: Zaman Dilimi
+        send_email_messages: Mesajınız Var
+        send_email_statistics: Kullanım istatistiklerim hakkında
+        send_email_newsletter: Aylık haber dergimiz çıktığında
+        send_email_references: Kullanıcı Yorumları
+        credits_remaining: Kredi Miktarım
+        add_credits: Kredi Ekle
+      transaction:
+        date: Ödeme Tarihi
+        type: Ödeme Türü
+        ammount: TL Miktarı
+        success: Durumu
+      feedback:
+        type: Türü
+        status: Durumu
+        message: Mesaj
+        updated_at: Son düzenleme
+        url: URL
+      quote:
+        customer_address: Hizmetin Verileceği Konum
+        category: Almak İstediğiniz Hizmet
+        description: Hizmetin Kısa Açıklaması
+        created_at: Tarihi
+        status: Durumu
+        selectedproviders: Seçilen Hizmet Sağlayıcılar
+        title: Başlık
+      reference:
+        body: Mesaj
+        rating: Puanlama
+        rating_negative: Hayır
+        rating_positive: Evet
+      provider:
+        business_address: İş Yerinizin Haritadaki Konumu       
+        officialname: Ticari Ünvanınız*
+        business_description: Yaptığınız İşini Tanıtımı*
+        business_address: İş Adresinizin Konumu*
+        business_type: Şirket Türünüz*
+        tax_business_name: Adınız ve Soyadınız*
+        tax_office: Vergi Daireniz*
+        tax_number: TC Kimlik Numaranız*
+        pin: TC Kimlik Numaranız
+        mobile_phone: Cep Telefonunuz
+        error_label: hatalı kod girdiniz.
+        info_label: lütfen cep telefonunuza gelen onay kodunu yazınız
+    errors:
+      format: "%{message}"
+      models:
+        user:
+          attributes:
+            quotes:
+              associated:
+                blank:ddsds
+            providers:
+              associated:
+                blank:ddsds
+            feedbacks :
+              associated:
+                blank:aaa
+            transactions:
+              associated:
+                blank:aaa
+            conversations:
+              associated:
+                blank:aaa
+            notifications:
+              associated:
+                blank:aaa
+            email:
+              invalid: geçerli eposta değil
+        quote:
+          attributes:
+            reference:
+              associated: dasdsa
+            providers:
+              associated: dasdsa
+            conversations:
+              associated: dasdsa
+        provider:
+          attributes:
+            provider_image:
+              integrity: aaaa
+            quotes:
+              associated: dasdsa
+            workdones:
+              associated: dasdsa
+            references:
+              associated: dasdsa
+            providers:
+              associated: dasdsa
+            conversations:
+              associated: dasdsa
+            officialname:
+              presence: lütfen ticari ünvanınızı giriniz
+              too_long: lütfen en fazla 50 karakterlik bir ünvan giriniz.
+              too_short: lütfen en az 5 karakterlik bir ünvan giriniz.
+            business_description:
+              presence: lütfen verdiğiniz hizmetler hakkında kısa bir açıklama giriniz.
+              too_long: girdiğiniz açıklama en fazla 400 karakter olmalıdır.
+              too_short: girdiğiniz açıklama en az 20 karakter olmalıdır.
+            provider_image:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            provider_image1:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            provider_image2:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            provider_image3:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            certificate_image1:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            certificate_image2:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            licence_image1:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            licence_image2:
+              integrity:
+                blank: lütfen profil resminizi seçiniz.
+              processing:
+                blank: lütfen profil resminizi seçiniz.
+              file_size:
+                blank: lütfen profil resminizi seçiniz.
+            category:
+              blank: lütfen verdiğiniz hizmetleri seçiniz
+              presence: lütfen verdiğiz hizmetleri seçiniz
+            tax_office:
+              presence: lütfen vergi dairenizi giriniz
+              blank: lütfen vergi dairenizi giriniz
+            tax_business_name:
+              presence: lütfen şirketinizin ticari ünvanını giriniz.
+              presence: lütfen alanı doldurunuz
+            tax_number:
+              presence: lütfen vergi numaranızı giriniz
+              blank: lütfen vergi numaranızı giriniz
+            business_address:
+              presence: lütfen iş yerinizin adresini yazarak haritadan seçildiğinden emin olunuz
+          messages:
+            wrong_size: "yanlış boyut (%{file_size} mb olmalıdır)"
+            size_too_small: "boyut çok küçük (az az %{file_size} mb olmalıdır)"
+            size_too_big: "boyut çok büyük (en fazla %{file_size} mb olmalıdır)"
+        conversation:
+          attributes:
+            user_ids:
+              already_exists:  
+        reference:
+          attributes:
+            user:
+              yourself: kendinize referans bırakamazsınız!
+              associated: a
+            referencing_user_id:
+              already_present: bu kullanıcıya önceden referans bıraktınız
+  activemodel:
+    attributes:
+      credit_card:
+        first_last_name: Adınız ve Soyadınız
+        write_amount: Miktarı Giriniz
+        expiry_date: Son Kullanma Tarihi
+        number: Kredi Kartı Numaranız
+        verification_value: Güvenlik Kodu
+    errors:
+      models:
+        credit_card:
+          attributes:
+            how_many:
+              blank: lütfen ödemek istediğiniz miktarı boş bırakmayınız.
+              not_a_number: lütfen ödemek istediğiniz miktara bir numara giriniz.
+            first_name:
+              blank: lütfen adınızı giriniz.
+            last_name:
+              blank: lütfen soyadınızı giriniz.
+            number:
+              blank: lütfen kredi kartı numaranızı giriniz.
+            verification_value:
+              blank: lütfen güvenlik numaranızı giriniz
+        login:
+          attributes:
+            email:
+              invalid: geçerli bir eposta değil

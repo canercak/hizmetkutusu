@@ -1,0 +1,7 @@
+.container
+  .page-header
+    %h1=t('transactions.successful_transction.title')  
+    %h2
+      %small=t('transactions.successful_transction.body') 
+  %p.lead
+    = link_to t('transactions.successful_transction.makeanother'), transaction_url

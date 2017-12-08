@@ -1,0 +1,13 @@
+- title t('.title')
+.row
+  .span12
+    = render 'shared/flash_messages'
+.row
+  .span12
+    %h1=t('.my_appointments')
+    %p.help-block 
+      %small
+        =t('.my_appointments_exp')
+    =render "events/calendar" 
+ 
+  

@@ -1,0 +1,20 @@
+%table.table.table-transaction
+  %thead
+    %tr
+      %th= Transaction.human_attribute_name(:date)
+      %th= Transaction.human_attribute_name(:type)
+      %th= Transaction.human_attribute_name(:amount)
+      -if current_user.admin?
+        %th= t('flash.admin.users.success.payments')
+  %tbody
+    - transactions.each_with_index do |transaction, index|
+      %tr.vertical-align-middle
+        %td= l(transaction.created_at.to_datetime, format: :message)
+        %td=transaction.type          
+        %td=transaction.amount 
+        -if current_user.admin?        
+          %td.btn-toolbar              
+            =link_to "/transactions/refund_transaction?token=#{transaction.transaction_token}&id=#{transaction.user_id}", class: 'btn btn-small btn-primary' do
+              %i.icon-star
+              =t('flash.admin.users.success.refund_transaction')  
+

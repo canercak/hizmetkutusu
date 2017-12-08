@@ -1,0 +1,54 @@
+= transloadit :image_resize
+.fileupload.fileupload-new.pull-left{style: "padding-right: 5px;", "data-provides" => "fileupload" }
+  .fileupload-new.thumbnail{:style => "width: 130px; height: 130px;"} 
+    -if @provider.provider_images.present?
+      - if @provider.provider_images["certificate_image1"].present?
+        %img{ :src => @provider.provider_images["certificate_image1"][0]}/
+  .fileupload-preview.fileupload-exists.thumbnail{:style => "width: 130px; height: 130px;"}
+  %div
+    %span.btn.btn-file
+      %span.fileupload-new{:id => "selectbutton"}
+        =t('oda_kayit')
+      %span.fileupload-exists
+        =t('oda_kayit')      
+      =file_field_tag "certificate_image1" 
+.fileupload.fileupload-new.pull-left{style: "padding-right: 5px;", "data-provides" => "fileupload" }
+  .fileupload-new.thumbnail{:style => "width: 130px; height: 130px;"} 
+    -if @provider.provider_images.present?
+      - if @provider.provider_images["certificate_image2"].present?
+        %img{ :src => @provider.provider_images["certificate_image2"][0]}/
+  .fileupload-preview.fileupload-exists.thumbnail{:style => "width: 130px; height: 130px;"}
+  %div
+    %span.btn.btn-file
+      %span.fileupload-new{:id => "selectbutton"}
+        =t('ustalik_belge')
+      %span.fileupload-exists
+        =t('ustalik_belge')      
+      =file_field_tag "certificate_image2"
+.fileupload.fileupload-new.pull-left{style: "padding-right: 5px;", "data-provides" => "fileupload" }
+  .fileupload-new.thumbnail{:style => "width: 130px; height: 130px;"} 
+    -if @provider.provider_images.present?
+      - if @provider.provider_images["certificate_image3"].present?
+        %img{ :src => @provider.provider_images["certificate_image3"][0]}/
+  .fileupload-preview.fileupload-exists.thumbnail{:style => "width: 130px; height: 130px;"}
+  %div
+    %span.btn.btn-file
+      %span.fileupload-new{:id => "selectbutton"}
+        =t('egitim_sertifika')
+      %span.fileupload-exists
+        =t('egitim_sertifika')      
+      =file_field_tag "certificate_image3"
+.fileupload.fileupload-new.pull-left{style: "padding-right: 5px;", "data-provides" => "fileupload" }
+  .fileupload-new.thumbnail{:style => "width: 130px; height: 130px;"} 
+    -if @provider.provider_images.present?
+      - if @provider.provider_images["certificate_image4"].present?
+        %img{ :src => @provider.provider_images["certificate_image4"][0]}/
+  .fileupload-preview.fileupload-exists.thumbnail{:style => "width: 130px; height: 130px;"}
+  %div
+    %span.btn.btn-file
+      %span.fileupload-new{:id => "selectbutton"}
+        =t('adli_sicil')
+      %span.fileupload-exists
+        =t('adli_sicil')      
+      =file_field_tag "certificate_image4"
+ 

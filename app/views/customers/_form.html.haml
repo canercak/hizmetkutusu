@@ -1,0 +1,10 @@
+.control-group
+	= f.label :phn, "Telefon",  class: 'control-label'
+	.controls 
+		= f.default_tag :text_field, :phone, placeholder: '05XX XXXXXXX', value: (@user.telephone if @user.present?), id: 'customer_phone' ,:class => "{mask:'(0569) 9999999'} input-medium", :alt=> "(0569) 9999999'"
+.control-group
+	= f.text_field :email, value: @user.email
+.control-group
+	= f.text_field :name, value: @user.name
+.control-group
+	= f.select :person_type, options_for_select(person_types, (@customer.person_type.present? ? @customer.person_type : person_types[(params[:format].to_i || 0)])), class: 'input-medium'

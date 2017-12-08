@@ -1,0 +1,125 @@
+:css
+	.bigdrop.select2-container .select2-results {max-height: 300px;}
+	.bigdrop .select2-results {max-height: 300px;}
+	.bigdrop .select2-choices {min-height: 200px; max-height: 300px; overflow-y: auto;}
+
+%legend= t('.business_information')
+%fieldset
+	= f.text_field :officialname, class: 'input-xxlarge'
+	.controls
+		%p.help-block{style:"margin-bottom: 15px; margin-top: -20px;"}
+			%small
+				= t('official_name_placeholder') 
+	= hidden_field_tag :provider_id, @provider._id
+	.control-group
+		= f.label :categories, t('.category'), id: "categories_label", class: 'control-label'
+		= hidden_field_tag :categories
+		.controls 
+			%input{name: "search", id: "search_tree", placeholder: t('please_select_or_search'), class: "input-large"}/
+			%button#btnResetSearch{disabled: "disabled"} ×
+			%span#matches 
+			#tree
+	.control-group
+		.controls
+			%p.help-block{style:"margin-bottom: 0px; margin-top: -20px;"} 
+				%small
+					= t('please_enter_work_type_provider')
+	= f.text_area :business_description, :id =>"business_description", :rows => "4"
+	.controls
+		%p.help-block{style:"margin-bottom: 15px; margin-top: -20px;"}
+			%small
+				= t('business_description_placeholder') 
+	.control-group
+		= label_tag :business_photos, t('.business_photos'), class: 'control-label'
+		.controls
+			= render partial: 'file_upload', :locals => {f: f}
+			%span#file-error.help-inline{style: "display:none;color: #b44337"}=t('.file_presence_error')  
+	.control-group
+		.controls
+			%p.help-block{style:"margin-bottom: 0px; margin-top: -20px;"} 
+				%small
+					= t('image_info')
+%legend= t('.address_information')
+%fieldset 
+	.control-group
+		= f.text_field :business_phone, :value=> @provider.business_phone.present? ? @provider.business_phone : "" ,  placeholder: '05XX XXXXXXX', :id=>"contact_phone", :class => "{mask:'(0569) 9999999'}", :alt=> "(0569) 9999999'"
+		.controls
+			%p.help-block{style:"margin-bottom: 15px; margin-top: -20px;"}
+				%small
+					= t('.business_phone_info')
+	.control-group
+		= f.text_field :office_phone, :value=> @provider.office_phone.present? ? @provider.office_phone : "" ,  placeholder: '0XXX XXXXXXX', :id=>"office_phone", :class => "{mask:'(0999) 9999999'}", :alt=> "(0999) 9999999'" 
+	.control-group
+		= f.text_field :website, :value=> @provider.website.present? ? @provider.website : ""   
+	.control-group
+		= f.text_field :business_email, :value=> (@provider.business_email || current_user.email )    
+		.controls
+			%p.help-block{style:"margin-bottom: 15px; margin-top: -20px;"}
+				%small
+					= t('.business_email_info') 
+	.control-group
+		= label_tag :real_address, t('.real_address'), class: 'control-label'
+		.controls
+			= render partial: 'address_select'
+			%p.help-block 
+				%small
+					= t('.real_address_info') 
+	.control-group
+		= f.text_field :business_address,  class: 'input-block', id: 'business_address' 
+		.controls
+			%p.help-block{style:"margin-bottom: 15px; margin-top: -20px;"}
+				%small
+					= t('.business_address_info') 
+			.map_container
+				#providermap
+	= hidden_field_tag :latitude, id: 'latitude'
+	= hidden_field_tag :longitude, id: 'longitude'
+	= hidden_field_tag :otp
+	= hidden_field_tag :hidden_phone, @provider.business_phone.present? ? @provider.business_phone : ""
+	= hidden_field_tag :current_phones, @current_phones 
+%legend= t('.social_information')
+%fieldset 
+	= render partial: 'social_select'
+%legend= t('.tax_information')
+%fieldset
+	= f.select :business_type, options_for_select(business_type_options,@provider.business_type),{},:style => "width:150px"
+	#taxpersonal
+		= f.text_field :tax_fullname, :class=>"input-xlarge", :value=> @provider.tax_fullname
+		= f.text_field :tax_pin,  :class=>"input-medium {mask:'99999999999'}", :alt=> "99999999999", :value=> @provider.tax_pin 
+		.control-group{id:"tax_helper"}
+			.controls
+				%p.help-block{style:"margin-bottom: 0px; margin-top: -10px;"} 
+					%small
+						= t('tax_info')
+	#taxbusiness
+		= f.text_field :tax_business_name, :class=>"input-xxlarge",  :value=> @provider.tax_business_name
+		= f.text_field :tax_office, :class=>"input-large", :value=> @provider.tax_office
+		= f.text_field :tax_number, :class=>"input-medium {mask:'9999999999'}", :alt=> "9999999999",  :value=> @provider.tax_number
+		.control-group
+			.controls
+				%p.help-block{style:"margin-bottom: 0px; margin-top: -10px;"} 
+					%small
+						= t('tax_info')
+	.control-group
+		= label_tag :business_hours, t('.business_hours'), class: 'control-label'     
+		.controls
+			#business_hours_selector
+			= hidden_field_tag :business_hours, ActiveSupport::JSON.encode(@provider.business_hours)
+	.control-group
+		.controls{style:"margin-top: -10px;"} 
+			%help-block
+				%small
+					= t('.business_hours_info') 
+%legend= t('.qualifications')
+%fieldset
+	.control-group
+		= label_tag :certificates, t('.certificates'), class: 'control-label'
+		.controls
+			= render partial: 'file_upload_qualification', :locals => {f: f}
+	.control-group
+		.controls
+			%p.help-block{style:"margin-bottom: 0px; margin-top: -20px;"} 
+				%small
+					= t('certificate_info')
+
+

@@ -1,0 +1,8 @@
+- content_for :head do
+  - fb_namespace = APP_CONFIG.facebook.namespace
+  %meta{ property: 'fb:app_id', content: APP_CONFIG.facebook.app_id }
+  %meta{ property: 'og:url', content: quote_url(quote) }
+  %meta{ property: 'og:site_name', content: APP_CONFIG.app_name }
+  %meta{ property: 'og:type', content: "#{fb_namespace}:quote" }
+  %meta{ property: 'og:image', content: quote.static_map }
+ 

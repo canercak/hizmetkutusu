@@ -1,0 +1,26 @@
+.container
+  %footer
+    %ul.unstyled.pull-left
+      %li
+        /- if logged_in?
+        = link_to logged_in? ? main_app.new_quote_path : root_path, class: 'brand-small' do
+          %span.hidden-phone= APP_CONFIG.app_name
+        %li
+          %i.fa.fa-flag
+          = link_to t('about1'), main_app.about_path
+        %li
+          %i.fa.fa-arrow-down
+          = link_to t('how_it_works1'), main_app.how_it_works_path
+        %li
+          %i.fa.fa-arrow-up
+          = link_to t('how_it_works_provider1'), main_app.how_it_works_provider_path
+        %li
+          %i.fa.fa-question
+          = link_to t('faq1'), main_app.faq_path
+        / %li
+        /   %i.fa.fa-bell
+        /   = link_to t('blog1'), main_app.blog_path
+        %li
+          %i.fa.fa-envelope
+          = link_to t('contact1'), main_app.contact_path
+ 

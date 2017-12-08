@@ -1,0 +1,71 @@
+- title t('.title')
+.row
+  .span12
+    %h1= yield :title
+    %h5.muted= t('last_modified', date: l(Time.zone.parse('11-11-2013'), format: :long))
+    %h3= t('.terms_10')  
+    %p= t('.terms_20') 
+    %h3= t('.terms_30') 
+    %p= t('.terms_40')
+    %h3= t('.terms_50')  
+    %p= t('.terms_60')   
+    %h3= t('.terms_70') 
+    %p= t('.terms_80')
+    %h3= t('.terms_130') 
+    %p= t('.terms_140') 
+    %h3= t('.terms_90') 
+    %p= t('.terms_100') 
+    %h3= t('.terms_110') 
+    %p= t('.terms_120') 
+    %h3= t('.terms_customer') 
+    %p
+      = t('.terms_customer10')
+      %ul
+        %li
+          %b= t('.terms_customer20')
+        %li
+          %b= t('.terms_customer30')
+        %li
+          %b= t('.terms_customer40') 
+        %li
+          %b= t('.terms_customer50') 
+        %li
+          %b= t('.terms_customer60') 
+    %p
+      = t('.terms_customer200') 
+    %h3= t('.terms_provider') 
+    %p
+      = t('.terms_provider10') 
+      %ul
+        %li
+          %b= t('.terms_provider20')
+        %li
+          %b= t('.terms_provider30') 
+        %li
+          %b= t('.terms_provider40')
+        %li
+          %b= t('.terms_provider50') 
+        %li
+          %b= t('.terms_provider60')
+        %li
+          %b= t('.terms_provider70') 
+    %p
+      = t('.terms_provider80')
+      %ul
+        %li
+          %b= t('.terms_provider90')
+        %li
+          %b= t('.terms_provider100')
+        %li
+          %b= t('.terms_provider110') 
+        %li
+          %b= t('.terms_provider115') 
+        %li
+          %b= t('.terms_provider120') 
+        %li
+          %b= t('.terms_provider130') 
+    %p
+      = t('.terms_provider300') 
+ 
+ 
+ 

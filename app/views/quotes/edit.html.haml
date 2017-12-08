@@ -1,0 +1,10 @@
+- title t('.title')
+= render 'header'
+.spacer
+.row
+  .span12
+    = bootstrap_form_for @quote  do |f|
+      = f.error_messages
+      = render 'form', f: f
+      .form-actions
+        = f.submit class: 'btn btn-primary', disable_with: t('helpers.disable_with')

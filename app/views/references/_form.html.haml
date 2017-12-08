@@ -1,0 +1,15 @@
+.control-group
+  = f.label :rating, t('references.new.ref1'), class: 'control-label'
+  %p
+  .controls
+    #ratingstarsadd{"data-average" => @reference.rating, "data-id" => "star"}
+    =hidden_field_tag :ratehidden,@reference.rating
+%br
+.control-group
+  = f.label :comment, t('references.new.ref2'), class: 'control-label'
+  %p
+  .controls
+    = text_area_tag :comment,@reference.comment,:cols => "6", :rows => "6", :class=>"input-xlarge"
+ 
+
+

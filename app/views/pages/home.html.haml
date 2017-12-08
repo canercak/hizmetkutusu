@@ -1,0 +1,160 @@
+!!!
+%html{ lang: I18n.locale.to_s }
+	%head
+		%title= t('meta_description', appname: APP_CONFIG.app_name)
+		%meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' }
+		= csrf_meta_tags
+		= tag :meta, name: 'description', content: t('meta_description', appname: APP_CONFIG.app_name)
+		/ Le HTML5 shim, for IE6-8 support of HTML elements
+		/[if lt IE 9]
+			= javascript_include_tag "https://html5shim.googlecode.com/svn/trunk/html5.js"
+
+		= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700|Pacifico', 'application', media: 'all'
+		/ Touch icons
+		%link{ href: asset_path('apple-touch-icon.png'), rel: 'apple-touch-icon' }
+		%link{ href: asset_path('apple-touch-icon-72x72.png'), rel: 'apple-touch-icon', sizes: '72x72' }
+		%link{ href: asset_path('apple-touch-icon-114x114.png'), rel: 'apple-touch-icon', sizes: '114x114' }
+		%link{ href: asset_path('apple-touch-icon-144x144.png'), rel: 'apple-touch-icon', sizes: '144x144' }
+
+		/ Placed at the top of the document 'cause of turbolinks
+		= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry,places', 'application'
+		= javascript_include_tag 'application'
+		= analytics_init if APP_CONFIG.google_analytics_id.present?
+
+	/ TODO DISABLE TURBOLINKS
+	
+	%body.home-page-body
+		#fb-root
+		#home-top-section 
+			.learn-more-container.hidden-phone.text-center
+				%input#landing_search 
+				%br
+				%br
+				%br
+				%br
+				%a.btn.btn-large.btn-learn-more{ href: '#' }= t('.learn_more')
+			#home-top-section-background
+				= image_tag asset_path('dash-quotes.jpg'), alt: ''
+			#home-top-section-container.container
+				= render 'shared/flash_messages'
+				%h1.pacifico
+					= APP_CONFIG.app_name
+					- if APP_CONFIG.demo_mode
+						%small
+							demo
+				%h2= t('.tagline')
+				= render 'facebook_login' 
+		.container
+			.row
+				.span12
+					#learn-more 
+						.ribbon-container
+							.ribbon
+								.ribbon-content{style:"text-align: center;"}
+									%h2= t('.what_is_appname', appname: APP_CONFIG.app_name)
+ 
+						%p.lead=  t('meta_description', appname: APP_CONFIG.app_name)
+			%br
+			#home-number-snippets
+				.row
+					.span4
+						%i.icon-number-style{style: "font-weight: 800; font-family:Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif"} 1
+						%p
+						%h2= t('.step1_title')
+						%p.stepcontent= t('.step1_content')
+					.span4
+						%i.icon-number-style{style: "font-weight: 800; font-family:Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif"} 2
+						%p
+						%h2= t('.step2_title')
+						%p.stepcontent= t('.step2_content')
+					.span4
+						%i.icon-number-style{style: "font-weight: 800; font-family:Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif"} 3           
+						%p
+						%h2= t('.step3_title')
+						%p.stepcontent= t('.step3_content')
+			.row
+				.span12
+					.ribbon-container
+						.ribbon
+							.ribbon-content{style:"text-align: center;"}
+								%h2= t('.main_features', appname: APP_CONFIG.app_name)
+			#home-text-snippets
+				.row
+					.span4
+						%i.icon-thumbs-up.icon-home-style
+						%h3= t('.get_quality_service_title')
+						%p.snippletcontent= t('.get_quality_service_content')
+					.span4
+						%i.fa-icon.fa-try.icon-home-style
+						%h3= t('.get_quality_for_less_title')
+						%p.snippletcontent= t('.get_quality_for_less_content')
+					.span4
+						%i.fa-icon.fa-sort-amount-asc.icon-home-style
+						%h3= t('.multiply_choices_title')
+						%p.snippletcontent= t('.multiply_choices_content')
+				.row
+					.span12.spacer.hidden-phone
+					.span4
+						%i.icon-magic.icon-home-style
+						%h3= t('.thats_easy_title')
+						%p.snippletcontent= t('.thats_easy_content', appname: APP_CONFIG.app_name)
+					.span4
+						%i.icon-star.icon-home-style
+						%h3= t('.its_free_title')
+						%p.snippletcontent= t('.its_free_content', appname: APP_CONFIG.app_name)
+					.span4
+						%i.fa-smile-o.icon-home-style
+						%h3= t('.nese_title')
+						%p.snippletcontent= t('.nese_content', appname: APP_CONFIG.app_name)
+			-if @reviews.count > 0
+				.row
+					.span12
+						.ribbon-container
+							.ribbon
+								.ribbon-content{style:"text-align: center;"}
+									%h2= t('.what_users_say')
+				#home-text-snippets
+					.row
+						.span12
+							#owl-demo.owl-carousel.owl-theme
+								- @reviews.each_with_index do |review,index|
+									.span3
+										%img.img-circle{:alt => "Avatar", :height => "60", :src => "#{review.user_image}", :width => "60"}/
+										.review{itemprop: "review", itemscope: '', itemtype: "http://schema.org/Review"}
+											%span{itemprop: "author", itemscope: '', itemtype: "http://schema.org/Person"}
+												.name{itemprop: 'name'}
+													%h3=review.firstname
+										.rate{itemprop: "reviewRating", itemscope: '', itemtype: "http://schema.org/Rating"}
+											.ratingstars{style:"margin-left:auto;margin-right:auto", "data-average" => review.rating, "data-id" => "star"}  
+											%meta{content: review.rating, itemprop: "ratingValue"}
+											%meta{content: "1", itemprop: "worstRating"}
+											%meta{content: "5", itemprop: "bestRating"}
+										%p{itemprop: "reviewBody"}
+											.snippletcontent=review.comment
+										%h6
+											%meta{content: review.created_at.strftime("%F"), itemprop: "datePublished"}
+												=t('conversations.messages.time_ago', time: distance_of_time_in_words(review.created_at, Time.now.utc))               
+											%span{itemprop: "itemReviewed", itemscope: "", itemtype: "http://schema.org/Thing"}
+												%span{itemprop: "name"}=review.category_name
+												=t("users.show.category")   
+							.avarage{itemprop: "aggregateRating", itemscope: "", itemtype: "http://schema.org/AggregateRating"}
+								%span{itemprop: "reviewCount"}=@reviews.count.to_s
+								inceleme - ortalama  
+								%span.big{itemprop: "ratingValue"}=@reviewavarage
+								puan 
+			.row
+				.span12
+					.ribbon-container
+						.ribbon
+							.ribbon-content
+								%h2= t('.join_us_today')
+			.row
+				.span6
+					#facepile-container.hide
+						.fb-facepile{ data: { size: 'medium', :"max-rows" => '1' } }
+				.span6= render 'facebook_login'
+
+
+		#footer= render 'shared/footer'
+= render 'shared/modal_why_facebook'
+ 

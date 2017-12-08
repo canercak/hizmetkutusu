@@ -1,0 +1,40 @@
+- title t('.account_settings')
+.row
+	.span12
+		= render 'shared/flash_messages'
+		%h1= yield :title
+.row
+	.span12
+		= bootstrap_form_for @user, :url=> user_path(@user.id), html: {  class: 'form-horizontal',id:'reg1_form' } do |f|
+			= transloadit_jquerify :user_settings_form, :wait => true, :modal=>false
+			=hidden_field_tag :user_image, @user.user_image
+			= f.error_messages 
+			-if current_user.oauth_token.blank?
+				%legend= t('.update_pass')
+				= f.password_field :password
+				= f.password_field :password_confirmation
+			%legend= t('.profile_details')
+			-if current_user.oauth_token.present?
+				%fieldset
+					%p= t('.user_profile_details')
+			-else
+				= f.text_field :email 
+				.control-group
+					= f.text_field :telephone, :value=> @user.telephone.present? ? @user.telephone : "" ,  placeholder: '05XX XXXXXXX', :id => "contact_phone", :class => "{mask:'(0569) 9999999'}", :alt=> "(0569) 9999999'"     
+			%legend= t('.application_settings')
+			%fieldset 
+				= f.select :locale, options_for_select(APP_CONFIG.available_locales.map { |code, native_name| [ native_name, code] }, @user.locale), {}, disabled: (APP_CONFIG.available_locales.size == 1),:style => "width:120px"
+				.control-group
+					= label_tag :notification_group, t('.send_email'), class: 'control-label'
+					.controls
+						- if @user.provider? == true
+							= f.check_box :send_email_references
+						= f.check_box :send_email_statistics 
+						= f.check_box :send_email_newsletter
+						%p.help-block
+							= t('.send_email_at_address', email: content_tag(:b,current_user.email)).html_safe
+			.form-actions
+				= f.submit t('.update_profile'), class: 'btn btn-primary', id: "form1xx_submit", disable_with: t('helpers.disable_with')
+				= hidden_field_tag :hidden_phone, @user.telephone.present? ? @user.telephone : ""
+				= hidden_field_tag :current_phones, @current_phones
+ 

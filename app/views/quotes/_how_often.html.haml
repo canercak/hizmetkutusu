@@ -1,0 +1,30 @@
+%h4.freq-title Ne sıklıkta hizmeti almak istiyorsunuz?
+.btn-group.btn-group-justified.btn-group-frequency.text-center{"data-toggle" => "buttons"}
+	.btn.btn-default.btn-padded.frequency-select-div.active
+		%input#onetime.frequency-select{type: "radio", style:"display:none", value: "onetime"}/
+		.hourly-price.text-center{value: "onetime"}
+			Bir Kere
+			%hr
+			%h5
+				%span.frequency-rate $30/hour
+	.btn.btn-default.btn-padded.frequency-select-div
+		%input#every4weeks.frequency-select{type: "radio", style:"display:none", value: "every4weeks"}/
+		.hourly-price.text-center{value: "every4weeks"}
+			Her Hafta
+			%hr/
+			%h5
+				%span.frequency-rate $30/hour
+	.btn.btn-default.btn-padded.frequency-select-div
+		%input#every3weeks.frequency-select{type: "radio", style:"display:none", value: "every3weeks"}/
+		.hourly-price.text-center{value: "every3weeks"}
+			Her Ay
+			%hr/
+			%h5
+				%span.frequency-rate $30/hour
+	.btn.btn-default.btn-padded.frequency-select-div
+		%input#biweekly.frequency-select{type: "radio", style:"display:none", value: "biweekly"}/
+		.hourly-price.text-center{value: "biweekly"}
+			Her Yıl
+			%hr/
+			%h5
+				%span.frequency-rate $25/hour

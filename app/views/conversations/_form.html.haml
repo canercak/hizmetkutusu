@@ -1,0 +1,11 @@
+= bootstrap_form_for @conversation, html: {id: "conversation_form"  } do |f|
+	= transloadit :quote_file
+	= hidden_field_tag :quote_id, @quote.id if @quote
+	= f.error_messages
+	= f.fields_for Message.new do |m|
+		.input-group
+			= m.text_area :body, rows: 3, style: "width: 95%", placeholder: t('.write_a_message'), skip_label: true
+			.button-group-vertical 
+				= f.submit t('.send'), class: 'btn btn-primary', id: "send_message", disable_with: t('helpers.disable_with')
+				/=file_field_tag "upload_file" 
+				/= transloadit_jquerify :conversation_form, :wait => true, :modal=>false 

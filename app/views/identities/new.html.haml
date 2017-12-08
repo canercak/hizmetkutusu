@@ -1,0 +1,46 @@
+- title t('shared.navbar.sign_up_hk')
+.spacer
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+.row
+  .span12 
+    = form_tag "/auth/identity/register" ,  html: { class: 'form-horizontal' }  do
+      - if @identity && @identity.errors.any?
+        .error_messages
+          %h3
+            = @identity.errors.count
+            =t('shared.navbar.pass_r')
+          %ul
+            - translate_errors(@identity.errors).each do |msg|
+              %li= msg
+      .control-group
+        = label_tag :name, t('shared.navbar.name')
+        = text_field_tag :name, @identity.try(:name)
+      .control-group
+        = label_tag :name, t('shared.navbar.email')
+        = text_field_tag :email, @identity.try(:email)
+      -unless (current_user.present? && current_user.admin? == true)
+        .control-group
+          = label_tag :name, t('shared.navbar.pass')
+          = password_field_tag :password
+        .control-group
+          = label_tag :name, t('shared.navbar.passrep')
+          = password_field_tag :password_confirmation
+        .control-group
+          = label_tag :name, t('shared.navbar.otp_code')
+          = text_field_tag :otp
+        .actions= submit_tag t('shared.navbar.sign_up'), class: "btn btn-primary"
+      -else
+        .span{style:"display:none"}
+          =@number=Faker::Number.number(6)
+          .control-group
+            = label_tag :name, t('shared.navbar.pass')
+            = password_field_tag :password, @number
+          .control-group
+            = label_tag :name, t('shared.navbar.passrep')
+            = password_field_tag :password_confirmation, @number
+            =hidden_field_tag :admin_password, @number
+        .actions= submit_tag t('flash.admin.users.success.adduser'), class: "btn btn-primary"
+

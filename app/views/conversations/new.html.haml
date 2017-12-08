@@ -1,0 +1,6 @@
+- title t('.title')
+.row
+  .span12
+    %h1= yield :title
+    %p.lead= t('quotes.common.about', quote_link: link_to(@quote, quote_path(@quote)), user_link: link_to(@quote.user, user_path(@quote.user))).html_safe
+    = render 'form'

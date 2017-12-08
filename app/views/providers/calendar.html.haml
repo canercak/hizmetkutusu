@@ -1,0 +1,19 @@
+- title t('.my_appointments')
+.row
+	.span12
+		= render 'shared/flash_messages'
+.row
+	.span12
+		%h1
+			=t('.my_appointments')
+			= link_to provider_path(params[:id]), style: "float:right", class: 'btn btn-primary' do
+				Profilime Geri Dön
+		%p.help-block 
+			%small
+				=t('.my_appointments_exp') 
+		=render "events/calendar"
+		=hidden_field_tag :provider_calendar 
+		=hidden_field_tag :customer_added 
+		=hidden_field_tag :staff_added 
+		=render "events/modal_event"
+ 

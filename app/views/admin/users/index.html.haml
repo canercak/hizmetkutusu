@@ -1,0 +1,50 @@
+= title User.model_name.human(count: :lots)
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1
+      = yield :title
+      %small= @users.all.count
+    =link_to new_identity_path, class: 'btn btn-medium btn-primary' do
+      %i.icon-tag
+      =t('flash.admin.users.success.adduser')  
+  .span12
+    %table.table.table-striped
+      %thead
+        %th= User.human_attribute_name :name
+        %th= User.human_attribute_name :email
+        %th= t('providers.common.isverified')
+        %th= t('flash.admin.users.success.manageuser')
+        /%th= t('flash.admin.users.success.payments')
+      %tbody
+        - @users.each do |user, index|
+          %tr.vertical-align-middle
+            %td= link_to user, user_path(user._id)
+            %td= user.email
+            %td
+              %table.table.table-bordered
+                .input-append
+                  - user.providers.each do |provider, index|
+                    %tr
+                      %td= link_to provider.officialname, provider_path(provider)
+                      - if provider.verified == true
+                        %td= check_box_tag "active", 1, true, :disabled => true
+                      - else
+                        %td= check_box_tag "active", 1, false, :disabled => true    
+            %td.btn-toolbar
+              - if user.banned?
+                = link_to unban_admin_user_path(user.id), method: :post, data: { confirm: t('helpers.links.confirm') }, class: 'btn btn-small btn-warning' do
+                  = t('helpers.links.user.unban')
+              - else
+                = link_to ban_admin_user_path(user.id), method: :post, data: { confirm: t('helpers.links.confirm') }, class: 'btn btn-small btn-warning' do
+                  %i.icon-ban-circle
+                  = t('helpers.links.user.ban')
+                = link_to t('.login_as'), login_as_admin_user_path(user.id), method: :get, class: 'btn btn-small btn-medium'  
+            / %td.btn-toolbar              
+            /   =link_to manualcredits_admin_user_path(user.id), class: 'btn btn-small btn-danger' do
+            /     %i.icon-tag
+            /     =t('flash.admin.users.success.addcredits')  
+            /   =link_to refunds_admin_user_path(user.id), class: 'btn btn-small btn-primary' do
+            /     %i.icon-star
+            /     =t('flash.admin.users.success.refund')  
+              

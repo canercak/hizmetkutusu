@@ -1,0 +1,18 @@
+.span6
+	%h4.freq-title 1- Uygun bir gün seçiniz
+	%hr{style:"margin-top: 5px;margin-bottom: 5px"}
+		#appointment_datepicker 
+			%div 
+.span6
+	%h4.freq-title{style:"margin-top: 10px;"} 2 - Uygun bir saat seçiniz
+	%hr{style:"margin-top: 5px;margin-bottom: 5px"}
+		%b.span{id: "datetime_text", class:"datetimetext"}=l(Time.zone.now, format: :day)
+		#available-times
+			%table
+				%tbody
+					%tr
+		.span{style: 'text-align: center; padding-top: 15px'} 
+			%i 
+				%span{id: "duration_text"} 
+				
+ 

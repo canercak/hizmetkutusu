@@ -1,0 +1,38 @@
+- t('helpers.links.provider.title')
+.row
+	.span12
+		= render 'shared/flash_messages'
+		%h3
+			-if type == 1
+				=t('helpers.links.provider.my_providers')
+			-elsif type == 2
+				=t('helpers.links.provider.customer_providers')
+			-else
+				=t('helpers.links.provider.personel_providers') 
+		%table.table-striped{{style: "width: 100%;"}}
+			%thead
+				%tr
+					%th{style: "text-align: left;"}
+						= t('helpers.links.provider.businessname')
+					%th{style: "text-align: left;"}
+						= t('helpers.links.provider.isverified')
+					%th{style: "text-align: left;"}
+						= t('helpers.links.provider.quotegiven')
+					%th{style: "text-align: left;"}
+						= t('helpers.links.provider.quotedone')
+					%th{style: "text-align: left;"}
+			%tbody
+				-  user_providers.each_with_index do |provider, index|
+					%tr.vertical-align-middle
+						%td 
+							= provider.officialname
+						%td 
+							= provider.verified ? t('boolean.true') : t('boolean.false')
+						%td 
+							= provider.workdones.sum(:quotegivencount)
+						%td 
+							= provider.workdones.sum(:workdonecount)
+						%td.btn-toolbar 
+							= link_to provider_path(provider.slug), class: 'btn btn-medium btn-warning' do
+								%i.fa.fa-edit
+								= t('helpers.links.provider.details')

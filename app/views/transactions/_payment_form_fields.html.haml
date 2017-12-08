@@ -1,0 +1,56 @@
+%legend= t('.amount_you_want_to_pay')
+%fieldset
+  .control-group
+    = f.label :write_amount, class: 'control-label'
+    .controls
+      .input-prepend.input-append
+        = text_field_tag "data[how_many]",  @credit_card.how_many, :id => "credit_card_how_many", autocomplete: 'off', class: "input-mini" 
+        %span.add-on>
+          \.00 TL
+    .controls
+      %p.help-block
+        %small
+          = t('users.settings.credits_remaining_details') 
+%legend= t('.card_details')
+%fieldset
+  .control-group 
+    = f.label :first_last_name, class: 'control-label'
+    .controls
+      = f.default_tag :text_field, :first_name, class: 'input-medium'
+      = f.default_tag :text_field, :last_name, class: 'input-medium'
+  .control-group 
+    = f.label :number, class: 'control-label'
+    .controls
+      = f.default_tag :text_field, :number, class: 'input-large', autocomplete: 'off'
+  .control-group 
+    = f.label :expiry_date, class: 'control-label'
+    .controls
+      = f.default_tag :select, :month,"<option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option>".html_safe, class: 'input-xxlarge'
+      = f.default_tag :select, :year,"<option>2013</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option>".html_safe, class: 'input-xxlarge'
+  .control-group 
+    = f.label :verification_value, class: 'control-label', autocomplete: 'off'
+    .controls
+      = f.default_tag :text_field, :verification_value, class: 'input-mini'
+      
+      
+
+
+/ :javascript
+/   $("#credit_card_how_many").keyup(function(e){
+/       txtVal = $(this).val();  
+/          if($.isNumeric(txtVal) && txtVal.length>3)
+/          {
+/              $(this).val(txtVal.substring(0,3) )
+/          } 
+/   });
+/    $("#credit_card_how_many").on("keypress keyup blur",function (event) {    
+/            $(this).val($(this).val().replace(/[^\d].+/, ""));
+/             if ((event.which < 48 || event.which > 57)) {
+/                 event.preventDefault();
+/             }
+/         });
+ 
+
+
+
+   

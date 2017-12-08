@@ -1,0 +1,39 @@
+development:
+  jquery_sdk_version: 'latest'
+  auth:
+    key     : 'fdcf2ad0966611e3ad4b51fcdc1608db'
+    secret  : '9d30cf9bedd00c62403923bdca0b5d4718f2cb22'
+    duration: 1800 
+    max_size: 52428800
+
+  templates:
+    image_resize: "1eef9f7099a911e3b49785752f8b363a"
+    image_resize_user: "18550500bf2f11e39e9767eb9ac9dd04"
+    video_encode: "8f64b330a16f11e394d06b3e241b8964"
+    quote_file: "5400041013d011e4b2110d23aaf1cb58"
+test:
+  jquery_sdk_version: 'latest'
+  auth:
+    key     : 'fdcf2ad0966611e3ad4b51fcdc1608db'
+    secret  : '9d30cf9bedd00c62403923bdca0b5d4718f2cb22'
+    duration: 1800 
+    max_size: 52428800
+
+  templates:
+    image_resize: "1eef9f7099a911e3b49785752f8b363a"
+    image_resize_user: "18550500bf2f11e39e9767eb9ac9dd04"
+    video_encode: "8f64b330a16f11e394d06b3e241b8964"
+    quote_file: "5400041013d011e4b2110d23aaf1cb58"
+production:
+  jquery_sdk_version: 'latest'
+  auth:
+    key     : 'fdcf2ad0966611e3ad4b51fcdc1608db'
+    secret  : '9d30cf9bedd00c62403923bdca0b5d4718f2cb22'
+    duration: 1800 
+    max_size: 52428800
+
+  templates:
+    image_resize: "1eef9f7099a911e3b49785752f8b363a"
+    image_resize_user: "18550500bf2f11e39e9767eb9ac9dd04"
+    video_encode: "8f64b330a16f11e394d06b3e241b8964"
+    quote_file: "5400041013d011e4b2110d23aaf1cb58"

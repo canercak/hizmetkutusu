@@ -1,0 +1,20 @@
+.span3{style:"margin-left: 0px;"}
+	.media-object.pull-left
+		%img{:src => @provider.provider_images["provider_image1"][0], alt: "",  height: "60", width: "60"}
+	.media-body
+		%h4.media-heading
+			%span{style:"height: 40px;display: inline-block;"}
+				= link_to @provider.officialname, provider_path(@provider.slug) 
+			%p
+				%span{style:"display:none"} 
+				- if @reservation.status == 2
+					%span.label.label-important{ id: "reservation_cancelled_#{@provider._id}"}=t('quotes.selected_providers.reservation_cancelled')
+					%span.label.label-info{ id: "offer_price_#{@provider._id}"}=@reservation.total_price.cents.to_s + ' TL'
+				- else
+					%span.label.label-warning{ id: "reservation_made_#{@provider._id}"}=t('quotes.selected_providers.reservation_made') 
+					%span.label.label-info{ id: "offer_price_#{@provider._id}"}=@reservation.total_price.cents.to_s + ' TL'
+					- if @reservation.payment.present?
+						%span.label.label-success{ id: "payment_done_#{@provider._id}"}=t('quotes.selected_providers.payment_done')
+
+				
+			 

@@ -1,0 +1,39 @@
+- title t('.financial_settings')
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+.row
+  .span12
+    /%p.lead= t('.financial_setting_details')
+    = bootstrap_form_for @user,  html: {  class: 'form-horizontal' } do |f|
+      = f.error_messages
+      %legend= t('.credits')
+      %fieldset
+      .control-group
+        = f.label :credits_remaining, class: 'control-label'
+        .controls
+          .input-append
+            %span.add-on>
+              = f.label :credit_count, @user.credits
+          %p.help-block
+            %small
+              = t('users.settings.credits_remaining_details') 
+      .control-group
+        = f.label :add_credits, class: 'control-label'
+        .controls
+          = link_to transaction_url, class: 'btn btn-medium btn-success' do
+            %i.icon-credit
+            = t('.by_credit_card')
+          %span
+          = link_to transaction_url, class: 'btn btn-medium btn-warning' do
+            %i.icon-credit
+            = t('.by_mobil')
+          %span
+          = link_to transaction_url, class: 'btn btn-medium btn-primary' do
+            %i.icon-credit
+            = t('.by_havale')
+      %legend= t('.order_history')
+      .span6
+        = render 'transactions/list' , transactions: @transactions
+ 

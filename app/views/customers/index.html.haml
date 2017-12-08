@@ -1,0 +1,52 @@
+- title t('.title')
+.row
+  .span12
+    = render 'shared/flash_messages'
+.row
+  .span12
+    %h1
+      =t '.title', default: Customer.model_name.human(count: :lot)
+      = link_to provider_path(@provider.slug), style: "float:right", class: 'btn btn-primary' do
+        Profilime Geri Dön
+    %p.help-block 
+      %small
+        = t('.exp') 
+    .btn-toolbar
+      = link_to t(".new"), new_provider_customer_path, class: 'btn btn-primary'
+    %table.table.table-striped
+      %thead
+        %tr
+          %th= t('helpers.links.user.phone')
+          %th= t('helpers.links.user.email')
+          %th= t('helpers.links.user.name')
+          %th= t('shared.navbar.person_type')
+          %th=t '.actions', default: t('helpers.actions')
+      %tbody
+        - @users.each_with_index do |user, index|
+          %tr.vertical-align-middle 
+            %td= user.telephone 
+            %td= user.email
+            %td= user.name
+            %td= person_types[@provider.customers[index].person_type][0]
+            %td.btn-toolbar
+              - if user.uid.blank?
+                = link_to edit_provider_customer_path(@provider, user._id), class: 'btn btn-small' do
+                  %i.icon-edit
+                  = t('helpers.links.edit')
+                = link_to provider_customer_path(@provider, user._id), method: :delete, data: { confirm: t('helpers.links.confirm') }, class: 'btn btn-small btn-danger' do
+                  %i.icon-trash
+                  = t('helpers.links.destroy')
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,94 @@
+/anlaşılmıyorsa htmle çevir http://haml2erb.herokuapp.com/
+.rdf2rdfa{xmlns: "http://www.w3.org/1999/xhtml", 
+  "xmlns:base" => "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/#",
+  "xmlns:eco" => "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#", 
+  "xmlns:gr" => "http://purl.org/goodrelations/v1#",
+  "xmlns:owl" => "http://www.w3.org/2002/07/owl#", 
+  "xmlns:rdf" => "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "xmlns:rdfs" => "http://www.w3.org/2000/01/rdf-schema#",
+  "xmlns:foaf"=>"http://xmlns.com/foaf/0.1/",
+  "xmlns:pto"=>"http://www.productontology.org/id/",
+  "xmlns:vcard" => "http://www.w3.org/2006/vcard/ns#",
+  "xmlns:xsd" => "http://www.w3.org/2001/XMLSchema#"}
+  .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{@provider.slug}/", typeof: "owl:Ontology"}
+    %div{rel: "owl:imports", resource: "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/"}
+    %div{rel: "owl:imports", resource: "http://www.w3.org/2006/vcard/ns"}
+    %div{rel: "owl:imports", resource: "http://purl.org/goodrelations/v1"}
+    %div{content: "RDF/XML data for #{@provider.officialname}", property: "rdfs:label", "xml:lang" => "en"}
+  .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{@provider.slug}/#BusinessEntity", typeof: "gr:BusinessEntity"}
+    %div{content: @provider.officialname, property: "gr:legalName"}
+    %div{content: @provider.officialname, property: "gr:name"}
+    %div{rel: "foaf:logo", resource: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1.0-1/c9.9.112.112/s50x50/563061_10151405888856590_2126652868_s.jpg"}
+    %div{rel: "vcard:geo"}
+      %div
+        %div{content: @provider.location[0], datatype: "xsd:float", property: "vcard:latitude"}
+        %div{content: @provider.location[1], datatype: "xsd:float", property: "vcard:longitude"}
+    %div{rel: "vcard:adr", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/#address"}
+    %div{rel: "gr:hasPOS"}
+      .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{@provider.slug}/#LOSOSP_1", typeof: "gr:LocationOfSalesOrServiceProvisioning"}
+        %div{rel: "vcard:adr"}
+          .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{@provider.slug}/#address", typeof: "vcard:Address"}
+            %div{content: "Turkey", property: "vcard:country-name", "xml:lang" => "en"}
+            %div{content: @provider.business_email, property: "vcard:business_email"}
+            %div{content: @provider.decomposed_address[:local], property: "vcard:locality"}
+            %div{content: @provider.decomposed_address[:postcode], property: "vcard:postal-code"}
+            %div{content: @provider.business_address, property: "vcard:street-address"}
+            %div{content: @provider.business_phone, property: "vcard:tel"}
+            %div{rel: "vcard:url", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{@provider.slug}/"}
+        %div{rel: "gr:hasOpeningHoursSpecification"}
+          .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{@provider.slug}/#OpeningHoursSpecification_Mon-Fr_am", typeof: "gr:OpeningHoursSpecification"}
+            %div{content: "#{calendar_range(@provider)[0]}", datatype: "xsd:time", property: "gr:closes"}
+            %div{rel: "gr:hasOpeningHoursDayOfWeek", resource: "http://purl.org/goodrelations/v1#Friday"}
+            %div{rel: "gr:hasOpeningHoursDayOfWeek", resource: "http://purl.org/goodrelations/v1#Thursday"}
+            %div{rel: "gr:hasOpeningHoursDayOfWeek", resource: "http://purl.org/goodrelations/v1#Wednesday"}
+            %div{rel: "gr:hasOpeningHoursDayOfWeek", resource: "http://purl.org/goodrelations/v1#Tuesday"}
+            %div{rel: "gr:hasOpeningHoursDayOfWeek", resource: "http://purl.org/goodrelations/v1#Monday"}
+            %div{content: "#{calendar_range(@provider)[0]}", datatype: "xsd:time", property: "gr:opens"}
+        %div{rel: "rdfs:isDefinedBy", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/"}
+        %div{content: @provider.officialname, property: "rdfs:label", "xml:lang" => "en"}
+    %div{rel: "rdfs:isDefinedBy", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/"}
+    %div{rel: "gr:offers"}
+      .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/#Offering_1", typeof: "gr:Offering"}
+        %div{rel: "gr:acceptedPaymentMethods", resource: "http://purl.org/goodrelations/v1#Cash"}
+        %div{rel: "gr:acceptedPaymentMethods", resource: "http://purl.org/goodrelations/v1#VISA"}
+        %div{rel: "gr:acceptedPaymentMethods", resource: "http://purl.org/goodrelations/v1#MasterCard"}
+        %div{rel: "gr:availableAtOrFrom", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/#LOSOSP_1"}
+        %div{rel: "gr:availableDeliveryMethods", resource: "http://purl.org/goodrelations/v1#DeliveryModbusiness_email"}
+        %div{rel: "gr:availableDeliveryMethods", resource: "http://purl.org/goodrelations/v1#DeliveryModePickUp"}
+        %div{rel: "gr:availableDeliveryMethods", resource: "http://purl.org/goodrelations/v1#UPS"}
+        %div{content: @provider.business_description, property: "rdfs:comment", "xml:lang" => "tr"}
+        %div{rel: "gr:eligibleCustomerTypes", resource: "http://purl.org/goodrelations/v1#Reseller"}
+        %div{rel: "gr:eligibleCustomerTypes", resource: "http://purl.org/goodrelations/v1#PublicInstitution"}
+        %div{rel: "gr:eligibleCustomerTypes", resource: "http://purl.org/goodrelations/v1#Business"}
+        %div{rel: "gr:eligibleCustomerTypes", resource: "http://purl.org/goodrelations/v1#Enduser"}
+        %div{content: "TR", datatype: "xsd:string", property: "gr:eligibleRegions"}
+        %div{rel: "gr:hasBusinessFunction", resource: "http://purl.org/goodrelations/v1#ProvideService"}
+        %div{rel: "foaf:depiction", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/imaje.jpg"}
+        %div{rel: "gr:hasPriceSpecification"}
+          .description{about: "http://plushbeautybar.com/services.html#PriceSpec_1", typeof: "gr:UnitPriceSpecification"}
+            %div{content: "TRY", datatype: "xsd:string", property: "gr:hasCurrency"}
+            %div{content: "30", datatype: "xsd:float", property: "gr:hasCurrencyValue"}
+        %div{rel: "gr:includes"}
+          .description{about: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/#Service_1", typeof: "eco:C_BAC092001-gen"}
+            %div{rel: "rdf:type", resource: "http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder"}
+            %div{content: "#{@provider.workdones.first.prices.first.price}, #{@provider.location}", property: "rdfs:comment", "xml:lang" => "tr"}
+            %div{content: "#{@provider.workdones.first.prices.first.price} - TL", property: "rdfs:label", "xml:lang" => "tr"}
+            %div{rel: "rdfs:seeAlso", resource: "@provider.workdones.price.variation"}
+            %div{about: "#service", typeof: "pto:Manicure"}
+              %div{rel: "rdf:type", resource: "http://purl.org/goodrelations/v1#SomeItems"}
+              %div{property: "gr:description", "xml:lang" => "tr"}
+              %div{property: "gr:name", "xml:lang" => "tr"} 
+              %div{content: "kişisel_bakım_hizmetleri/tırnak_bakımı/manikür/erkekler_için_manikür", property: "gr:category"}
+              %div{rel: "foaf:depiction", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/imaje.jpg"}
+              %div{rel: "foaf:page", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}"}
+        %div{rel: "rdfs:isDefinedBy", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/"}
+        %div{content: @provider.workdones.first.prices.first.price, property: "rdfs:label", "xml:lang" => "en"}
+        %div{rel: "rdfs:seeAlso", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}"}
+        %div{content: @provider.officialname, property: "gr:name"}
+        %div{content: "2014-05-10T00:00:00+02:00", datatype: "xsd:dateTime", property: "gr:validFrom"}
+        %div{content: "2015-05-10T23:59:00+02:00", datatype: "xsd:dateTime", property: "gr:validThrough"}
+    %div{rel: "rdfs:seeAlso", resource: "#{APP_CONFIG.base_url}/fiyatlar/#{APP_CONFIG.base_url}/"}
+
+
+
+

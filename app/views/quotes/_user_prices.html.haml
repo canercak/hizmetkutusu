@@ -1,0 +1,41 @@
+- if @user_prices.present?
+  = bootstrap_form_for "@quote"  do |f|
+    %h3
+      =t("quotes.new.services", officialname:@user_prices[0][:officialname] )
+    #accordion2.accordion      
+      - @user_prices[1].keys.each_with_index do |parent, index|
+        .accordion-group
+          .accordion-heading
+            %a.accordion-toggle{"data-parent" => "accordion2", "data-toggle" => "collapse", href: "#collapse#{index}"}
+              %span{"data-hide-on" => "collapsed"}
+              %span{"data-hide-on" => "expanded"}
+              =parent
+            .collapse.accordion-body.collapse.in{:id=> "collapse#{index}"}
+              - @user_prices[1]["#{@user_prices[1].keys[index]}"].each do |child|
+                .accordion-inner
+                  %span
+                    &nbsp
+                    &nbsp
+                    - child.each do |c|
+                      %b
+                        =c[0]
+                      %i
+                        =c[2]
+                      %span{style:"float:right;margin-top: -5px;"}
+                        %input.pricelist_check{"data-label"=> "#{c[3]} TL" , :id=>"pricelist_price", :class=>"price_list_check", :type => "checkbox", :value=>(c[1] == @user_prices[0][:price_id] ? "checked" : "unchecked"),     data: { price: c[3], id: c[1] }}/
+                        - if c[1] == @user_prices[0][:price_id] 
+                          :javascript
+                            element = $('input[data-id="#{c[1]}"]');
+                            element.prop('checked', true);
+                            $("#total_price").text("#{c[3]}");
+
+ 
+
+ 
+
+ 
+= hidden_field_tag :selected_price_list 
+
+
+
+ 

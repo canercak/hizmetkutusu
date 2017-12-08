@@ -1,0 +1,91 @@
+#scheduler.dhx_cal_container{:style => "width:100%; height:100%; "} 
+  .dhx_cal_navline{:style => "width:100%;"}
+    =hidden_field_tag :personel_services
+    =hidden_field_tag :provider_services
+    .dhx_cal_date 
+    .dhx_cal_tab{:name => "map_tab", :style => "right:218px;"}
+    .dhx_cal_tab{:name => "day_tab", :style => "right:154px;"}
+    .dhx_cal_tab{:name => "week_tab", :style => "right: 90px;"}
+    .dhx_cal_tab{:name => "month_tab", :style => "right: 26px;"}
+    .dhx_cal_prev_button{:style => "right:337px;"}
+    .dhx_cal_next_button{:style => "right:290px;"}
+  .dhx_cal_header
+  .dhx_cal_data{:style => "width:100%;"} 
+=hidden_field_tag :provider_id, params["id"]
+=hidden_field_tag :calendar_range, params["calendar_range"]
+=hidden_field_tag :calendar_blocks, params["calendar_blocks"]
+ 
+ 
+/ :coffee
+ 
+/ $.ajax
+/   url: "/events/events_block"
+/   type: "GET"    
+/   data:
+/     id: $("#provider_id").val()
+/   dataType: 'json'
+/   success: (data) ->  
+/     $("#provider_services").select2 data: data.data
+/     $("#provider_services").select2 "val", data.data[0]["id"]
+/     $("#provider_services").trigger "change"
+/     return   
+
+/ $("#provider_services").change ->
+/   theID = $("#provider_services").select2("data").id
+/   loadSchedulerData(category_id = theID)  
+/ $("#provider_services").css "width", "30%" 
+
+
+/ loadSchedulerData = (category_id) -> 
+/   scheduler.clearAll()    
+/   provider_id = $("#provider_id").val()  
+/   scheduler.load "/events/load_scheduler.json?category_id=" + category_id + "&provider_id=" + provider_id, "json" 
+/   #initScheduler()
+/   $.ajax 
+/     url: "/events/get_user_blocks"
+/     type: "GET"
+/     data: 
+/       provider_id: $("#provider_id").val()
+/       category_id: category_id
+/     dataType: 'json'
+/     success: (data) -> 
+/       if data.length > 0
+/         $.each data, (index, value) ->
+/           scheduler.blockTime
+/             start_date: new Date(value[0])
+/             end_date: new Date(value[1])
+/             html:"<b>"+ value[2]+"</b>"
+/             type: "dhx_time_block"
+/           scheduler.updateView()  
+/         return
+/       else
+/         scheduler.deleteMarkedTimespan()
+/         scheduler.updateView() 
+/       #loadBusinessHours()
+
+/   scheduler.config.cascade_event_display = true
+/   scheduler.config.cascade_event_count = 10     
+/   scheduler.config.cascade_event_margin = 30  
+/   scheduler.config.xml_date = "%Y-%m-%d %H:%i"
+/   scheduler.config.start_on_monday = true
+/   #scheduler.config.show_loading = true
+/   scheduler.config.first_hour = 8
+/   scheduler.config.last_hour = 19
+/   scheduler.config.prevent_cache = true 
+/   scheduler.config.time_step  = 60
+/   scheduler.config.fix_tab_position = false 
+/   scheduler.config.touch = true  
+
+/   scheduler.locale.labels.map_tab = "Map";
+/   scheduler.config.map_start = new Date(2013, 5, 1) 
+/   scheduler.config.map_end = new Date(2014,12,12)
+/   scheduler.locale.labels.section_location = "Location" 
+/   scheduler.xy.map_date_width = 180 
+/   scheduler.xy.map_description_width = 400 
+/   scheduler.config.update_render = true
+/   scheduler.init "scheduler", new Date(), "map"
+
+/   scheduler.load("/events/load_scheduler.json")
+/   dp = new dataProcessor("data/events_map_view.php");
+/   dp.init(scheduler);
+

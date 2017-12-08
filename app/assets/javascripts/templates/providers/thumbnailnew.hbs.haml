@@ -1,0 +1,201 @@
+:css
+	.popover{
+		width: 200px;
+		text-align:center;
+	}
+ 
+	.popover-title {
+		padding: 4px 8px;
+	}
+	.popover-content {
+	padding: 0 0 1 0;
+	}
+ 
+.row 
+	.span10{id: "span9row"}
+		.row
+			.span10
+				%h4
+					%strong
+						%a{href:"{{provider_path}}", target: "_blank"} {{officialname}}
+		.row
+			.span2#profileimage
+				%a.thumbnail{id:"profile_thumb"} 
+					%img{alt: "", style: "height: inherit;", width: "185px", height: "185px", src: "{{profile_image}}" }/
+			.span8{id: "span7row" }
+				%ul.nav.nav-tabs{:style => "margin-bottom: 10px;"}
+					%li.active            
+						%a{"data-toggle" => "tab", :href => "#pane1_{{id}}"}  
+							%i.fa.fa-bullseye.fa-lg 
+							%span {{translate "templates.quotes.quotes"}}
+					%li
+						%a{"data-toggle" => "tab", :href => "#pane2_{{id}}"}           
+							%i.fa.fa-camera-retro.fa-lg 
+							%span {{translate "templates.quotes.photos"}}
+					%li
+						%a{"data-toggle" => "tab", :href => "#pane3_{{id}}"} 
+							%i.fa.fa-briefcase.fa-lg 
+							%span {{translate "templates.quotes.about"}}
+					%li
+						%a{"data-toggle" => "tab", :href => "#pane4_{{id}}"}
+							%i.fa.fa-file-text-o.fa-lg 
+							%span {{translate "templates.quotes.certificates"}}
+				.tab-content{:style => "margin-bottom: 10px"}
+					#pane1.tab-pane.active{:id => "{{id}}" } 
+						{{#each references}}
+						%ul.unstyled.comments.list-hover.list-striped{style:"margin-bottom:4px;"}
+							%li{style:"background-color:white;"}
+							.review{itemprop: "review", itemscope: '', itemtype: "http://schema.org/Review"}
+								.avatar1.pull-left
+									%img{:alt => "Avatar", :style=>"max-height:40px", :height => "30", :width => "30", :src =>  "{{user_image}}"}/                                   
+								.body
+									%span{itemprop: "author", itemscope: '', itemtype: "http://schema.org/Person"}
+									.name{itemprop: 'name'}
+										%a.text-contrast {{firstname}}                 
+										%span
+											{{day_ago}}  
+											%span{itemprop: "itemReviewed", itemscope: "", itemtype: "http://schema.org/Thing"}
+											%span{itemprop: "name"} {{category_name}}
+											=t("users.show.category",category: "{{category_name}}") 
+											.rate{itemprop: "reviewRating", itemscope: '', itemtype: "http://schema.org/Rating"}
+												.ratingstars{style:"float:right;", "data-average" => "{{rating}}", "data-id" => "star"}                     
+												%meta{content: "{{rating}}", itemprop: "ratingValue"}
+												%meta{content: "1", itemprop: "worstRating"}
+												%meta{content: "5", itemprop: "bestRating"}
+							.text-left{id:"text_left", style:"margin-top:1px"}  
+								%span{itemprop: "reviewBody", style:"margin-bottom:5px"}
+									%span{id:"show_comment"}=t("users.show.comment",comment: content_tag(:i,"{{comment}}")).html_safe
+								%meta{content: "{{created_at}}", itemprop: "datePublished"}
+							%hr{style:"margin-top:1px; margin-bottom:1px;"}             
+						{{/each}}
+						{{#each fsq_references}}
+						%ul.unstyled.comments.list-hover.list-striped{style:"margin-bottom:4px;"}
+							%li{style:"background-color:white;"}
+							.review{itemprop: "review", itemscope: '', itemtype: "http://schema.org/Review"}
+								.avatar1.pull-left
+									%img{:alt => "Avatar", :style=>"max-height:40px", :height => "30", :width => "30", :src =>  "{{user_image}}"}/                                   
+								.body
+									%span{itemprop: "author", itemscope: '', itemtype: "http://schema.org/Person"}
+									.name{itemprop: 'name'}
+										%a.text-contrast {{firstname}}                 
+										%span
+											{{day_ago}}  
+							.text-left{id:"text_left", style:"margin-top:1px"}  
+								%span{itemprop: "reviewBody", style:"margin-bottom:5px"}
+									%span{id:"show_comment"}=t("users.show.comment",comment: content_tag(:i,"{{comment}}")).html_safe
+								%meta{content: "{{created_at}}", itemprop: "datePublished"}
+							%hr{style:"margin-top:1px; margin-bottom:1px;"}             
+						{{/each}}  
+					#pane2.tab-pane{:id => "{{id}}"}
+						#images 
+							{{#if provider_images.provider_image1.[0]  }}                   
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{provider_images.provider_image1.[1]}}"}
+								%img{alt: "", src: "{{provider_images.provider_image1.[0]}}", class: "album_mini"}/
+							{{/if}}
+							{{#if provider_images.provider_image2.[0]}}                   
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{provider_images.provider_image2.[1]}}"}
+								%img{alt: "", src: "{{provider_images.provider_image2.[0]}}", class: "album_mini"}/
+							{{/if}}
+							{{#if provider_images.provider_image3.[0] }} 
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{provider_images.provider_image3.[1]}}"}
+								%img{alt: "", src: "{{provider_images.provider_image3.[0]}}", class: "album_mini"}/
+							{{/if}}
+							{{#if provider_images.provider_image4.[0]}} 
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{provider_images.provider_image4.[1]}}"}
+								%img{alt: "", src: "{{provider_images.provider_image4.[0]}}", class: "album_mini"}/
+							{{/if}}
+							{{#if provider_images.provider_image5.[0] }} 
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{provider_images.provider_image5.[1]}}"}
+								%img{alt: "", src: "{{provider_images.provider_image5.[0]}}", class: "album_mini"}/
+							{{/if}}
+							{{#if provider_images.provider_image6.[0]}} 
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{provider_images.provider_image6.[1]}}"}
+								%img{alt: "", src: "{{provider_images.provider_image6.[0]}}", class: "album_mini"}/
+							{{/if}} 
+							{{#each foursquare_photos}}
+							%a{"data-gallery" => "#blueimp-gallery1-{{id}}", href: "{{this}}"}
+								%img{alt: "", src: "{{this}}", class: "album_mini"}/
+							{{/each}} 
+					#pane3.tab-pane{:id => "{{id}}"}
+						{{business_description}}
+					#pane4.tab-pane{:id => "{{id}}"}
+						#certificates
+							{{#unlessCond provider_images.certificate_image1.[0] undefined }}
+							%a{"data-gallery" => "#blueimp-gallery2-{{id}}", href: "{{provider_images.certificate_image1.[1]}}"}
+								%img{alt: "", src: "{{provider_images.certificate_image1.[0]}}", height: "80", width: "80"}/
+							{{/unlessCond }}
+							{{#unlessCond provider_images.certificate_image2.[0] undefined }}
+							%a{"data-gallery" => "#blueimp-gallery2-{{id}}", href: "{{provider_images.certificate_image2.[1]}}"}
+								%img{alt: "", src: "{{provider_images.certificate_image2.[0]}}", height: "80", width: "80"}/
+							{{/unlessCond}} 
+							{{#unlessCond provider_images.certificate_image3.[0] undefined }}
+							%a{"data-gallery" => "#blueimp-gallery2-{{id}}", href: "{{provider_images.certificate_image3.[1]}}"}
+								%img{alt: "", src: "{{provider_images.certificate_image3.[0]}}", height: "80", width: "80"}/
+							{{/unlessCond}} 
+							{{#unlessCond provider_images.certificate_image4.[0] undefined }}
+							%a{"data-gallery" => "#blueimp-gallery2-{{id}}", href: "{{provider_images.certificate_image4.[1]}}"}
+								%img{alt: "", src: "{{provider_images.certificate_image4.[0]}}", height: "80", width: "80"}/
+							{{/unlessCond}} 
+
+		.row
+			.span10{id: "span9row2"}
+				%p
+					%i.icon-map-marker
+					%input{:href => "#", :id=>"lat1_{{id}}", type: "hidden",value: "{{lat}}" }/
+					%input{:href => "#", :id=>"lat2_{{id}}", type: "hidden",value: "{{quotelat}}" }/
+					%input{:href => "#", :id=>"lon1_{{id}}", type: "hidden",value: "{{lng}}" }/
+					%input{:href => "#", :id=>"lon2_{{id}}", type: "hidden",value: "{{quotelon}}" }/
+					%span{:id=>"result-distance_{{id}}"}
+					%span {{translate "templates.quotes.km_far"}}
+					{{#if workdonecount }}
+					|   
+					%i.fa.fa-flag-checkered 
+					%span {{workdonecount}} {{translate "templates.quotes.gave_service"}}
+					{{/if }} 
+					{{#if refcount }}
+					|
+					%i.fa.fa-star-o 
+					%span {{refcount}} {{translate "templates.quotes.comment"}} {{staravg}} {{translate "templates.quotes.take_star"}}
+					{{/if }} 
+					{{#if verified}}
+					| 
+					%i.fa.fa-check-square-o
+					%span {{translate "templates.quotes.verified"}}
+					{{/if }} 
+					{{#if like_total }}
+					|
+					%i.fa.fa-thumbs-o-up 
+					%span {{like_total}} {{translate "templates.quotes.likes"}}  
+					{{/if}} 
+					{{#if checkin_total }}
+					|
+					%i.fa.fa-check 
+					%span {{checkin_total}} {{translate "templates.quotes.checkin"}}  
+					{{/if}} 
+					%span
+						%span.label.label-info{id: "hklabel", class:"hklabel"} {{translate "templates.quotes.appname_score"}}: {{overall_score}}
+	{{#ifCond enableselection true}}
+	.span2{id: "y2"}
+		.row{id: "xx2"}
+			.vcard-stats-quote-top
+				%span.vcard-quote{id:"vcard{{id}}"}
+					%input.price_check{"data-label"=> "{{price}}{{translate 'templates.quotes.currency'}}" , :id=>"giveprice", :class=>"price_check", :type => "checkbox", value: "unchecked",   data: { id: "{{id}}", img:"/assets/hasan_popover.png", priceid: "{{price_id}}", categoryid: "{{category_id}}", rowindex: "{{rowindex}}"} }/
+					%input#provider_id{:name => "provider_id", :type => "hidden",  :value =>  "{{id}}" }/      
+	{{/ifCond}} 
+%hr{style:"margin-top: 0px;margin-bottom: 18px;"}/
+ 
+
+:javascript 
+	$(document).ready(function() {
+		var new_number, p1, p2;
+		p1 = new LatLon(Geo.parseDMS($("#lat1_{{id}}").val()), Geo.parseDMS($("#lon1_{{id}}").val()));
+		p2 = new LatLon(Geo.parseDMS($("#lat2_{{id}}").val()), Geo.parseDMS($("#lon2_{{id}}").val()));
+		new_number = parseFloat(p1.distanceTo(p2)).toFixed(2);
+		if (new_number == "NaN") {
+			new_number = "0";
+		}
+		$("#result-distance_{{id}}").text(new_number);
+	});
+ 
+
+

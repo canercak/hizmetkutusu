@@ -1,0 +1,17 @@
+- title t('.new_reference')
+.spacer
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+.row
+  .span12
+ 
+    = bootstrap_form_for @reference,  html: { class: 'form-vertical' } do |f|
+      = f.error_messages
+      = render 'form', f: f
+      = hidden_field_tag "provider_id" ,@reference.provider.id
+      = hidden_field_tag "quote_id" ,@quote.id 
+      .form-actions 
+        = f.submit class: 'btn btn-primary', id:"new_reference", disable_with: t('helpers.disable_with'), value: t('helpers.save')
+ 

@@ -1,0 +1,193 @@
+:css
+	.bigdrop.select2-container .select2-results {max-height: 300px}
+	.bigdrop .select2-results {max-height: 300px}
+	.bigdrop .select2-choices {min-height: 200px; max-height: 300px; overflow-y: auto;}
+ 
+	.select2-container[class*="span"] {
+		float: none;
+		margin-left: 0;
+	}
+	 
+	.select2-container .select2-choice,
+	.select2-container-multi .select2-choices {
+		height: 28px;
+		line-height: 29px;
+		border: 1px solid #cccccc;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		background: none;
+		background-color: white;
+		filter: none;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	}
+ 
+	.select2-container .select2-choice div,
+	.select2-container.select2-container-disabled .select2-choice div {
+		border-left: none;
+		background: none;
+		filter: none;
+	}
+ 
+	.control-group.error [class^="select2-choice"] {
+		border-color: #b94a48;
+	}
+ 
+	.select2-container-multi .select2-choices .select2-search-field {
+		height: 28px;
+		line-height: 27px;
+	}
+ 
+	.select2-container-active .select2-choice,
+	.select2-container-multi.select2-container-active .select2-choices {
+		border-color: rgba(82, 168, 236, 0.8);
+		outline: none;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	}
+	 
+	[class^="input-"] .select2-container {
+		font-size: 14px;
+	}
+	 
+	.input-prepend [class^="select2-choice"] {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	 
+	.input-append [class^="select2-choice"] {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	 
+	.select2-dropdown-open [class^="select2-choice"] {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	 
+	.select2-dropdown-open.select2-drop-above [class^="select2-choice"] {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	 
+	[class^="input-"] .select2-offscreen {
+		position: absolute;
+	}
+	 
+	.select.select2 {
+		height: 28px;
+		visibility: hidden;
+	}
+ 
+
+- title t('.title')
+- if @quote.errors.any?
+	.row
+		.span12
+			.alert.alert-block.alert-error.fade.in
+				%button{ type: 'button', class: 'close', data: { dismiss: 'alert' } } &times;
+				%h4.alert-heading= t('errors.template.header', model: Quote.model_name.human, count: @quote.errors.size)
+				= t('errors.template.body')
+				%ul
+					- @quote.errors.full_messages.each do |message|
+						%li= message
+.row
+	#wizard-step-1-title.span6.quote-step.active
+		%h3.no-margin
+			= t('.select_service')
+	#wizard-step-2-title.span6.quote-step.hidden-phone
+		%h3.no-margin
+			= t('.select_quote')
+.spacer
+= bootstrap_form_for @quote  do |f|
+	#wizard-step-1-content{ data: { step: 1 } }
+		.row
+			.span4
+				= f.label :customer_address, id:"variation_label"
+				.input-prepend 	
+					%button.btn{type: "button", style: "padding-left: 15px;padding-right: 15px "}
+						%i.fa.fa-map-marker 
+					= text_field_tag :customer_address, (@quote.customer_address.present? ? @quote.customer_address : "" ) , {:placeholder=> t('.please_enter_address') , class:"input-xlarge"}
+				%p
+				= f.label :proposed_date, id:"date_label" 
+				.input-prepend
+					%button.btn{type: "button"}
+						%i.fa.fa-calendar
+					= text_field_tag :query_date, (@quote.query_date.blank? ? l(Time.zone.now, format: :day) : l(@quote.query_date, format: :day) ),  {:placeholder=> t('.please_select_date') , class: 'input-xlarge'}
+				%p 
+				= f.label :variation, id:"variation_label"
+				.input-prepend
+					%button.btn{type: "button"}
+						%i.fa.fa-search
+					= f.hidden_field :variation_id,  :value=> (@quote.variation_id.present? ?  @quote.variation_id.join(",") : nil) ,  placeholder: t('.please_select_type') , class:"input-xlarge"
+
+				#error.alert.alert-error
+			.span8
+				.map_container
+					#quotemap
+		.row{id:"hint_row"}
+			.span12
+				.spacer
+			.span4
+				%h3.no-margin
+					%i.fa.fa-map-marker
+					= t('.hint_privacy_title')
+				%p
+					= t('.hint_privacy_content') 
+			.span4
+				%h3.no-margin
+					%i.fa.fa-calendar
+					= t('.hint_search_before_title')
+				%p
+					= t('.hint_search_before_content')
+			.span4
+				%h3.no-margin
+					%i.fa.fa-search
+					= t('.hint_customize_title')
+				%p
+					= t('.hint_customize_content') 
+
+			= hidden_field_tag :latitude, id: 'latitude'
+			= hidden_field_tag :longitude, id: 'longitude'
+			= f.hidden_field :location, :value=> (@quote.location.present? ? [@quote.location.x,@quote.location.y].join(',') : nil)  
+			= f.hidden_field :distance, id: 'distance', value: '10'
+			= f.hidden_field :variation_text, :value=> (@quote.variation_text.present? ? @quote.variation_text : nil)
+	#wizard-step-2-content{ data: { step: 2 } }   
+		#mapsrow.row.hide()
+			=gmaps({"map_options" => { "auto_zoom" => false}, :last_map => false } )
+			.map_container
+				%label#search_distance
+				%input#B{"data-slider-orientation" => "horizontal", "data-slider-handle" => "square", "data-slider-id" => "BC", "data-slider-max" => "130", "data-slider-min" => "0", "data-slider-step" => "5" , "data-slider-value" => "10", type: "text",  value: ""}/
+		.row
+			%br
+			#providers-thumbs
+			%h3.result-notfound 
+			%a.scrollup{} Scroll
+			= hidden_field_tag :selected_providers
+			= hidden_field_tag :selected_prices 
+			= hidden_field_tag :reservation_date
+			= hidden_field_tag :share_on_facebook_timeline, "true"
+			= hidden_field_tag :otp
+			= hidden_field_tag :current_phones, current_user.present? ? current_user.telephone : nil
+			= hidden_field_tag :current_user, current_user.present? ? current_user : nil
+	.form-actions.pagination-centered{style:"margin-top:10px;"}  
+		= button_tag t('.previous_step'), type: 'button', class: 'btn btn-large hide', name: 'back_button', id: 'wizard-prev-step-button', disabled: true
+		= f.submit t('.next_step'), type: 'button', class: 'btn btn-large btn-primary', name: 'next_button','data-no-turbolink' => true, id: 'wizard-next-step-button', disabled: false
+		= f.submit t('.confirm_and_share'), class: 'btn btn-large btn-success hide', id: 'new_quote_submit', disabled: true 
+		= link_to "#", id:"add_variation", title:"Seçtiğiniz hizmet sağlayıcının diğer hizmetlerini ekleyin", class: 'btn btn-medium btn-danger hide' do
+			%i.fa.fa-plus.fa-1x
+	.pagination-centered
+		/%span{id:"facebook_share"}
+		/- if current_user.has_facebook_permission?(:publish_stream) == true
+		/%input.facebook_check{"data-label"=> t('helpers.links.share_on_facebook_timeline'),:type=> "checkbox", checked: "checked"}
+ 
+=render "shared/image_gallery"
+=render 'shared/modal_phone_verification'
+=render 'shared/modal_login_identity'
+=render 'quotes/price_list'
+=render 'quotes/appointment_booking'
+
+ 

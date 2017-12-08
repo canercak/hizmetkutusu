@@ -1,0 +1,148 @@
+
+p {
+    margin: 10px 0;
+}
+
+.aboutus-description {
+ 
+}
+
+.aboutus-description p {
+    font-size: 26px;
+}
+
+.aboutus-description p span {
+    display: block;
+}
+.aboutus-description .heart {
+    display: inline-block;
+}
+
+.aboutus-success {
+ 
+}
+
+.aboutus-success p {
+    font-size: 26px;
+}
+
+.aboutus-success p span {
+    display: block;
+}
+.aboutus-success .heart {
+    display: inline-block;
+}
+ 
+ 
+
+.title-subheading {
+    margin-top: 16px;
+}
+
+.title-subheading-link:hover {
+    color: #f2ede3;
+}
+ 
+
+.section-title {
+    font-size:  1.8em;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+}
+.section-title span {
+    display: block;
+}
+
+/* XXX @tarajane remove this - placeholder until we get your image. */
+.placeholder {
+    background-color: red;
+    opacity: 0.3;
+}
+
+/* 600px / 16px = 37.5 */
+@media only screen and (min-width: 37.5em) {
+  
+    .section-title {
+        font-size:  3em;
+    }
+
+    .aboutus-description p {
+        font-size: 1.8em;
+    }
+    .aboutus-success p {
+        font-size: 1.8em;
+    }
+ 
+    #headerImage {
+        height: 270px;
+        background-size: auto, auto 270px, 200px 200px;
+    }
+}
+
+/* 768px / 16px = 48 */
+@media only screen and (min-width: 48em) { 
+
+    .aboutus-description {
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+
+    .aboutus-description p {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .aboutus-success {
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+
+    .aboutus-success p {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    /* XXX fixme: refactor all fonts to use ems in the future. */
+
+    .section-title {
+        font-size: 2.0em;
+        padding: 0;
+    }
+    .bold{
+      font-weight:bold;
+    }
+    #headerImage {
+        height: 370px;
+        background-size: auto, auto 370px, 200px 200px;
+    }
+}
+
+/* 890px / 16px = 55.625 */
+@media only screen and (min-width: 55.625em) {
+    .aboutus-description {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .aboutus-success {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .makers-grid .description {
+        height: 270px;
+    }
+ 
+    #headerImage {
+        height: 430px;
+        background-size: auto, auto 430px, 200px 200px;
+    }
+}
+
+/* 1130px / 16px = 70.625 */
+@media only screen and (min-width:70.625em) {
+ 
+    #headerImage {
+        height: 545px;
+        background-size: auto, auto 545px, 200px 200px;
+    }
+}

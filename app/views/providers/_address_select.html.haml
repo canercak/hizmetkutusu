@@ -1,0 +1,20 @@
+.input-prepend
+	%span.add-on= t('providers.form.province')
+	= select_tag :province, options_for_select(province_list, (@provider.decomposed_address.present? ? @provider.decomposed_address["province"] : "" )) , class: 'input-small'
+.input-prepend
+	%span.add-on= t('providers.form.district')
+	= select_tag :district, (options_for_select(Address.get_children(@provider.decomposed_address["province"],@provider.decomposed_address["province"],  nil), @provider.decomposed_address["district"]) if @provider.decomposed_address.present?), class: 'input-medium'
+.input-prepend
+	%span.add-on= t('providers.form.neigbor')
+	= select_tag :neigbor, (options_for_select(Address.get_children(@provider.decomposed_address["district"],@provider.decomposed_address["province"], 0), @provider.decomposed_address["neigbor"]) if @provider.decomposed_address.present?),  class: 'input-medium' 
+.input-prepend
+	%span.add-on= t('providers.form.local')
+	= select_tag :local, (options_for_select(Address.get_children(@provider.decomposed_address["neigbor"],@provider.decomposed_address["district"], nil), @provider.decomposed_address["local"]) if @provider.decomposed_address.present?), class: 'input-medium' 
+%p
+.input-prepend
+	%span.add-on= t('providers.form.street')
+	= text_field_tag :street,(@provider.decomposed_address["street"] if @provider.decomposed_address.present?) , class: 'input-large' 
+.input-prepend
+	%span.add-on= t('providers.form.no_door')
+	= text_field_tag :no_door,(@provider.decomposed_address["no_door"] if @provider.decomposed_address.present?) , class: 'input-medium' 
+ 

@@ -1,0 +1,12 @@
+#phone-verification.modal.hide.fade{ tabindex: -1,   role: 'dialog', 'aria-labelledby' => t('providers.verification.phone_verification'), 'data-width' => '360', "data-focus-on" => "input:first" ,'aria-hidden' => true }
+	.modal-header
+		%button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+		%h3= t('providers.verification.phone_verification')
+	.modal-body 
+		- if @quote.present?
+			= render "quotes/verification" 
+		- else
+			= render "providers/verification" 
+	.modal-footer
+ 
+ 

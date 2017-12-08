@@ -1,0 +1,77 @@
+ACRISS Car Classification Code "ECMN" (a typical code for rental car categories),
+ i.e. an Economy car, 2/4 doors, manual gearbox, no air-conditioning (e.g. Ford Fiesta or Opel Corsa)
+The price is $ 50 per day.
+
+<div xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://www.w3.org/1999/xhtml" xmlns:foo="http://example.org/#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:dbpedia="http://dbpedia.org/resource/" xmlns:vso="http://purl.org/vso/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <div about="http://example.org/#company" typeof="gr:BusinessEntity">
+    <div property="gr:legalName" content="Miller Inc."></div>
+    <div rel="gr:offers" resource="#offer2"></div>
+    <div rel="foaf:page" resource="http://www.miller.com/"></div>
+  </div>
+  <div about="#offer2" typeof="gr:Offering">
+    <div rel="gr:hasBusinessFunction" resource="http://purl.org/goodrelations/v1#LeaseOut"></div>
+    <div rel="gr:hasPriceSpecification">
+      <div  typeof="gr:UnitPriceSpecification">
+        <div property="gr:hasCurrency" content="USD" datatype="xsd:string"></div>
+        <div property="gr:hasCurrencyValue" content="50" datatype="xsd:float"></div>
+        <div property="gr:hasUnitOfMeasurement" content="DAY" datatype="xsd:string"></div>
+      </div>
+    </div>
+    <div rel="gr:includes">
+      <div  about="#cars" typeof="vso:Automobile gr:SomeItems">
+        <div property="vso:ACRISSCode" content="ECMN" datatype="xsd:string"></div>
+        <div rel="vso:transmission" resource="http://dbpedia.org/resource/Manual_transmission"></div>
+        <div rel="vso:doors">
+          <div  typeof="gr:QuantitativeValueInteger">
+            <div property="gr:hasMaxValueInteger" content="4" datatype="xsd:int"></div>
+            <div property="gr:hasMinValueInteger" content="2" datatype="xsd:int"></div>
+            <div property="gr:hasUnitOfMeasurement" content="C62" datatype="xsd:string"></div>
+          </div>
+        </div>
+        <div rel="vso:fuelType" resource="http://dbpedia.org/resource/Gasoline"></div>
+        <div rel="foaf:page" resource="http://example.org/economy-car-deal"></div>
+      </div>
+    </div>
+    <div rel="foaf:page" resource="http://example.org/economy-car-deal"></div>
+  </div>
+</div>
+
+
+
+
+
+
+<div xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+       xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:gr="http://purl.org/goodrelations/v1#"
+       xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <div  about="#company" typeof="gr:BusinessEntity">
+    <div property="gr:legalName" content="Hepp Space Ventures Inc." xml:lang="en"></div>
+    <div rel="gr:offers">
+     <div about="#offering" typeof="gr:Offering">
+      <div property="rdfs:comment" content="I sell my old Volkswagen Station
+ Wagon, 4WD, for 400 $" xml:lang="en"></div>
+      <div rel="gr:hasBusinessFunction"
+             resource="http://purl.org/goodrelations/v1#Sell"></div>
+      <div rel="gr:hasPriceSpecification">
+         <div typeof="gr:UnitPriceSpecification">
+          <div property="gr:hasCurrency" content="USD" datatype="xsd:string"></div>
+          <div property="gr:hasCurrencyValue" content="400" datatype="xsd:float"></div>
+         </div>
+      </div>
+      <div property="rdfs:label" content="Volkswagen Station Wagon, 4WD, 400 $" xml:lang="en"></div>
+     </div>
+    </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+%ul.unstyled.conversation
+	- alternate = false
+	- prev_sender = nil
+	-if @conversation.messages.present?
+		- @conversation.messages.each do |message|
+			- alternate = !alternate if prev_sender != message.sender && prev_sender
+			= render 'conversations/message', message: message, alternate: alternate
+			- prev_sender = message.sender
+	-else
+		%i=t('quotes.show.messages_no_quote') 
+ 

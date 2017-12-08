@@ -1,0 +1,30 @@
+= transloadit :image_resize
+-6.times do |index|
+  .fileupload.fileupload-new.pull-left{style: "padding-right: 5px;", "data-provides" => "fileupload" }
+    .fileupload-new.thumbnail{:style => "width: 130px; height: 130px;"} 
+      -if @provider.provider_images.present?
+        - if @provider.provider_images["provider_image#{index+1}"].present?
+          %img{:id=>"providerimage1", :src => @provider.provider_images["provider_image#{index+1}"][0]}/
+    .fileupload-preview.fileupload-exists.thumbnail{:style => "width: 130px; height: 130px;"}
+    %div
+      %span.btn.btn-file
+        %span.fileupload-new{:id => "selectbutton"}
+          -if index == 0
+            =t('select_profile_image')  
+          -else
+            =t('select_image')              
+        %span.fileupload-exists
+          -if index == 0
+            =t('select_profile_image')  
+          -else
+            =t('select_image')      
+        =file_field_tag "provider_image#{index+1}" 
+
+
+
+
+        
+ 
+
+
+

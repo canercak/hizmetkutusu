@@ -1,0 +1,8 @@
+#login-identity.modal.hide.fade{ tabindex: -1, role: 'dialog', 'aria-labelledby' => t('login_before_booking'), 'aria-hidden' => true }
+  .modal-header
+    %button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+    %h3= t('shared.navbar.login_before_booking')
+  .modal-body
+    = render 'pages/facebook_login'
+  .modal-footer
+    = link_to t('close'), '#', 'aria-hidden' => true, data: { dismiss: 'modal' }, class: 'btn'

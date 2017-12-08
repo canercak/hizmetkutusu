@@ -1,0 +1,471 @@
+.clearfix { *zoom: 1 }
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both }
+ 
+.satirbasi {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+}
+.satirbasi:before,
+.satirbasi:after {
+    content: "";
+    display: table;
+}
+.satirbasi:after { clear: both }
+.satirbasi>[class*="column"]:first-child { margin-left: 0 }
+@charset "UTF-8";
+
+ul.works {
+margin: 0 0 0px 0px; important!;
+}
+
+
+.upper-page {
+    height: 600px;
+    min-height: 300px;
+    padding-bottom: 20px;
+    text-align:center;
+		padding-left: 100px;
+		padding-right: 100px;
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .upper-page { 
+    height: auto;
+    padding-left: 10px;
+		padding-right: 10px;
+     }
+}
+.upper-page .birlestir h1 {
+		padding-top:40px;
+		text-align:center;
+		font-size:49px;
+		font-weight:500;
+		text-shadow:none;
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .upper-page .birlestir h1 {
+        padding-top: 20px;
+        font-size: 33.6px;
+        text-align:center;
+        line-height: 42px;
+    }
+}
+.upper-page .birlestir p {
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-align:center;
+    padding-top: 20px;
+   
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .upper-page .birlestir p { 
+    line-height: 25.2px; 
+    text-align:center;
+    }
+}
+.anasayfa_adimlar,
+.asil_oneriler { 
+padding-bottom: 40px;  
+padding-left: 50px;
+padding-right: 50px;
+}
+.anasayfa_adimlar h2,
+.asil_oneriler h2 {
+/*
+    margin: 80px 0 60px 0;
+*/
+    font-size: 35px;
+    line-height: 39.199999999999996px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-align:center;
+}
+@media (max-width:768px) { 
+    .anasayfa_adimlar h2,
+    .asil_oneriler h2 { text-align: center }
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar h2,
+    .asil_oneriler h2 { margin: 40px 0 60px 0 }
+}
+.anasayfa_adimlar p,
+.asil_oneriler p {
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.099999999999998px;
+    line-height: 30.800000000000004px;
+    letter-spacing: 0;
+    padding-top: 10px;
+}
+.anasayfa_adimlar .nasilis1,
+.asil_oneriler .nasilis1,
+.anasayfa_adimlar .nasilis2,
+.asil_oneriler .nasilis2,
+.anasayfa_adimlar .nasilis3,
+.asil_oneriler .nasilis3,
+.anasayfa_adimlar .nasilis4,
+.asil_oneriler .nasilis4,
+.anasayfa_adimlar .nasilis5,
+.asil_oneriler .nasilis5,
+.anasayfa_adimlar .nasilis6,
+.asil_oneriler .nasilis6 {
+    padding-left: 80px;
+    margin-bottom: 60px;
+    position: relative;
+    text-align: justify;
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .nasilis1,
+    .asil_oneriler .nasilis1,
+    .anasayfa_adimlar .nasilis2,
+    .asil_oneriler .nasilis2,
+    .anasayfa_adimlar .nasilis3,
+    .asil_oneriler .nasilis3,
+    .anasayfa_adimlar .nasilis4,
+    .asil_oneriler .nasilis4,
+    .anasayfa_adimlar .nasilis5,
+    .asil_oneriler .nasilis5,
+    .anasayfa_adimlar .nasilis6,
+    .asil_oneriler .nasilis6 {
+        text-align: left;
+        padding-left: 0;
+    }
+}
+.anasayfa_adimlar .nasilis1 h3,
+.asil_oneriler .nasilis1 h3,
+.anasayfa_adimlar .nasilis2 h3,
+.asil_oneriler .nasilis2 h3,
+.anasayfa_adimlar .nasilis3 h3,
+.asil_oneriler .nasilis3 h3,
+.anasayfa_adimlar .nasilis4 h3,
+.asil_oneriler .nasilis4 h3,
+.anasayfa_adimlar .nasilis5 h3,
+.asil_oneriler .nasilis5 h3,
+.anasayfa_adimlar .nasilis6 h3,
+.asil_oneriler .nasilis6 h3  {
+    font-size: 21.994px;
+    font-weight: 500;
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .nasilis1 h3,
+    .asil_oneriler .nasilis1 h3,
+    .anasayfa_adimlar .nasilis2 h3,
+    .asil_oneriler .nasilis2 h3,
+    .anasayfa_adimlar .nasilis3 h3,
+    .asil_oneriler .nasilis3 h3,
+    .anasayfa_adimlar .nasilis4 h3,
+    .asil_oneriler .nasilis4 h3,
+    .anasayfa_adimlar .nasilis5 h3,
+    .asil_oneriler .nasilis5 h3,
+    .anasayfa_adimlar .nasilis6 h3,
+    .asil_oneriler .nasilis6 h3 { line-height: 30.800000000000004px }
+}
+ 
+
+.anasayfa_adimlar .nasilis6:before,
+.asil_oneriler .nasilis6:before {
+ content: "\f00c"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FF8424;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+
+
+.anasayfa_adimlar .nasilis5:before,
+.asil_oneriler .nasilis5:before {
+ content: "\f005"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FF8424;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+
+.anasayfa_adimlar .nasilis4:before,
+.asil_oneriler .nasilis4:before {
+ content: "\f023"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FF8424;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.anasayfa_adimlar .nasilis3:before,
+.asil_oneriler .nasilis3:before {
+ content: "\f140"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FF8424;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.anasayfa_adimlar .nasilis2:before,
+.asil_oneriler .nasilis2:before {
+ content: "\f0e6"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FF8424;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.anasayfa_adimlar .nasilis1:before,
+.asil_oneriler .nasilis1:before {
+ content: "\f00b"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FF8424;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .nasilis1:before,
+    .asil_oneriler .nasilis1:before,
+    .anasayfa_adimlar .nasilis2:before,
+    .asil_oneriler .nasilis2:before,
+    .anasayfa_adimlar .nasilis3:before,
+    .asil_oneriler .nasilis3:before,
+    .anasayfa_adimlar .nasilis4:before,
+    .asil_oneriler .nasilis4:before,
+    .anasayfa_adimlar .nasilis5:before,
+    .asil_oneriler .nasilis5:before { display: none }
+}
+.anasayfa_adimlar .nasilis2:before,
+.asil_oneriler .nasilis2:before { background-position: -60px 0 }
+.anasayfa_adimlar .nasilis3:before,
+.asil_oneriler .nasilis3:before { background-position: -120px 0 }
+.anasayfa_adimlar .nasilis4:before,
+.asil_oneriler .nasilis4:before { background-position: 0 -60px }
+.anasayfa_adimlar .nasilis5:before,
+.asil_oneriler .nasilis5:before { background-position: -60px -60px }
+.anasayfa_adimlar .takip-adim,
+.asil_oneriler .takip-adim {
+    display: inline;
+    float: left;
+    width: 5.801104972%;
+    margin: 0 0 0 2.762430939%;
+    min-height: 1px;
+    margin-left: 0;
+    font-weight: bold;
+    color: #F14079;
+/*
+    color: #4092f1;
+*/
+    font-size: 84px;
+    letter-spacing: -4px;
+}
+.ie7 .anasayfa_adimlar .takip-adim,
+.ie7 .asil_oneriler .takip-adim { width: 5.701104972% }
+@media (max-width:768px) { 
+    .anasayfa_adimlar .takip-adim,
+    .asil_oneriler .takip-adim {
+        width: 100%;
+        margin: 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .takip-adim,
+    .asil_oneriler .takip-adim { font-size: 56px }
+}
+.anasayfa_adimlar .uzunyazi,
+.asil_oneriler .uzunyazi {
+    display: inline;
+    float: left;
+    width: 50%;
+    margin: 0 0 0 2.762430939%;
+    min-height: 1px;
+    padding: 12px 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ie7 .anasayfa_adimlar .uzunyazi,
+.ie7 .asil_oneriler .uzunyazi { width: 39.955248616% }
+@media (max-width:768px) { 
+    .anasayfa_adimlar .uzunyazi,
+    .asil_oneriler .uzunyazi {
+        width: 100%;
+        margin: 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+.anasayfa_adimlar .uzunyazi h3,
+.asil_oneriler .uzunyazi h3 {
+    font-size: 36.4px;
+    line-height: 33.6px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .uzunyazi h3,
+    .asil_oneriler .uzunyazi h3 { font-size: 28px }
+}
+.anasayfa_adimlar .uzunyazi ul li ,
+.asil_oneriler .uzunyazi ul li  {
+    position: relative;
+    list-style-type: none;
+    margin-left: 0;
+    font-size: 16.8px;
+    line-height: 28px;
+}
+.anasayfa_adimlar .uzunyazi ul li .fa,
+.asil_oneriler .uzunyazi ul li .fa {
+    color: #FF8424;
+    position: absolute;
+}
+@media (max-width:768px) { 
+    .anasayfa_adimlar .uzunyazi ul li .fa,
+    .asil_oneriler .uzunyazi ul li .fa { 
+ 
+    color: #FF8424;
+    position: relative; }
+}
+.anasayfa_adimlar .uzunyazi ul li p,
+.asil_oneriler .uzunyazi ul li p {
+    padding-left: 30px;
+    padding-top: 0;
+}
+@media (max-width:768px) { 
+    .anasayfa_adimlar .uzunyazi ul li p,
+    .asil_oneriler .uzunyazi ul li p { padding: 0 100px }
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .uzunyazi ul li p,
+    .asil_oneriler .uzunyazi ul li p { padding: 0 }
+}
+.anasayfa_adimlar .image,
+.asil_oneriler .image {
+    text-align: right;
+    display: inline;
+    float: left;
+    width: 40%;
+    margin: 0 0 0 0.5%;
+    min-height: 1px;
+}
+.ie7 .anasayfa_adimlar .image,
+.ie7 .asil_oneriler .image { width: 48.518784527% }
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar .image img,
+    .asil_oneriler .image img { width: 100% }
+}
+@media (max-width:768px) { 
+    .anasayfa_adimlar .image,
+    .asil_oneriler .image {
+        width: 100%;
+        margin: 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+.anasayfa_adimlar.ilk_adim,
+.asil_oneriler.ilk_adim { 
+padding: 0 0 80px 0;
+padding-left: 50px;
+padding-right: 50px;
+ }
+.anasayfa_adimlar.ilk_adim .birlestir,
+.asil_oneriler.ilk_adim .birlestir {  }
+.anasayfa_adimlar.ilk_adim h2,
+.asil_oneriler.ilk_adim h2 { 
+margin-bottom: 80px; 
+text-align: center;}
+
+.aboutus_first h2 { 
+margin-bottom: 10px; 
+padding-top: 40px;
+font-size: 35px;
+text-align: center;}
+
+
+.anasayfa_adimlar .footer-text,
+.asil_oneriler .footer-text {
+    text-align: center;
+    margin: 40px 0;
+}
+.anasayfa_adimlar { 
+	padding: 80px 0 ;
+ padding-left: 50px;
+ padding-right: 50px;
+ }
+@media (max-width:768px) { 
+    .anasayfa_adimlar h2 { margin-top: 80px }
+}
+@media only screen and (max-width: 34.285714285714285em),only handheld and (max-device-width: 34.285714285714285em) { 
+    .anasayfa_adimlar {     
+      padding: 40px 0;
+      padding-left: 5px;
+      padding-right: 5px;    
+     }
+    .asil_oneriler {     
+      padding: 40px 0;
+      padding-left: 5px;
+      padding-right: 5px;    
+     }
+    .anasayfa_adimlar.ilk_adim,
+		.asil_oneriler.ilk_adim { 
+
+		padding: 0 0 80px 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		 }
+ 
+}
+/*
+.ikincitur {
+ padding-left: 50px;
+ padding-right: 50px;
+ 
+ }
+*/

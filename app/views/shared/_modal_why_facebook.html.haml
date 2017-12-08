@@ -1,0 +1,66 @@
+:css 
+  .select2-container .select2-choice {
+    background: #FFFF99;
+    background-color: #FFFF99;
+  }
+ 
+  .select2-container .select2-choice .select2-arrow {
+    display: none;
+  } 
+  .select2-container .select2-choice .select2-chosen {
+       margin-right: 1px;
+       margin-left: 1px;
+       color: #34495e;
+       font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  } 
+ 
+  .select2-container .select2-choice {
+    display: block;
+    height: 40px;
+    width: 550px; 
+    padding: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+    font-family: initial;
+    font-size: 17px; 
+    border: 1px solid #aaa;
+    white-space: nowrap;
+    line-height: 36px;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+     / background-color: #fff;
+     / background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+     / background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+     / background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+     / background-image: -o-linear-gradient(bottom, #eee 0%, #fff 50%);
+     / background-image: -ms-linear-gradient(top, #fff 0%, #eee 50%);
+     / filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+     / background-image: linear-gradient(top, #fff 0%, #eee 50%);
+  }
+ 
+ 
+#why-facebook.modal.hide.fade{ tabindex: -1, role: 'dialog', 'aria-labelledby' => t('why_facebook'), 'aria-hidden' => true }
+  .modal-header
+    %button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+    %h3= t('why_facebook')
+  .modal-body
+    %p= t('why_facebook_exp1', appname: APP_CONFIG.app_name)       
+    %p= t('why_facebook_exp2', appname: APP_CONFIG.app_name)  
+    %p= t('why_facebook_exp3', appname: APP_CONFIG.app_name)  
+    %p= t('why_facebook_exp4') 
+    %p
+      %i.icon-info-sign.icon-large
+      %u
+        %strong= t('why_facebook_exp5') 
+  .modal-footer
+    = link_to t('close'), '#', 'aria-hidden' => true, data: { dismiss: 'modal'  }, class: 'btn'

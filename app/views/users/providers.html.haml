@@ -1,0 +1,22 @@
+- title t('shared.navbar.provider_settings')
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1= yield :title
+- if current_user.providers.present?
+  .row
+    .span12= render 'providers/list',  user_providers: @providers, type: 1
+- if current_user.customer_provider.present?
+  .row 
+    .span12= render 'providers/list',  user_providers:  (Provider.where(:_id.in=>current_user.customer_provider).to_a) , type: 2
+- if  (current_user.staff_provider.present? && current_user.providers.blank?)
+  .row
+    .span12= render 'providers/list', user_providers: (Provider.where(:_id.in=>current_user.staff_provider).to_a), type: 3
+.row
+  .span12.text-center
+    %hr
+    .btn-toolbar 
+      = link_to new_provider_path, class: 'btn btn-primary' do
+        %i.fa-fa-suitcase
+        = t('.new_provider') 
+

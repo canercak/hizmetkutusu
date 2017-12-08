@@ -1,0 +1,8 @@
+- title t('.title')
+.row
+  .span12
+    %h3.no-margin-bottom
+      = t('quotes.common.about', quote_link: link_to(@quote.uid, quote_path(@quote)), user_link: link_to(get_first_name(@quote.user.name), user_path(@quote.user.id))).html_safe
+    = render 'conversation'
+    %hr
+    = render 'form'

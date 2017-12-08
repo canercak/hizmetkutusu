@@ -1,0 +1,25 @@
+%li{ class: message_classes(alternate, message, current_user) }
+  .message-avatar
+    .img-outset><
+      %span{style: "display:none"}
+        =@sender = User.find(message.sender_id)
+      - if @sender == @quote.user
+        = user_profile_picture @sender, style: nil
+      -else
+        %img.avatar.js-avatar{height: "225", width: "225", src: "#{@quote.providers.find_by(:user_id=>@sender.id).provider_images["provider_image1"][0]}"}/
+        
+  .message
+    .message-header
+      = message_timestamp message
+      %span
+        - if @sender == @quote.user
+          %strong= link_to get_first_name(@sender.name), user_path(@sender.id)
+        - else
+          %span{style: "display:none"}
+            =@provider =@quote.providers.find_by(:user_id=>@sender.id)
+          %strong= link_to @provider.officialname, provider_path(@provider.slug)
+    %p.message-body
+      %span.pre-line><= message.body.strip
+      - if (@sender == current_user && !message.unread?)
+        %br
+        = message_readat message

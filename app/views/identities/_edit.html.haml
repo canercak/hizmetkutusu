@@ -1,0 +1,25 @@
+.row
+  .span12
+    %p.lead= t('.financial_setting_details')
+    = bootstrap_form_for "/auth/identity/edit", html: {  class: 'form-horizontal' } do
+      %legend= t('.credits')
+      %fieldset
+      .control-group
+        = label_tag :name
+        .controls
+          .input-append
+          = text_field_tag :name, @identity.try(:name)
+      .control-group
+        = label_tag :email
+        .controls
+          = text_field_tag :email, @identity.try(:email)
+      .control-group
+        = label_tag :password
+        .controls
+          = password_field_tag :password
+      .control-group
+        = label_tag :password_confirmation
+        .controls
+          = password_field_tag :password_confirmation
+      .actions= submit_tag "Update"
+

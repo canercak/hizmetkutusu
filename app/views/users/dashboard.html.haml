@@ -1,0 +1,9 @@
+- title t('.title')
+.row
+  .span12
+    = render 'shared/flash_messages'
+.row
+  .span12
+    %h1= t('.latest_quotes')
+    = render 'quotes/table', quotes: @latest_quotes, edit: true
+ 

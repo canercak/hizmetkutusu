@@ -1,0 +1,1221 @@
+en:
+  transactions:
+    payment_form_fields:
+      card_details: Credit card details
+      amount_you_want_to_pay: Amount you want to pay
+    list:
+      credit_card_transaction: By credit card
+      state: Paid
+    transaction:
+      pay_with_credit_card: Pay with credit card
+      pay: Please note that we do not store credit card details. Details are passed directly to our payment provider over an encrypted link and never stored in our system.
+  date:
+    formats:
+      full_day: ! '%A %B %e'
+      birthday: ! '%B %-d, %Y'
+      month_year: ! '%B %Y'
+  routes:
+    users: kullanici
+    new: yeni
+    providers: hizmet-saglayici
+    quotes: teklif
+    references: yorum
+    show: goster
+    conversations: sohbet
+    update: guncelle
+    edit: duzenle
+    destroy: sil
+    dashboard: teklif-gecmisim
+    settings: ayarlar
+    financialsettings: odeme-ayarlari 
+    banned: atılmis
+    verified: onayli
+    about: hakkimizda
+    how_it_works: hizmet-alanlar
+    how_it_works_provider: hizmet-verenler
+    policy: gizlilik 
+    terms: kullanim 
+    blog: blog 
+    faq: sss 
+    contact: iletisim 
+  time:
+    ampm: "true"
+    formats:
+      time_only: '%I:%M %p'
+      message: ! '%d %m 20%-y, %H:%M'
+  datetime:
+    formats:
+      message: ! '%A %B %e, %I:%M'
+  boolean:
+    "true": "Yes"
+    "false": "No"
+  helpers:    
+    disable_with: Please wait...
+    save: Save
+    correct: Please make sure you have filled the form fields with * sign
+    pay: Pay  
+    form:
+      error: Please fix the following errors
+    links:      
+      new: New      
+      share_on_facebook_timeline: Share on Facebook
+      confirm: Are you sure?
+      show: Show
+      edit: Edit
+      destroy: Delete
+      user:
+        ban: Ban
+        unban: Unban
+        verify: Verify Provider
+        unverify: Unverify Provider
+      provider:
+        verified: Verifed
+        unverified: Unverified
+    titles:
+      new: "New %{model}"
+      edit: "Edit %{model}"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Previous"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  templates:
+    quotes:
+      read_more: Read more
+      show_on_map: Show on map
+      facebook_verified: Verified on Facebook
+    providers:
+      edit_provider: Edit      
+      service_score: Quality Score
+      price_score: Price Score
+      speed_score: Speed Score
+      gave_service: Service Given
+      appname_score: Hizmetkutusu Score
+      about: About
+      references: References
+      certificates: Certificates
+      photos: Photos
+      give_quote: Give Quote
+  meta_description: "Need a work done? By using %{appname}, get free price quotes from local businesses and people who offer you service for doing this work!"
+  login: Log in
+  login_with_facebook: Login with Facebook
+  logout: Log Out
+  we_will_never_post: We will never post anything without your explicit consent.
+  why_facebook: "Why Facebook?"
+  why_facebook_exp1: "We know that some people do not use Facebook or do not allow permissions to third party applications."
+  why_facebook_exp2: "Anyway, the creation of a new profile will make you solve a captcha, wait for an activation email, insert personal data, upload at least one picture, select a username, remember a new password, etc."
+  why_facebook_exp3: "You can skip all this boring process by logging in with Facebook."
+  why_facebook_exp4: "Personal identity matters for our application. You should be able to trust service providers and they should be able to trust you; so Facebook provides a first verification."
+  why_facebook_exp5: "Moreover, through Facebook you can find out your friends using %{appname} and ask them their opinions about the people they worked with."
+  why_facebook_exp6: "NOTE: We will never post anything without your explicit consent."
+  select_image: Select Image
+  select_profile_image: Select Profile Image*
+  remove_image: Remove
+  change_image: Change
+  select_certificate: Select Certificate
+  select_licence: Select Licence
+  image_info: your profile picture represent you to your customers. You can select your company's logo, your picture or a picture related with the services you offer.
+  certificate_info: your qualifications increase customers' trust to you. You can select your certificates, licences, diplomas or awards you have taken about the services you offer.
+  business_description_placeholder: write about your company or yourself. You can include your experiences and specialities on the services you offer.
+  official_name_placeholder: if you are a company please write you company's short name. If you are a person, write your name.
+  please_enter_work_type_provider: please write and select the services you offer
+  tax_info: correctness of these information will be checked by us. If you are an official company you'll fullfill one of our quality standards and start with 20 points out of 100.
+  about: About Us  
+  how_it_works: How it works
+  policy: Policy
+  terms: Terms
+  demo_terms: Demo Terms
+  last_modified: "Last modified: %{date}"
+  save: Save
+  close: Close
+  delete_account: Delete account
+  demo_mode: This is a demo application
+  flash:
+    admin:
+      users:
+        success:
+          ban: User successfully banned.
+          unban: User successfully unbanned.
+          manageuser: Manage User
+          payments: Payments
+          refund: Refunds
+          addcredits: Add Credits
+          refund_transaction: Refund
+          removecredits: Remove Credits
+          credits: Credits
+          addcreditsconfirm: Do you want to add credits?
+          removecreditsconfirm: Do you want to remove credits?
+          creditadded: Successfully added credits
+          creditremoved: Successfully removed credits
+        error:
+          ban: An error occurred while banning this user.
+          unban: An error occurred while unbanning this user.
+          creditnotadded: Problem with adding credit. Please contact administrator.
+          creditnotaddedminus: The user credit will be minus. Cannot add credit
+    users:
+      success:
+        update: User successfully updated.
+        destroy: User sucessfully destoryed.
+      error:
+        update: An error occurred while updating this user.
+    feedbacks:
+      success:
+        create: Feedback successfully created.
+        update: Feedback successfully updated.
+        destroy: Feedback successfully destroyed.
+      error:
+        create: An error occurred while creating this feedback.
+        update: An error occurred while updating this feedback.
+        destroy: An error occurred while destroying this feedback.
+    quotes:
+      success:
+        update: Quote successfully updated.
+        destroy: Quote successfully destroyed.
+      error:
+        destroy: An error occurred while destroying this quote.
+    providers:
+      success:
+        create: Provider successfully created.
+        update: Provider successfully updated.
+        destroy: Provider successfully destroyed.
+      error:
+        destroy: An error occurred while destroying this provider.
+        wrong_size: "is the wrong size (should be %{file_size})"
+        size_too_small: "is too small (should be at least %{file_size})"
+        size_too_big: "is too big (should be at most %{file_size})"
+        carrierwave_processing_error: "failed to be processed"
+        carrierwave_integrity_error: "is not an allowed file type"    
+        carrierwave_download_error: "Couldn't download image."
+    sessions:
+      error:
+        create: An error occurred while accessing the application.
+        restricted: "An error occurred while accessing the application. This application is restricted to users of a Facebook group, you may have not enough privileges to log in."
+    messages:
+      error:
+        create: An error occurred while creating this message.
+    errors:
+      not_authenticated: Please login first.
+      not_allowed: You don't have permissions to access this page.
+  apps:
+    new:
+      every_day: Every day  
+      every_day_2_hours: Every day 2 hours
+      every_day_5_approaches: Every day 5 approaches 
+      custom: Custom
+      
+      
+  shared:
+    navbar:
+      account_settings: User Settings
+      financial_settings: Payments
+      provider_settings: My Service Providers
+      company_limited: Limited	  
+      new_quote: Get New Quote!
+      quote_history: Quote History
+      company_anonymous: Corporate
+      company_personal: Personal
+      company_no: I don't have Company
+      admin_users: Manage Users
+      language: Language
+      no_new_messages: No new messages
+      see_all_messages: See All
+      please_select: Please Select
+      no_matches_found: No matches found
+      you_can_only_select: you can only select
+      loading_more_results: Loading...
+      searching: Searching...
+      more_characters: more characters
+      item: items
+    footer:
+      message: Privacy is not guaranteed at this stage of development
+    flash_quote_success:
+      create:  We have notified our service providers for the service you requested.
+      create2: The ones who want to give you offer will contact you through your mobile phone.
+  pages:
+    home:
+      tagline: "Offer to find, money to save"
+      learn_more: "What is %{appname}?"
+      what_is_appname: "What is %{appname}?"
+      main_features: "Neden %{appname}?"
+      step1_title: Tell us what you need done 
+      step2_title: Select the best service providers
+      step3_title: Get price quotes from them
+      step1_content: Tell us the service you want to get and we find you the best service providers. 
+      step2_content: Select the best service providers and notify them to give you price quotes.
+      step3_content: Get price quotes and decide on which service provider to work with.      
+      get_quality_service_title: Only The Best Providers
+      get_quality_service_content: We meet you with certified businesses and qualified professionals. If a service provider is Certified, it means that they have completed our training course and we have checked their official trading history.
+      get_quality_for_less_title: Get Quality For Less  
+      get_quality_for_less_content: For every concluded service; we ask customer whether she paid a moderate amount, got quality service and got it fast. So we collect hundreds of customer opinions to direct you to the right service providers.   
+      multiply_choices_title: Multiply Your Choices
+      multiply_choices_content: The key difference between us and the Yellow Pages is that our businesses contact you. Select the businesses you like and compare a range of quotes from them, but if you don’t like any of their offers, just walk away.
+      thats_easy_title: It's So Easy
+      thats_easy_content: We simply done, undone - to make it easy. Elderly and children designed %{appname}. Believed in people who can't use email to make things flow on mobile. Ripped off long quotation forms to make you enter less, talk more.   
+      its_free_title:  It's All Free
+      its_free_content: Best things in life are always free. Think about it. You can’t put a price tag on things that really matter. Honesty, Integrity, Compassion, Hope, Faith, Love, Joy, Family, Friends and %{appname}.
+      nese_title: It's Finally Fun
+      nese_content: Life is meant to be fun, so make it fun. Meet with our mouse Ruby. She's been rambling around %{appname} since it's start, so she knows everything. She will direct you and help you in case of need. Don't forget to feed her!
+      signin_terms: "By clicking \"Sign In\", you agree to %{terms_link} of %{appname} and that you have read and understand our %{policy_link}."
+      demo_mode: "This is a demo application. By clicking on \"Sign In\" you agree to our %{demo_terms_link}."
+      join_us_today: "Join us today!"
+    policy:
+      title: Privacy Policy
+      policy_10: Information we collect
+      policy_20: We collect some information to provide better services to all of our users.
+      policy_30: We collect information in two ways
+      policy_40: Information you give us.
+      policy_50: In the profile settings, we’ll ask for personal information, like your mobile phone number
+      policy_60: Information we get from Facebook.
+      policy_70: This information includes
+      policy_80: Public profile picture, email, name, birthday, work, education, total number of friends, spoken languages; all these values are cached in our databases.
+      policy_90: Likes and common friends with other Hizmetkutusu users; these values are only showed when viewing a profile.
+      policy_100: How we use information we collect
+      policy_110: We use the information we collect on our service to provide, maintain, protect and improve it. Hizmetkutusu processes personal information on our servers in many countries around the world. We may process your personal information on a server located outside the country where you live.
+      policy_120: Transparency and choice
+      policy_130: People have different privacy concerns. Our goal is to be clear about what information we collect, so that you can make meaningful choices about how it is used. For example, you can;
+      policy_140: your account
+      policy_150: You may also set your browser to block all cookies, including cookies associated with our services, or to indicate when a cookie is being set by us. However, it’s important to remember that many of our services may not function properly if your cookies are disabled. For example, we may not remember your language preferences.
+      policy_160: Information you share
+      policy_170: Our service let you share information with others. Remember that when you share information publicly,it may be indexable by search engines.
+      policy_180: Accessing and updating your personal information
+      policy_190: You can edit information you provide us through profile settings. You can't edit information we retrieve from Facebook because these are only cached on our database for performance reasons. If you need to edit those information, edit them on Facebook and log in again on our service.
+      policy_200: Information we share
+      policy_210: We do not share personal information with companies, organizations and individuals outside of #{APP_CONFIG.app_name} unless one of the following circumstances apply;
+      policy_220: For legal reasons
+      policy_230: We will share personal information with companies, organizations or individuals outside of #{APP_CONFIG.app_name} if we have a good-faith belief that access, use, preservation or disclosure of the information is reasonably necessary to;
+      policy_240: meet any applicable law, regulation, legal process or enforceable governmental request.
+      policy_250: enforce applicable Terms of Service, including investigation of potential violations.
+      policy_260: detect, prevent, or otherwise address fraud, security or technical issues.
+      policy_270: protect against harm to the rights, property or safety of #{APP_CONFIG.app_name}, our users or the public as required or permitted by law.
+      policy_280: We may share aggregated, non-personally identifiable information publicly and with our partners – like publishers, advertisers or connected sites. For example, we may share information publicly to show trends about the general use of our services.
+      policy_290: If #{APP_CONFIG.app_name} is involved in a merger, acquisition or asset sale, we will continue to ensure the confidentiality of any personal information and give affected users notice before personal information is transferred or becomes subject to a different privacy policy.
+      policy_300: Application
+      policy_310: Our Privacy Policy does not apply to services offered by other companies or individuals, including products or sites that may be linked from our service. Our Privacy Policy does not cover the information practices of other companies and organizations who advertise our services, and who may use cookies, pixel tags and other technologies to serve and offer relevant ads.
+      policy_320: Changes
+      policy_330: Our Privacy Policy may change from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. We will post any privacy policy changes on this page and, if the changes are significant, we will provide a more prominent notice (including, for certain services, email notification of privacy policy changes).
+
+    how_it_works:
+      title: How it works
+      step1: Step 1
+      step2: Step 2
+      step3: Step 3
+      step4: Step 4
+      customer1_title: Tell us about your needs
+      customer1_content10: Answer a few simple questions.
+      customer1_content20: Select the service providers you like. Maximum Three.
+      customer1_content30: Go about your day, we'll take it from here.
+      customer2_title: Get quotes within 24 hours
+      customer2_content10: We will share your mobile phone with the providers who want to give you offer
+      customer2_content20: We'll keep your mobile phone private, so no spam.
+      customer2_content30: They will start to call you to give you price quotes.
+      customer3_title: Compare quotes & hire the best service provider
+      customer3_content10: Collect price quotes.
+      customer3_content20: Compare them to get a great deal
+      customer3_content30: Call or message the right provider to discuss the work.
+    how_it_works_provider:
+      provider1_title: A client search for a service
+      provider1_content10: If you provide the service client looking for and if you are not far from the client, he sees your profile with other profiles.
+      provider1_content20: The higher hizmetkutusu score you have for that service, the higher you appear on the list. 
+      provider1_content30: Client always check your scores. Client knows that higher score is a better service provider.
+      provider1_content40: Client compares different providers and decides who to select.
+      provider1_content50: Client can select maximum 3 service providers.
+      provider1_content60: If client thinks that you can provide the service, he selects you.
+      provider1_content70: Clients submits his request.
+      provider1_content80: Hizmetkutusu qualifies the leads; real people, real needs.
+      provider2_title: You decide if you want to respond
+      provider2_content10: Hizmetkutusu sends the lead via SMS to service providers client have chosen.
+      provider2_content20: The SMS you will get is similar to this one;  A client who is 5 miles away from your business address, wants to get dry cleaning service from you. He has chosen you second out of three providers and you can reach his profile from this link. If you want to give price quote to this client, please answer this text with YES. (this will take 1 out of your 8 Hizmetkutusu Credits) 
+      provider2_content30: chosen you second out of three means you had the second highest hizmetkutusu score out of 3 providers he has chosen.
+      provider2_content40: You can reach client's profile and see a copy of his facebook profile, his past service requests and reviews. You won't be able to see the name and contact details of that client.
+      provider2_content50: Every credit costs 1$. 1$ is all we get. You may decide to work with client, we do not get any commision from that.
+      provider2_content60: You can pre-pay for credits by credit card in the payments section of Hizmetkutusu.
+      provider2_content70: You decide if you want to respond to the client. 
+      provider3_title: Respond to Client
+      provider3_content10: When you answer the SMS with YES, we deduct 1 credit from your account and reply to you the contact details of client and what to do next.
+      provider3_content20: The SMS you will get is similar to this; "Thank you for working with Hizmetkutusu. The name of client is John Warwick and his mobile phone is 1432233443.  If the client hires you, please answer this sms with OK after you finish your work. Please write OK after you finish the work, this will enable the client to give you rating to increase your hizmetkutusu score. 
+      provider3_content30: We expect you to call the client, ask for details and give price quote. 
+      provider3_content40: We expect you to be polite and understanding to client.
+      provider3_content50: We expect you to accept the fact that client may not choose you to work with.
+      provider4_title: Get hired, and let us know!
+      provider4_content10: When client hires you, provide the best service you can for reasonable amount of price!
+      provider4_content20: Giving the best service for reasonable amount is important because these two affect your hizmetkutusu score most. 
+      provider4_content30: Once you finish the service, reply to our last sms with OK so we can know that you've done the work and ask client to give you rating.
+      provider4_content40: We will do everthing to make client give you rating. We may provide ipad, vacations and various goods services to client for free, just to make him determine your hizmetkutusu score.
+      provider4_content50: Beware. Do not reply with OK if you are not hired by the client.  
+      provider4_content60: Beware. Do not reply with OK if you have not finished the work
+      provider4_content70: Beware. Do not send your adverts to client without his explicit consent.
+      provider4_content80: We recognise each situation by spending our and client's time. If you make one of those mistakes two times we will have to block you from accessing hizmetkutusu.
+      how_get_hired_title: How do I get hired?
+      how_get_hired_content10: Build a winning profile
+      how_get_hired_content20: "Our clients are looking for trustworthy service professionals who can demonstrate relevant experience to their specific needs. Your Hizmetkutusu profile is where your potential clients meet you and your business. Add a profile picture - preferably one where we clearly see your handsome smiling face. Describe your experience: what jobs have you done in the past? Why are you the right person to hire? Make yourself trustworthy; update a license, link to your website or LinkedIn. And most importantly, wow them with with photos and videos - let them imagine you doing the job!"
+      how_get_hired_content30: Talk with a client clearly and professionally
+      how_get_hired_content40: This is your chance to tell who you are to potential client. Make sure to personalize - focus on addressing any issues the client raised and responding to their specific request. If you need more information, try asking to clarify. Set a competitive price (always helps make a good impression), and finally, go over briefly your qualifications and specialties.
+      how_get_hired_content50: Give an estimate
+      how_get_hired_content60: Customers are more likely to hire service providers who provide a basic idea of price. Whenever possible, give your customers a sense of cost. This does not have to be the final number, and it can be changed as you learn more about a particular job.
+      how_get_hired_content70: Get ratings and increase your hizmetkutusu score
+      how_get_hired_content80: Clients tell us that Hizmetkutusu score is a major factor in their decision of who to hire. Ask your consumers to give you ratings. Make sure your ratings are credible - not everyone is perfect 100% of the time.
+      how_get_hired_content90: "Don't give up!" 
+      how_get_hired_content100: "Even our most successful service providers may not have gotten hired on their first quote. Remember, because there are up to three quotes submitted per request and client may not be sure what he wants; you will not win every single job. It takes time to meet the right customer for you. Make sure you are receiving the right leads. Try freely talking with clients. Experiment and see what works. For a majority of providers, it takes more than 5 quotes to get their first hire. Treat this as an investment in your long term success. Many service providers have grown their business more than 50% by simply responding consistently to Hizmetkutusu leads. You can too."
+      how_get_hired_content110: Sign up now and grow your business.
+    about:
+      aboutus_10: Kendi seçmediğim bir yerde,
+      aboutus_20: Kendi seçmediğim bir zamanda,
+      aboutus_30: Kendi seçmediğim bir işte,
+      aboutus_40: Kendi seçmediğim bir süratte,
+      aboutus_50: Kendi seçmediğim insanlarla,
+      aboutus_60: Muhakkak bir amirin sıkı gözetimi altında,
+      aboutus_70: Direktif alarak,
+      aboutus_80: Bütün o çocukca ceza ve ödül sistemleri ile,
+      aboutus_90: Ruhumu,
+      aboutus_100: Bedenimi,
+      aboutus_110: Aklımı,
+      aboutus_120: Meşgul etmek.
+      aboutus_130: Çalışmak.
+      aboutus_140: Kendi seçtiğim bir yerde,
+      aboutus_150: Kendi seçtiğim bir zamanda,
+      aboutus_160: Kendi seçtiğim bir işte,
+      aboutus_170: Kendi seçtiğim bir süratte,
+      aboutus_180: Kendi seçtiğim insanlarla,
+      aboutus_190: Muhakkak bir devletin sıkı gözetimi altında,
+      aboutus_200: Direktif vererek,
+      aboutus_210: Bütün o çocukca ceza ve ödül sistemlerini uygulayarak,
+      aboutus_220: Ruhumu,
+      aboutus_230: Bedenimi,
+      aboutus_240: Aklımı,
+      aboutus_250: Meşgul etmek.
+      aboutus_260: Çalışmak.
+      aboutus_270: Bugün bir çok insanın hemen hemen hiç farkında olmadıkları gerçek,
+      aboutus_280: Çalışmak zorunda bırakıldıkları gerçeğidir.
+      aboutus_290: Sabah 7 akşam 7,
+      aboutus_300: Haftanın 6 günü,
+      aboutus_310: Üretmeli,
+      aboutus_320: Ürettikleri hiçbir işe yaramayan hırdavatı,
+      aboutus_330: Emeklerinin karşılarında aldıkları ücretlerle,
+      aboutus_340: Yine kendileri tüketmelidirler.
+      aboutus_350: Enayilerin sadece bir kısmı çok çalışırlar.
+      aboutus_360: Ama bütün enayiler çalışkanlığı överler.
+      aboutus_370: Çalışmak anayasalara hak olarak girmiştir.
+      aboutus_380: Liderlerin halklarına söyledikleri ilk şey olmuştur.
+      aboutus_390: Dünyaya bugüne kadar gelmiş ve geçmiş;
+      aboutus_400: Tüm sistemlerin,
+      aboutus_410: Tüm akımların,
+      aboutus_420: Tüm dinlerin,
+      aboutus_430: Tüm inançların,
+      aboutus_440: Tek bir ortak yanı vardır.
+      aboutus_450: Çalışmak.
+      aboutus_460: Çalışmak ne bir hak, ne bir ödevdir.
+      aboutus_470: Kötü bir kaderdir sadece.
+      aboutus_480: En kötü cinsten köleliktir.
+      aboutus_490: Sefilliktir.
+      aboutus_500: Büyük talihsizliktir.
+      aboutus_510: Para; güvenlik, konfor, özgürlük ve yer yer mutluluk getirir.
+      aboutus_520: Ama ne fakirlerin hayal ettikleri,
+      aboutus_530: Ne de zenginlerin uğrunda yaşamlarını harcadıkları kadar.
+      aboutus_540: Çalışan milyonların kendilerine soramadıkları,
+      aboutus_550: Veya sormaya cesaret edemedikleri,
+      aboutus_560: Büyük soru şudur;
+      aboutus_570: Zamanımızın hemen hemen hepsini,
+      aboutus_580: Bedenimizin önemli bir kısmını,
+      aboutus_590: Duygularımızın ve düşüncelerimizin neredeyse yarısını,
+      aboutus_600: Elden çıkararak kazandığımız tam olarak nedir?
+      aboutus_610: Çalışkanlar, akıllı tüccarlar gibi düşünselerdi,
+      aboutus_620: Çalışmaktan vazgeçebilirlerdi.
+      aboutus_630: Çünkü akıllı tüccarlar,
+      aboutus_640: Ellerindeki iyi bir şeyi,
+      aboutus_650: Ancak daha değerli bir başkası için çıkartırlar.
+      aboutus_660: Peki.
+      aboutus_670: Elimizdeki en iyi şey nedir?
+      aboutus_680: Yaşamdır.
+      aboutus_690: Yaşamak da, Çalışmak değildir.
+      aboutus_700: Sadece enayiler, yaşamak için çalışmak gerektiğini düşünürler.
+      aboutus_710: Yaşamak, Çalışmak Değildir!
+      aboutus_720: Ya nedir?
+      aboutus_730: Boş boş bulutları seyretmektir,
+      aboutus_740: Takla atmaktır,
+      aboutus_750: Yuvarlanmaktır,
+      aboutus_760: Kanatlanmaktır,
+      aboutus_770: Dans etmektir,
+      aboutus_780: Gözünü kırpmadan rezil olmaktır,
+      aboutus_790: Kendinden geçmektir,
+      aboutus_800: İçine gömülmektir.
+      aboutus_810: Aşkla,
+      aboutus_820: Şiirle,
+      aboutus_830: Sohbetle,
+      aboutus_840: Türlü türlü maceralar içinde,
+      aboutus_850: Hayretten hayrete düşerek,
+      aboutus_860: Şu kısacık ömrü,
+      aboutus_870: İçinden geldiği gibi,
+      aboutus_880: Geçirmektir.
+      aboutus_890: Durmak.
+      aboutus_900: Ve Düşünmektir.
+      aboutus_910: Asıl bunlar, zaman ve emek isterler.
+      aboutus_920: Çalışanlar sadece koşuştururlar.
+      aboutus_930: İlerleyen insanlık - eğer ilerliyorsa,
+      aboutus_940: Her şeyini aylaklara borçludur.
+      aboutus_950: Evet aylaklara.
+      aboutus_960: Bizler, Aylak İnsanlarız.
+      aboutus_970: Kimdir Aylak?
+      aboutus_980: Aylak, çabasız yaratan kişidir.
+      aboutus_990: Yavaşça, Usulca, Kendiliğinden.
+      aboutus_1000: Bütün büyük sanatçılar böyledir.
+      aboutus_1010: İlim, sanat, kültür ve medeniyet dedikleri,
+      aboutus_1020: Aylakların keyiflerinden arta kalan boş zamanlarında,
+      aboutus_1030: Yavaş yavaş uydurdukları nafile hayallerle,
+      aboutus_1040: Yaptıkları bomboş marifetlerdir.
+      aboutus_1050: Aylaklar için yaşamak, harcayarak bitiremeyecekleri bir servettir.
+      aboutus_1060: Çalışkanlar için yaşamak, bir cimrinin kuruşlarını sıkıştırdığı kumbarasıdır.
+      aboutus_1070: Çabasız, emeksiz ve telaşsız elde edilemeyecek hiçbir lezzet yoktur.
+      aboutus_1080: Bütün aylaklar bunun sırrını iyi bilirler.
+      aboutus_1090: Bu nedenle;
+      aboutus_1100: Ne istediğini bilen bir aylak,
+      aboutus_1110: Ne istediğini bilmeyen bir çalışkandan,
+      aboutus_1120: Daha çok şey yapar, yaşar ve yaratır.
+      aboutus_1130: Aylak taslağı hayal eder.
+      aboutus_1140: Çalışkanlar ise taşları üst üste koyarlar.
+      aboutus_1150: Durduk.
+      aboutus_1160: Ve Düşündük.
+      aboutus_1170: Durduk.
+      aboutus_1180: Ve Düşündük.
+      aboutus_1190: Durduk.
+      aboutus_1200: Ve Düşündük.
+      aboutus_1210: Hizmetkutusunu kurduk.
+      aboutus_1220: Hizmetkutusunun kurulma amacı;
+      aboutus_1230: Sahip olmak yerine, hizmet almayı topluma yaymaktır.
+      aboutus_1240: Bu amacını gerçekleştirmek için,
+      aboutus_1250: Kaliteli hizmetin makul fiyata alınabilmesini sağlayacaktır.
+      aboutus_1260: Neden mi?
+      aboutus_1270: Çünkü, 
+      aboutus_1280: Önemli olan hislerdir.
+      aboutus_1290: Nasıl mı?
+      aboutus_1300: Bilimsel olarak.
+      aboutus_1310: Bilimsel olarak,
+      aboutus_1320: Her insan,
+      aboutus_1330: Beyninde oluşan alemi seyreder, 
+      aboutus_1340: Beyninde oluşan alemi duyar,
+      aboutus_1350: Beyninde oluşan alemi koklar, 
+      aboutus_1360: Beyninde oluşan alemi tadar, 
+      aboutus_1370: Beyninde oluşan aleme dokunur.
+      aboutus_1380: Görme olayını ele alalım.
+      aboutus_1390: Baktığımız cisimden gelen ışık demetleri,
+      aboutus_1400: Gözün önündeki lensin içinden geçerek,
+      aboutus_1410: Retinaya ters olarak düşerler.
+      aboutus_1420: Retinada bu uyarılar elektrik sinyallerine dönüşür.
+      aboutus_1430: Ardından bu elektrik sinyalleri, sinirler aracılığı ile,
+      aboutus_1440: Beynin arka bölümündeki görme merkezine ulaşır.
+      aboutus_1450: İşte burada,
+      aboutus_1460: Elektrik sinyalleri bir dizi işlemden geçer,
+      aboutus_1470: Görüntü olarak algılanır. 
+      aboutus_1480: Yani görme olayı gerçekte, 
+      aboutus_1490: Beynin arkasındaki,
+      aboutus_1500: Küçük, 
+      aboutus_1510: Işığın hiçbir şekilde giremediği,
+      aboutus_1520: Kapkaranlık bir noktada yaşanır.
+      aboutus_1530: Gören gözlerimiz değildir,
+      aboutus_1540: Görüntü beynimizde oluşur.
+      aboutus_1550: Beynimizin diğer noktalarında aynı şekilde oluşan,
+      aboutus_1560: Başka olaylar da vardır.
+      aboutus_1570: Duyma, Koklama, Tatma, Dokunma.
+      aboutus_1580: Ne kadar gerçekçi olursa olsun,
+      aboutus_1590: Dış dünya,
+      aboutus_1600: Sadece,
+      aboutus_1610: Beynimizin birer yorumudur.
+      aboutus_1620: Dünyanın gerçek görüntüsünü gördüğümüze dair,
+      aboutus_1630: Bizi ikna eden beş duyumuz, 
+      aboutus_1640: Elektrik sinyallerinden mahrum kaldığında, 
+      aboutus_1650: Dış dünya da ortadan kalkar.
+      aboutus_1660: Biz dünyayı bizim dışımızda zannederiz. 
+      aboutus_1670: Oysa, dünya herşeyiyle bizim içimizdedir. 
+      aboutus_1680: Biz, dışımızda sandığımız dünyayı aslında içimizde, 
+      aboutus_1690: Beynimizdeki küçücük bir noktada görürüz. 
+      aboutus_1700: Burada anlattığımız,
+      aboutus_1710: Her insanın üzerinde büyük bir ciddiyetle düşünmesi gereken,
+      aboutus_1720: Çok önemli bir bilimsel gerçektir. 
+      aboutus_1730: Çünkü bu gerçeği görmezden gelen her insan, 
+      aboutus_1740: Ömrü boyunca küçücük bir noktada oluşan görüntüyü,
+      aboutus_1750: Gerçek zannederek yanılmaktadır. 
+      aboutus_1760: Beynindeki bir noktada oluşan maddelere sahip olduğunu zanneden kişi,
+      aboutus_1770: Bu görüntülerden dolayı mutlu olur.
+      aboutus_1780: Beynindeki bir noktada oluşan maddelere sahip olmadığını zanneden kişi,
+      aboutus_1790: Bu görüntülerden dolayı mutsuz olur.
+      aboutus_1800: Bu maddelerin aslını, dışarıdaki gerçek halini,
+      aboutus_1810: Hiç kimse, hiçbir zaman bilemez ve göremez. 
+      aboutus_1820: Peki.
+      aboutus_1830: Gören gözlerimiz değilse, 
+      aboutus_1840: Gördüğü manzaradan zevk alan kimdir? 
+      aboutus_1850: Hayatı boyunca, 
+      aboutus_1860: Kapkaranlık, sessiz kafatasının içinde,
+      aboutus_1870: Kendisine gösterilen görüntüleri;
+      aboutus_1880: İzleyen, 
+      aboutus_1890: Düşünen, 
+      aboutus_1900: Sonuç çıkaran, 
+      aboutus_1910: Karar veren,
+      aboutus_1920: ve hisseden kimdir?
+      aboutus_1930: Materyalistlerin içinden çıkamadıkları,
+      aboutus_1940: Asıl nokta işte burasıdır.
+      aboutus_1950: Çevremizde gördüğümüz herşeyle birlikte, 
+      aboutus_1960: Biz de bir görüntüysek.
+      aboutus_1970: Yani beynimiz de,
+      aboutus_1980: Bir görüntü ise; 
+      aboutus_1990: Görüntü olan bir varlığın,
+      aboutus_2000: Görüntü meydana getirdiğini,
+      aboutus_2010: Söyleyemeyiz. 
+      aboutus_2020: O zaman bu görüntüleri kesintisiz olarak devam ettiren kimdir?
+      aboutus_2030: Din, “Ruh” der.
+      aboutus_2040: Felsefe, “Ruh” der.
+      aboutus_2050: Bilim de sonunda “Ruh” der.
+      aboutus_2060: Hep “Ruh” deniliyorsa,
+      aboutus_2070: Bir bildikleri vardır.
+      aboutus_2080: Bizim de bir bildiğimiz var.
+      aboutus_2090: Biz görsek de görmesek de maddesel bir dünya vardır. 
+      aboutus_2100: Ancak biz bu dünyayı beynimizin içinde bir kopya,
+      aboutus_2110: Diğer bir deyişle algılarımızın yorumu olarak görürüz.
+      aboutus_2120: Dolayısıyla madde, bizim için bir hayaldir.
+      aboutus_2130: Önemli olan ruhumuz sayesinde hissettiklerimizdir.
+      aboutus_2140: Madde bir hayalse,
+      aboutus_2150: Önemli olan da hissetmekse,
+      aboutus_2160: Niye hisler için değil de,
+      aboutus_2170: Hayaller için yaşamımızı harcıyoruz?
+      aboutus_2180: Maddeye sahip olmak,
+      aboutus_2190: Anlamsız bir hayale sahip olmaktır.
+      aboutus_2200: Fakat,
+      aboutus_2210: Hisse sahip olmak için,
+      aboutus_2220: Maddeye sahip olmamıza gerek yok ki.
+      aboutus_2230: Dini, felsefi ve bilimsel olarak;
+      aboutus_2240: Bir eve sahip olmak hem anlamsız hem gereksizdir.
+      aboutus_2250: Bir arabaya sahip olmak hem anlamsız hem gereksizdir.
+      aboutus_2260: Bir cep telefonuna sahip olmak hem anlamsız hem gereksizdir.
+      aboutus_2265: Ama gerekiyorsa;
+      aboutus_2270: Bu temel ihtiyaçların bile hislerini,
+      aboutus_2280: Yaşamımızdan çok daha az vererek,
+      aboutus_2290: Daha kaliteli bir halde,
+      aboutus_2300: Daha makul fiyata,
+      aboutus_2310: Yaşayabiliriz.
+      aboutus_2320: Önemli olan da yaşamaktır!
+      aboutus_2330: Nasıl mı?
+      aboutus_2340: Hizmet Alarak.
+      aboutus_2350: Her nesne, içine gömülü hizmetlerle kullanıcısına ulaşır.
+      aboutus_2360: Oluşturulmasında, çeşitli kişilerden hizmet alınmıştır.
+      aboutus_2370: Bu hizmetlerin sonucu, kullananın alacağı hizmeti belirler.
+      aboutus_2380: Araba, sürücüsüne ulaşım hizmetleri sağlar.
+      aboutus_2390: Ev, içinde yaşayan aileye yaşam hizmetleri sunar. 
+      aboutus_2400: Telefon, kullanıcısına İletişim hizmetleri verir.
+      aboutus_2410: Nesne olan araba, ev ve telefon birer araçtır, 
+      aboutus_2420: Amaç, kişinin çeşitli hizmetlerini karşılamaktır.
+      aboutus_2430: Çünkü kişi kendisini iyi hissetmek istiyordur.
+      aboutus_2440: Zengin-fakir, Emir veren-emir alan. Genç-Yaşlı. Kadın-Erkek.
+      aboutus_2450: Bugün herkes tüketmeye çalıştığı nesnelerin,
+      aboutus_2460: Üretiminde çalıştırılarak tüketilen birer nesnedir.
+      aboutus_2470: Biri iki milyon liralık bir villa için çalıştırılmaktadır,
+      aboutus_2480: Diğeri ise iki bin liralık kullanılmış bir araba için. 
+      aboutus_2490: Sistem için bugün herkes hem üretici hem de tüketici olarak,
+      aboutus_2500: İki ucundan yakılmış bir mumdur.
+      aboutus_2510: Neden mi, seve seve çalışırlar?
+      aboutus_2520: Çünkü önce, 
+      aboutus_2530: Sahip olmayı hayal ederler.
+      aboutus_2540: Ev için çalışan baba, ailesiyle konforlu bir yaşama sahip olmayı hayal eder.
+      aboutus_2550: Araba için çalışan genç erkek, arkadaşlarını gezdirdiğini hayal eder.
+      aboutus_2560: Telefon için çalışan genç kız, fotoğraflarını paylaştığını hayal eder.
+      aboutus_2570: Dikkat edin!
+      aboutus_2580: Her hayal, aslında o şeye ulaştıktan sonra,
+      aboutus_2590: Kişinin o nesneden alacağı hizmetlerin hayalidir.
+      aboutus_2600: Hayal ettikleri,
+      aboutus_2610: Sahip olacakları nesnenin verdiği hizmetin,
+      aboutus_2620: Yaşamı zenginleştirmesidir sadece.
+      aboutus_2630: İyi hissetmelerini sağlamasıdır.
+      aboutus_2640: Hissi, hizmeti yaşamak verir.
+      aboutus_2650: İşte bu his; 
+      aboutus_2660: Adamı çalıştırtır.
+      aboutus_2670: İşte bu his;
+      aboutus_2680: Bağımlılık yapar.
+      aboutus_2690: İşte bu his;
+      aboutus_2700: İnsanlığı son 10bin yıldır ilerletiyor.
+      aboutus_2710: Dünyadaki bütün para, kendini iyi hissetmek için harcanır.
+      aboutus_2720: Nedir para?
+      aboutus_2730: Ticaretin en eski takas olmuştur.
+      aboutus_2740: Nihayietinde demir paralar ve kağıt paralar gelmiştir.
+      aboutus_2750: Önce “Altın standardı” ile.
+      aboutus_2760: Kişinin elineki 10 liralık kağıt para, 
+      aboutus_2770: Devletin ona ödediği 10 liralık borç senedidir. 
+      aboutus_2780: Devlet, “sen buna sahipsin” ibaresini,
+      aboutus_2790: Paranın üzerindeki imzasıyla da onaylar.
+      aboutus_2800: Çünkü devletin bu para karşılığında altını bulunmaktır.
+      aboutus_2810: Böylelikle takas başka bir hal almış,
+      aboutus_2820: İnsanlar ellerindeki altın hisselerini değiştirir olmuşlardır.
+      aboutus_2830: Tabiki en sonunda,
+      aboutus_2840: Bankalar aralarında anlaşmışlar,
+      aboutus_2850: Dünya devletlerini ikna etmişler,
+      aboutus_2860: Altın sistemi terk edilmiştir.
+      aboutus_2870: İşte o günden beri; 
+      aboutus_2880: Birilerinin canı sıkıldıkça,
+      aboutus_2890: Para basılmaktadır.
+      aboutus_2900: Altın sembolik hale gelmiştir.
+      aboutus_2910: Gelmemiştir diyen de enayidir.
+      aboutus_2920: Çünkü günümüzde artık para basmakla da uğraşmıyorlar.
+      aboutus_2930: Artık para, bir bilgisayarın sıfırlı numalarıdır.
+      aboutus_2940: Bir kendine güven biçimidir.
+      aboutus_2950: Banka hesabınızdaki 10 liranın yanına,
+      aboutus_2960: 10 sıfır eklendiğini farkederseniz,
+      aboutus_2970: Kendinize güveniniz 10 ile çarpılır.
+      aboutus_2980: Sonuçta;
+      aboutus_2990: Para, bir semboldür.
+      aboutus_3000: Neyin sembolüdür?
+      aboutus_3010: Sadece,
+      aboutus_3020: Ama Sadece,
+      aboutus_3030: Harcanılan eforun.
+      aboutus_3040: Efor göreceli olabilir.
+      aboutus_3050: Cebinizdeki 10 lirayı, arkadaşınızla karşılıkı olarak,
+      aboutus_3060: 10 milyon kere alıp verirseniz,
+      aboutus_3070: 100 milyon lira kazanmış olursunuz.
+      aboutus_3080: Harcanılan efor arkadaşınızı tanımak ve parayı 10 milyon kere değiştirmektir.
+      aboutus_3090: Para, bu eforun sembölüdür.
+      aboutus_3100: Efor fiziksel olmayabilir.
+      aboutus_3110: Beynen en pis işlerde çalışanlara en yüksek paralar ödenir.
+      aboutus_3120: Fiziksel olarak en pis işlerde çalışanlara da en düşük paralar.
+      aboutus_3130: Efor geçmişte, şimdi ve gelecekte harcanılan;
+      aboutus_3140: Zamanı temsil eder.
+      aboutus_3150: Beynen en pis işte çalışan kişinin geçmişi o işle doludur.
+      aboutus_3160: Bir ürünün el yapımı, fabrikasyon halinden her zaman daha pahalıdır.
+      aboutus_3170: Ona milyonlar kazandıracak kişileri bulup anlaşmak iş adamı için kolay olmamıştır.
+      aboutus_3180: Her durumda da;
+      aboutus_3190: Kişi, yaşamından daha çok vermiştir. 
+      aboutus_3200: Para, bu eforun sembolüdür.
+      aboutus_3210: Paranın sembolik olduğunu biliyoruz.
+      aboutus_3220: Peki efor nedir?
+      aboutus_3230: İşte efor, hizmettir.
+      aboutus_3240: Kişinin verdiği ve aldığı hizmetlerin toplamıdır efor.
+      aboutus_3250: Hizmet önce paraya çevrilir.
+      aboutus_3260: Ardından başka birinin harcadığı hizmet olan;
+      aboutus_3270: Eve, arabaya, veya telefona;
+      aboutus_3280: Geri çevrilir.
+      aboutus_3290: Ekonomi derler buna.
+      aboutus_3300: Her kişi, genlerinde yer etmiş hizmetleri sağlama özellikleriyle doğar.
+      aboutus_3310: Yaşamı boyunca yeni hizmetler öğrenir.
+      aboutus_3320: Çevresine hizmetler verir.
+      aboutus_3330: Çevresinden hizmetler alır.
+      aboutus_3340: Tüm bu hizmetler, onun yaşam tecrübesini belirler.
+      aboutus_3350: Hayat derler buna.
+      aboutus_3360: Doktor; sağlık hizmetlerinden sorumludur.
+      aboutus_3370: Asker; güvenlik hizmetlerinden.
+      aboutus_3380: Anne; ailesinin bakım, temizlik, beslenme hizmetleriyle uğraşır.
+      aboutus_3390: Baba; ailesinin finans, güvenlik, ulaşım hizmetleri için didinir.
+      aboutus_3400: Tüm bu hizmetlerin arkasındaki tek şey,
+      aboutus_3410: Kişinin kendisini iyi hissetmesidir.
+      aboutus_3420: Ama maddi, ama manevi. 
+      aboutus_3430: Karşılıklı hizmetler sayesinde,
+      aboutus_3440: Hem Ekonomi çarkı,
+      aboutus_3450: Hem Hayat çarkı,
+      aboutus_3460: Döner durur.
+      aboutus_3470: Çoğu insan parayı bir mal, bir emtia olarak görür.
+      aboutus_3480: Bunlar ekonomiye en zararlılarımız oldukları gibi,
+      aboutus_3490: Hayat fakirleridirler.
+      aboutus_3500: Çünkü parayı çevirmeye değil, toplamaya çalışırlar.
+      aboutus_3510: Daha çok kazanmak yerine, tasarruf için uğraşırlar.
+      aboutus_3520: İşletmek yerine, mal edinirler.
+      aboutus_3530: Daha az hizmet alıp, daha az hizmet vermeye başlarlar.
+      aboutus_3540: Bunları yaparken harcadıkları hayatlarıdır aslında.
+      aboutus_3550: Ellerine verilmiş müthiş bir tabloyu yakarak ısınmaya çalışırlar.
+      aboutus_3560: Neden mi?
+      aboutus_3570: Enayilerdir de ondan.
+      aboutus_3580: Parayı depolayarak,
+      aboutus_3590: Mutluluğu da depolayacaklarını sanarlar.
+      aboutus_3600: İyi hissetmeyi depolamaya kalkışırlar.
+      aboutus_3610: Ve çuvallarlar.
+      aboutus_3620: Mutlluluk sadece nörokimyasal bir reaksiyondur.
+      aboutus_3630: Dış etkenleri beklemek yerine,
+      aboutus_3640: Kendi içinizde, kendi isteğinizle yaratabilceğiniz bir durumdur.
+      aboutus_3650: Hemen,
+      aboutus_3660: Şimdi.
+      aboutus_3670: Sadece sahip olduklarınıza şükrederek.
+      aboutus_3680: Mutluluk için bir yerlere bişiler depolamaya gerek yoktur.
+      aboutus_3690: Tam Tersine,
+      aboutus_3700: Mutluluk;
+      aboutus_3710: Denemek yanılmak. 
+      aboutus_3720: Düşmek ve kalkmak. 
+      aboutus_3730: Terkrar denemek,
+      aboutus_3740: ve doğrusunu bulmaktır.
+      aboutus_3750: Mutluluğu ararken,
+      aboutus_3760: Bir şeyleri depolamaya çalışmak,
+      aboutus_3770: Onu bulma özgürlüğünden alıkoyar sizi.
+      aboutus_3780: Zenginler derler;
+      aboutus_3790: Para elinin kiridir.
+      aboutus_3800: Çok Doğrudur.
+      aboutus_3810: Hizmetkutusu olarak,
+      aboutus_3820: İşte burada devreye giriyoruz.
+      aboutus_3830: Enayiler!
+      aboutus_3840: Beleşi elinizdeyken,
+      aboutus_3850: Aynısı için hizmet almak varken, 
+      aboutus_3860: Bu sahip olma hırsından vazgeçin!
+      aboutus_3870: Demekten kendimizi alıkoyamıyoruz.
+      aboutus_3880: Hizmet alma ve Hizmet verme işini,
+      aboutus_3890: Basitleştirirek,
+      aboutus_3900: Yaygınlaştırarak,
+      aboutus_3910: Kalitesini arttırarak,
+      aboutus_3920: Makulleştirerek;
+      aboutus_3930: İnsanların bilinçaltlarına,
+      aboutus_3940: Satın almaktan önce,
+      aboutus_3950: Hizmet almayı,
+      aboutus_3960: Yerleştirmek istiyoruz.
+      aboutus_3970: Çünkü insanları seviyoruz.
+      aboutus_3980: Çünkü insanların toplumu,
+      aboutus_3990: Toplumun da insanları değiştireceğini biliyoruz.
+      aboutus_4000: Çünkü bir amaç uğrunda para kazanmak istiyoruz.
+      aboutus_4010: Çünkü bize hizmet vermiş ülkemizin ekonomisine hizmet vermek istiyoruz.
+      aboutus_4020: Çünkü hayatımızı anlamlı bir şekilde yaşamak istiyoruz.
+      aboutus_4030: Dünyadaki bütün para, kendini iyi hissetmek için harcanmaktadır.
+      aboutus_4040: O zaman niye şimdi iyi hissedilmiyor?
+      aboutus_4050: 2 milyonluk ev için çalışan iş adamı;
+      aboutus_4060: Neden o evi yıllık 60 bin liraya kiralayıp önce tercübe etmiyor?
+      aboutus_4070: 30 binlik bir araba için çalışan memur;
+      aboutus_4080: Neden lazım olduğunda 50 liraya o arabayı kiralamıyor?
+      aboutus_4090: Yemeğin alışverişi, taşıması, ocağı, pişirmesi, tüp parası, bılaşığı ve su parasıyla uğraşan anne;
+      aboutus_4100: Neden günlük 15 liraya bir restoranla anlaşıp koybolan emeği çocuğuna harcamıyor?
+      aboutus_4110: Çamaşırın makinası, kurutması, ütüsü ve elektrik derdiyle uğraşan ev hanımı;
+      aboutus_4120: Neden aylık 100 liraya  bu dertlerden kurtulmuyor?
+      aboutus_4130: Niye insanlar ayda 1 kere olsun, saz veya gitar çalan birini,
+      aboutus_4140: 100 liraya akşam yemeklerine davet etmiyorlar?
+      aboutus_4150: Bunların hiçbiri için zengin olmaya gerek yok.
+      aboutus_4160: Bir hesaplayın.
+      aboutus_4170: Hesaba sizin emeğinizi katmaya da bilirsiniz.
+      aboutus_4180: Daha ucuza geldiğini göreceksiniz.
+      aboutus_4190: Daha kaliteli olacağını da göreceksiniz.
+      aboutus_4200: Bir deneyin Bakalım.
+      aboutus_4210: Görün.
+      aboutus_4220: Yaşayın.
+      aboutus_4230: İlla ki satın alacaksınız, 
+      aboutus_4240: Yine satın alın, yine sahip olun, 
+      aboutus_4250: Ama o ürünün verdiği hizmeti keşfettikten sonra.
+      aboutus_4260: Çoğu zaman bir şeyi elde edene kadardır herşey.
+      aboutus_4270: Ondan sonra sıkılmaya kadar geri sayım başlar.
+      aboutus_4280: Bir çok ürün satın aldıktan sonra dert getirir, bakım maliyeti getirir.
+      aboutus_4290: Evdeki hesap hiçbir zaman çarşıya uymaz.
+      aboutus_4300: Satın almayıp, hizmet alarak;
+      aboutus_4320: Hem daha kalitelisini alırsınız.
+      aboutus_4330: Hem daha ucuza gelir.
+      aboutus_4340: Hem ekonomi canlanır.
+      aboutus_4350: Hem yaşamaya zaman kalır.
+      aboutus_4360: Hizmetkutusu olarak,
+      aboutus_4370: Kendimizden bir örnek verelim.
+      aboutus_4380: Biz, hiçbirşeyi satın almadık.
+      aboutus_4390: Hiçbirşeye sahip değiliz.
+      aboutus_4400: Sadece hizmet alıyoruz.
+      aboutus_4410: Ofis için A firmasından.
+      aboutus_4420: Sunucu için B firmasından.
+      aboutus_4430: Telefon için C firmasından.
+      aboutus_4440: Satış için D firmasından.
+      aboutus_4450: Araba için E firmasından.
+      aboutus_4460: Finans için F firmasından.
+      aboutus_4470: Yazılım için geri kalan tüm harflerden.
+      aboutus_4480: Yaşamımıza bir bakın;
+      aboutus_4490: Ev alacak paramız var,
+      aboutus_4500: Ama evimiz hep kiralık;
+      aboutus_4510: Sonbaharda İzmir için İzmir’in göbeğindeyiz.
+      aboutus_4520: Kışın kar ve snowboard için Erciyes’in eteklerinde.
+      aboutus_4530: Baharda doğa ve dağlar için marmaris civarında.
+      aboutus_4540: Yazın günbatımı ve tekne için Çeşme kıyılarında.
+      aboutus_4550: Yazın küçük bir tekne, 
+      aboutus_4560: Kışın külüstür bir araba, 
+      aboutus_4570: Baharda eski bir motorsiklet kiralarız.
+      aboutus_4580: Yemek yapmayız,
+      aboutus_4590: Ama hergün değişik ve lezzetli yemekler yeriz.
+      aboutus_4600: Ev işiyle uraşmayız,
+      aboutus_4610: Ama evimiz tertemiz ve düzenlidir.
+      aboutus_4620: Zenginmiyiz?
+      aboutus_4630: Evet çok zenginiz.
+      aboutus_4640: Ama para zengini değil,
+      aboutus_4650: Yaşam zenginiyiz.
+      aboutus_4660: Hizmet almanın da,
+      aboutus_4670: Buna direk katkısı var.
+      aboutus_4680: Dikkat edin!
+      aboutus_4690: Kendimizi hiçbirşeye bağlamıyoruz.
+      aboutus_4700: Hizmet aldığımız için özgürüz.
+      aboutus_4710: Bu nedenle aylağız.
+      aboutus_4720: Çalışmıyoruz.
+      aboutus_4730: Yaşıyoruz.
+      aboutus_4740: Hiçbirşeyin derdini çekmiyoruz.
+      aboutus_4750: Evet şirketimiz var.
+      aboutus_4760: Ama sabah 7’de kalkıp trafiğe girmeye gerek yok.
+      aboutus_4770: Evet evimiz var.
+      aboutus_4780: Ama onun konumuyla, komşusuyla, bakımıyla, mirasıyla uğraşmak yok.
+      aboutus_4790: Evet ailemiz var.
+      aboutus_4800: Ama onlarla bir yere tıkılmaya gerek yok.
+      aboutus_4810: Herkes hizmet alabilir mi?
+      aboutus_4820: Alabilir.
+      aboutus_4830: Alamaya dabilir.
+      aboutus_4840: Çünkü her iş gibi, bu işin de bir sırrı var.
+      aboutus_4850: Herşey bir hizmettir!
+      aboutus_4860: Hiç CRM diye bir laf duydunuz mu?
+      aboutus_4870: Duymadıysanız da, size hergün dokunduğundan eminiz.
+      aboutus_4880: İngilizce “Customer Relationship Management”.
+      aboutus_4890: Türkçe “Müşteri İlişkileri Yönetimi”.
+      aboutus_4900: Bu gavur terimi, 
+      aboutus_4910: Vallahi çok gereksizdir.
+      aboutus_4920: Amacı şudur;
+      aboutus_4930: Hizmeti alanla hizmeti veren arasındaki ilişkinin
+      aboutus_4940: Profesyonel bir biçimde devam ettirilmesi.
+      aboutus_4950: Çünkü bu ilişki devam ederse, hizmet satışı devam edecektir.
+      aboutus_4960: Doğrudur,
+      aboutus_4970: Ama profesyonel olmaz.
+      aboutus_4980: Ve enayice yaparlar.
+      aboutus_4990: Evet CRM size hergün dokunur.
+      aboutus_5000: Cep telefonlarınıza gelen,
+      aboutus_5010: O bir türlü engelleyemediğiniz reklamlar,
+      aboutus_5020: Birer CRM’dir. 
+      aboutus_5030: “Kış ürünlerinde %50 indirimi kaçırmayın..”
+      aboutus_5040: “Size özel düşük faizli ihtiyaç kredimizle..”
+      aboutus_5050: Bazen küçük rüşvetler de vermeyi de bilirler.
+      aboutus_5060: “Doğum gününüzü kutlar, size sağlıklı...”
+      aboutus_5070: “Mubarek kadir geceniz...”
+      aboutus_5080: Ne kadar da yavandırlar.
+      aboutus_5090: Sanarlar ki siz o şirkete daha da bağlanacaksınız.
+      aboutus_5100: Enayilerdir. Çünkü durum bu değildir.
+      aboutus_5110: Gerçek müşteri ilişkileri yönetimi nedir biliyor musunuz?
+      aboutus_5120: Bakkal Hasan amcaya gitiğinizde;
+      aboutus_5130: “Nasılsınız Mehmet bey, çoluk çocuk nasıl inşallah...”
+      aboutus_5140: diye selamlaması.
+      aboutus_5150: “Bak ne dicem..Kars’dan yeni peynir geldi, tam senin seveceğin cinsten..
+      aboutus_5160: akşam ara sıra sofra kuruyosun hani al dolabında bulunsun”
+      aboutus_5170: Demesidir.
+      aboutus_5180: İşte kalite budur.
+      aboutus_5190: Tanıdığının seni bilerek sana verdiği referanstır.
+      aboutus_5200: İşte makul fiyat budur.
+      aboutus_5210: Böyle bir sohbette fiyat konuşulmaz.
+      aboutus_5220: Fiyat zaten olması gerekendir.
+      aboutus_5230: Neyse alınır.
+      aboutus_5240: Hasan amca seni bilir, sen onu bilirsin
+      aboutus_5250: Başka bakkala da gitmezsin.
+      aboutus_5260: Hizmetkutusu olarak,
+      aboutus_5270: Her işiniz düştüğünde bize gelmenizi istemiyoruz.
+      aboutus_5280: Biliyoruz ki belli başlı hizmet ihtiyaçlarınız var.
+      aboutus_5290: Bizi kullanarak,
+      aboutus_5300: Bu ihtiyaçları sürekli giderebilmeniz için,
+      aboutus_5310: Kaliteli ve makul fiyata hizmet veren,
+      aboutus_5320: Bakkal Hasan amcaları bulmanızı istiyoruz.
+      aboutus_5330: Çünkü kaliteli hizmeti, makul fiyata almıyorsanız,
+      aboutus_5340: O hizmeti almayın ve kendiniz uğraşın daha iyi!
+      aboutus_5350: Evet bu konuda iddalıyız.
+      aboutus_5360: Çünkü; 
+      aboutus_5370: Biz de Hizmetkutusu kullanıyoruz,
+      aboutus_5380: Biz de o bakkal Hasan amcaları bulmak istiyoruz.
+      aboutus_5390: Gelecek kış Erzurum’a snowboard yapmaya gidelim diyoruz.
+      aboutus_5400: Ev lazım.
+      aboutus_5410: Araç lazım.
+      aboutus_5420: Takım taklavat lazım.
+      aboutus_5430: Yiyecek lazım.
+      aboutus_5440: Giyecek lazım.
+      aboutus_5450: Ne oraya gidip sokak sokak gezmeye,
+      aboutus_5460: Ne deli danalar gibi sayısız kez googlemaya,
+      aboutus_5470: Ne de sarı sayfaları karıştırmaya,
+      aboutus_5480: Ne rakipleri kullanarak uzun formlar doldurmaya,
+      aboutus_5490: Ne de sorup soruşturmaya halimiz var.
+      aboutus_5500: Gireriz Hizmetkutusuna,
+      aboutus_5510: Yazarız adrese Erzurum diye,
+      aboutus_5520: Seçeriz ne istediğimizi
+      aboutus_5530: Haberdar ederiz beyendiğimizi.
+      aboutus_5540: Oh..bizde keyfimize bakalım.
+      aboutus_5550: Yeni hayallerde kendimizi bulalım.
+      aboutus_5560: Telefon etsinler!
+      aboutus_5570: Sohbet edelim.
+      aboutus_5580: Ne öyle epostalar, web sitesi üzerinen mesajlaşmalar?
+      aboutus_5590: Adam telefonda kendisini anlatmasını beceremiyorsa,
+      aboutus_5600: İşimizi nasıl becerecek?
+      aboutus_5610: Bakalım, Erzurum’daki bakkal Hasan amcalarımızı bulabilecek miyiz..
+      aboutus_5620: Çünkü bulduğumuzda, artık rahatız.
+      aboutus_5630: Bu dünyada iki tip insan vardır.
+      aboutus_5640: Birinci tipler fırsatların önlerine gelmesini,
+      aboutus_5650: Ve önlerine gelmesi yetmiyormuş gibi,  
+      aboutus_5660: Bu fırsatları yakalayacaklarından da emin olmak isterler.
+      aboutus_5670: Köşelerinde otururlar, beklerler.
+      aboutus_5680: Onlar fırsatı yakalayım derken,
+      aboutus_5690: Hayat önlerinden akıp geçer.
+      aboutus_5700: İkinci tip insanlarsa,
+      aboutus_5710: Sorgusuz sualsiz fırsata giderler,
+      aboutus_5720: Kendi fırsatlarını kendileri yaratırlar.
+      aboutus_5730: Kendi şanslarını kendilerler belirlerler.
+      aboutus_5740: Hizmetkutusu yepyeni bir fikir değildir.
+      aboutus_5750: Olmasına da gerek yoktur.
+      aboutus_5760: Çünkü kökeni cilalı taş devrine dayanır.
+      aboutus_5770: Türkiye’de ve yurtdışında da benzerleri de vardır.
+      aboutus_5780: Farklı olduğumuz nokta şu;
+      aboutus_5790: İnsan piskolojisini kullanarak,
+      aboutus_5800: Kaliteli hizmeti makul fiyata sunmaya çalışıyoruz.
+      aboutus_5810: Nasıl mı?
+      aboutus_5820: Hizmetkutusundan seçtiğiniz hizmet sağlayıcıları haberdar ettiğinizde,
+      aboutus_5830: Cep telefonlarına bir mesajı düşer.
+      aboutus_5840: “A km uzakta olan B kişisi sizden C konusunda hizmet almak istiyor.
+      aboutus_5850: Bu kişi sizi D. sırada seçti ve profili E.
+      aboutus_5860: Kişinin cep telefonuna erişmek istiyorsanız EVET yazınız.”
+      aboutus_5870: EVET yazdığında hizmet sağlayıcının hesabından 1TL düşüyoruz.
+      aboutus_5880: Dikkat ederseniz hizmet sağlayıcının önüne fırsatı getiriyoruz.
+      aboutus_5890: Şunu biliyoruz;
+      aboutus_5900: Bahsettiğimiz birinci tip insanlar bu fırsatı kabul etmeyecekler.
+      aboutus_5910: Çünkü onlardan hizmet almayı kabul etmeyebilirsiniz.
+      aboutus_5920: İsterler ki, garanti olan işi önlerine getirelim. 
+      aboutus_5930: İsterler ki, işin olacağını görsünler sonra para versinler.
+      aboutus_5940: Şunu da biliyoruz;
+      aboutus_5950: Bahsettiğimiz ikinci tip insanlar bu işi kabul edecekler.
+      aboutus_5960: Çünkü bulundukları konuma bu şekilde gelmişlerdir.
+      aboutus_5970: Kendilerine güvenerek,
+      aboutus_5980: Risk alarak.
+      aboutus_5990: İşte sizin ve bizim ikinci tip insanlara ihtiyacımız var.
+      aboutus_6000: Bakkal Hasan amcalar bunlardır.
+      aboutus_6010: Bu kişi laf değil, iş yapar.
+      aboutus_6020: Başınızı ağrıtmaz.
+      aboutus_6030: İşini kaliteli yapar.
+      aboutus_6040: Bedelini de alır.
+      aboutus_6050: Çoğu zaman da bu bedel bir iş beceremeyenle aynıdır.
+      aboutus_6060: Sonuçta;
+      aboutus_6070: Kalitelidir dersiniz.
+      aboutus_6080: Makuldür dersiniz.
+      aboutus_6090: Tesisatçı mı lazım.
+      aboutus_6100: Çağırın Ahmet ustayı!
+      aboutus_6110: Bu kişi ailenizden biri olmalı.
+      aboutus_6120: Sizinle yemek yemeli.
+      aboutus_6130: Çocuğunuzun büyüdüğünü görmeli.
+      aboutus_6140: Paranız olmadığında veresiye kabul etmeli.
+      aboutus_6150: Zevk için pazarlık yapabilmelisiniz.
+      aboutus_6160: Zırt pırt değiştirilmez böyle insanlar!
+      aboutus_6170: Şirket çalışanısınız diyelim. Amirinize sorumlusunuz. Taşeron lazım.
+      aboutus_6180: En son isteyeceğiniz şey bulduğunuzun işleri berbat etmesidir.
+      aboutus_6190: İşler bir berbat oldu mu;
+      aboutus_6200: Patronuz o teşeronu anlamaz,
+      aboutus_6210: Sizin o işi becemediğinizi anlar.
+      aboutus_6220: Birine işi verdiğinizde ona güvenebilmeli ve hep onla çalışabilmelisiniz.
+      aboutus_6230: Kaça yaparsın diye danışabilmeli ,
+      aboutus_6240: Her durumda telefonla arayabilmelisiniz.
+      aboutus_6250: Böyle insalarla çalışmıştırsınız.
+      aboutus_6255: Bu kişileri ısmarlama bulamazsınız.
+      aboutus_6260: Bu kişileri tesadüf eseri bulursunuz.
+      aboutus_6270: Bir olasılıktır.
+      aboutus_6280: Hizmetkutusu olarak,
+      aboutus_6290: Bu olasılığı en yüksek seviyeye taşıyoruz.
+    terms:
+      title: Terms of Service
+    demo_terms:
+      title: Terms of Service (Demo)
+  admin:
+    users:
+      manualcredits:
+        manually_add_credits_to_user: Manually Add Credits to User
+        payment_details: Payment Details
+        user_credits: User Credit Count
+        payment_type: Payment Type
+        add_credit: Add Credit
+        amount_to_add: Ammount to Add/Remove
+        add_credits_exp: 1 Credit Costs 1 $. Payments are controlled by manager, do not make payment before seeing bank transfer or mobile payment receipt.  
+        amount_to_add_user_minus_plus: You can write negative value of amount to decrease credit.              
+      refunds:
+        refund_to_user: Kredi Kartı İşlemleri İçin Geri Ödeme 
+        refund_details: Ödeme Bilgileri
+        user_credits: Kullanıcının kredi miktarı
+        amount_to_refund: Ödeme türü
+        add_credits_exp: 1 Kredi 1 TL'dir. Geri Ödemeler yönetici tarafından kontrol edilmektedir. Geri Ödemeden Sonra Kredi Miktarı Azalacaktır.
+      index:
+        login_as: Login as
+  users:
+    banned:
+      title: Suspended account
+      you_were_banned: You were banned!
+      contact: Contact our staff if you think there was a mistake.
+    financialsettings:
+      financial_settings: Ödeme Bilgilerim
+      financial_setting_details: Bu sayfada kredi bilgilerinizi görebilir ve ödeme yapabilirsiniz.
+      credits: Kredi Bilgilerim
+      by_credit_card: by Card
+      by_mobil: By Mobile
+      by_havale: By Cheque
+      order_history: Order History
+      credit_card_refund: Credit Card Refund
+      credit_card_purchase: Credit Card Purchase
+      bank_transfer_refund: Bank Transfer Refund
+      bank_transfer_purchase: Bank Transfer Purchase
+      mobile_transfer_refund: Mobile Payment Refund
+      mobile_transfer_purchase: Mobile Payment Purchase     
+    dashboard:
+      title: Dashboard
+      reminder: Reminder
+      new_quote: New quote
+      search_quotes: Search quotes
+      your_quotes: Your quotes
+      new_messages:
+        zero: No new messages
+        one: "%{count} new message"
+        other: "%{count} new messages"
+      new_notifications:
+        zero: No notifications
+        one: "%{count} notification"
+        other: "%{count} notifications"
+      new_references:
+        zero: No new references
+        one: "%{count} new reference"
+        other: "%{count} new references"
+      latest_quotes: Latest Quotes
+      by: by
+    quotes:
+      title: My quotes
+    show:
+      member_since: "Member since %{date}"
+      see_all: See All
+      facebook_verified: "A Facebook user is considered verified if he takes any of the following actions: registers for mobile; confirms his account via SMS; enters a valid credit card."
+      basic_info: Basic info
+      friends: "%{count} friends"
+      age: "%{count} years"
+      language: "%{language} language"
+      common_friends: Common friends
+      likes: Likes
+      and_others:
+        one: and one other
+        other: "and %{count} others"
+    settings:
+      account_settings: Kullanıcı Ayarlarım      
+      new_quote: Get New Quote!
+      quote_history: Quote History
+      general_information: General info
+      profile_details: Profile Details
+      credits: Credits
+      order_history: Order History
+      financial_setting_details: make an order, view order history, print invoices.
+      user_profile_details: Profile details are updated from Facebook after each login.
+      credits_remaining: Credits Remaining
+      credits_remaining_details: Each credit costs 1 TL
+      send_email: Send an email when
+      send_email_at_address: "We will send emails at the following address: %{email}"
+      application_settings: Application settings
+      update_profile: Update
+    providers:
+      new_provider: New Provider
+  quotes:
+    selected_providers:
+      gave_quote: Gave Quote
+      service_request_sent: Service Request Sent
+      gave_service: Gave Service 
+    common:
+      about: "about %{quote_link} by %{user_link}"
+    table:
+      taken_service: Hizmet Alındı      
+    search:
+      search: Search
+      verified_users: Verified users
+    index:
+      title: Search quotes
+    show:
+      app_user: "An user of %{appname}"
+      left_reference: Reference Left  
+      reference_left: Reference Left  
+      leave_reference: Leave Reference
+      report_quote: "Report this quote"
+      login_to_contact: "Log in to contact this user"
+    edit:
+      title: "Edit quote"
+    new:
+      title: New quote      
+      step_1: Step 1
+      step_2: Step 2
+      step_3: Step 3
+      insert_quote_details: "Insert quote details"
+      confirm_and_share: "Confirm and share"
+      next_step: "Next step"
+      previous_step: "Back"
+      missing_publish_stream_permission: "%{appname} doesn't have permissions to publish on your timeline."
+      share_on_timeline_unavailable: "We apologize. %{appname} can't share on Facebook's Timeline right now."
+      hint_privacy_title: "a bit of privacy"
+      hint_privacy_content: "Are you concerned of your privacy? Do not be too specific in setting the path. Select major streets near to your address"
+      hint_customize_content: "Just write the first words that come to your mind. We are sure those will be the keywords for the service you are looking for."
+      hint_customize_title: "little thought"
+      notify_provider_sms: "%{distance}km uzak biri sizden %{service} hizmeti icin Fiyat Almak istiyor. %{description} dedi. Listede %{rank}. ciktiniz ve %{providercount} hizmet saglayici daha secti. Teklif vermek icin %{yes} yaziniz. Krediniz: %{creditcount}. (%{shortlink})"
+      notify_provider_sms_only: "%{distance}km uzak biri sizden %{service} hizmeti icin Fiyat Almak istiyor. %{description} dedi. Listede %{rank}. ciktiniz ve sizden baska kimseyi secmedi. Teklif vermek icin %{yes} yaziniz. Krediniz: %{creditcount}. (%{shortlink})"
+      notify_provider_senduserdetails: "Musteri adi: %{username}, Telefonu: %{telephone}. Sadece kendisiyle anlasip isi bitirmeniz durumunda bu mesaja TAMAM yazarak cevap veriniz."
+      notify_provider_credits: "Krediniz bitmistir. %{creditlink} adresinden kredi satin alabilsiniz. Kredi aldiktan sonra bu mesaja 'Evet' cevabi verebilirsiniz."
+      notify_provider_correct_yes: "Lutfen evet cevabi verdiginizden emin olunuz."
+      notify_provider_email: "%{distance}km uzak biri sizden %{service} hizmeti icin Fiyat Almak istiyor. %{description} dedi. Listede %{rank}. ciktiniz ve %{providercount} hizmet saglayici daha secti. Teklif vermek icin lütfen şu linki kullanınız. (%{shortlink})"
+      notify_provider_email_only: "%{distance}km uzak biri sizden %{service} hizmeti icin Fiyat Almak istiyor. %{description} dedi. Listede %{rank}. ciktiniz ve sizden baska kimseyi secmedi. Teklif vermek icin lütfen şu linki kullanınız. (%{shortlink})"
+      notify_provider_senduserdetails_email: "Musteri adi: %{username}, Telefonu: %{telephone}. Sadece kendisiyle anlasip isi bitirmeniz durumunda bu mesaja TAMAM yazarak cevap veriniz."
+      notify_provider_credits_email: "Krediniz bitmistir. %{creditlink} adresinden kredi satin alabilsiniz. Kredi aldiktan sonra bu mesaja 'Evet' cevabi verebilirsiniz."
+      hint_search_before_title: "some words"
+      hint_search_before_content: "Write little info about the service you've selected, just to make sure the service provider understands what you are looking for"
+      search_link: "Search"
+      please_enter_work_type_user: lütfen seçiniz
+      info_search_distance: Search distance
+  providers:
+
+    common:
+      isverified: Is verified?
+    form:
+      address_information: Adress Details
+      business_information: Business Details
+      tax_information: Trading Details
+      qualifications: Qualifications
+      category: Services You Offer*
+      business_photos: Photos about the services you offer*      
+      business_address_info: By taking your location we want to find out the distance between you and your potential customers. If you cannot find you exact address, you can enter an address near to you. 
+      category_presence_error: please select services you offer.
+      file_presence_error: Please select you profile picture.
+      map_presence_error: Please enter your location.
+      certificates: Certificates and Licences
+      Cep_Telefon_Numaranız: Mobile Phone Number
+    edit:
+      title: "Edit Provider"
+      update: Update
+    new:
+      title: New Provider
+      create: Save
+      new_provider: New Service Provider 
+    verification:
+      send_code: Send Code
+      phone_verification: Please verify your mobile phone number
+      provider_exp: We need your mobile phone number verification in order to connect you with your potential customers.
+      provider_exp1: Please note that we won't be sharing your number with anyone.     
+  feedbacks:
+    index:
+      new: New
+      hide_fixed: Hide fixed
+      show_fixed: Show fixed
+  notifications:
+    index:
+      title: Notifications
+  conversations:
+    index:
+      title: Conversations
+    show:
+      title: Conversation
+    new:
+      title: New conversation
+    messages:
+      time_ago: "%{time} ago"
+      seen: "Seen %{date}"
+    form:
+      write_a_message: Write a message...
+      send: Send
+  transactions:
+    successful_transaction:
+      body: Thank You.
+      header: You have successfully made a purchase. 
+      makeanother: Make Another
+  references:
+    index:
+      title: References
+    show:
+      title: Reference
+    new:
+      title: New reference
+    snippet:
+      positives:
+        zero: 0 positives
+        one: "%{count} positive"
+        other: "%{count} positives"
+      negatives:
+        zero: 0 negatives
+        one: "%{count} negative"
+        other: "%{count} negatives"
+    form:
+      write_a_reference: Write a reference...
+  javascript:
+    no_quotes_found: No quotes found
+    an_error_occurred: Ops! An error occurred while searching for quotes.
+    not_found: Route not found
+    zero_results: No results
+  provider_mailer:
+    registration_email:
+      subject: Hizmetkutusu hizmet sağlayıcısı oldunuz.
+      registration_email_head: Size özel iş fırsatlarına artık daha yakınsınız.

@@ -1,0 +1,9 @@
+= title t('.manually_add_credits_to_user')
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1
+      = yield :title
+      %small= @transactions.all.count
+  .span12
+    = render 'transactions/list', transactions: @transactions

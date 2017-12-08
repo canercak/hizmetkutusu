@@ -1,0 +1,72 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+  prefix="
+    foaf: http://xmlns.com/foaf/0.1/
+    gr: http://purl.org/goodrelations/v1#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    eco: http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    xsd: http://www.w3.org/2001/XMLSchema#"
+  >
+  <div typeof="gr:BusinessEntity" about="http://www.plushbeautybar.com/#BusinessEntity">
+    <div rel="gr:offers">
+      <div typeof="gr:Offering" about="http://plushbeautybar.com/services.html#Offering_2">
+        <div rel="gr:eligibleCustomerTypes" resource="http://purl.org/goodrelations/v1#Enduser"></div>
+        <div rel="gr:acceptedPaymentMethods" resource="http://purl.org/goodrelations/v1#VISA"></div>
+        <div rel="gr:hasBusinessFunction" resource="http://purl.org/goodrelations/v1#ProvideService"></div>
+        <div rel="gr:acceptedPaymentMethods" resource="http://purl.org/goodrelations/v1#MasterCard"></div>
+        <div rel="gr:hasPriceSpecification" resource="http://plushbeautybar.com/services.html#PriceSpec_2"></div>
+        <div property="gr:validThrough" datatype="xsd:dateTime" content="2011-03-09T23:59:00-08:00"></div>
+        <div rel="gr:availableAtOrFrom" resource="http://www.plushbeautybar.com/#LOSOSP_1"></div>
+        <div rel="rdfs:isDefinedBy" resource="http://www.plushbeautybar.com/services.html"></div>
+        <div property="rdfs:label" xml:lang="en" content="NAIL SERVICES: Pedicure - $30"></div>
+        <div rel="foaf:page" resource="http://www.plushbeautybar.com/services.html"></div>
+        <div property="gr:eligibleRegions" datatype="xsd:string" content="US"></div>
+        <div rel="gr:acceptedPaymentMethods" resource="http://purl.org/goodrelations/v1#Cash"></div>
+        <div rel="gr:includes" resource="http://plushbeautybar.com/services.html#Service_2"></div>
+        <div property="gr:validFrom" datatype="xsd:dateTime" content="2010-03-09T00:00:00-08:00"></div>
+        <div property="rdfs:comment" xml:lang="en" content="NAIL SERVICES: Pedicure - $30 - Salon for mothers of young children in Los Angeles, California USA"></div>
+      </div>
+    </div>
+    <div rel="gr:offers">
+      <div typeof="gr:Offering" about="http://plushbeautybar.com/services.html#Offering_1">
+        <div rel="rdfs:isDefinedBy" resource="http://www.plushbeautybar.com/services.html"></div>
+        <div property="gr:validThrough" datatype="xsd:dateTime" content="2011-03-09T23:59:00-08:00"></div>
+        <div rel="gr:acceptedPaymentMethods" resource="http://purl.org/goodrelations/v1#Cash"></div>
+        <div rel="gr:hasBusinessFunction" resource="http://purl.org/goodrelations/v1#ProvideService"></div>
+        <div property="rdfs:comment" xml:lang="en" content="NAIL SERVICES: Manicure (shiny buff or polish) - $25 - Salon for mothers of young children in Los Angeles, California USA"></div>
+        <div property="gr:validFrom" datatype="xsd:dateTime" content="2010-03-09T00:00:00-08:00"></div>
+        <div rel="gr:acceptedPaymentMethods" resource="http://purl.org/goodrelations/v1#VISA"></div>
+        <div rel="gr:availableAtOrFrom" resource="http://www.plushbeautybar.com/#LOSOSP_1"></div>
+        <div rel="gr:acceptedPaymentMethods" resource="http://purl.org/goodrelations/v1#MasterCard"></div>
+        <div rel="gr:includes" resource="http://plushbeautybar.com/services.html#Service_1"></div>
+        <div rel="foaf:page" resource="http://www.plushbeautybar.com/services.html"></div>
+        <div rel="gr:hasPriceSpecification" resource="http://plushbeautybar.com/services.html#PriceSpec_1"></div>
+        <div property="rdfs:label" xml:lang="en" content="NAIL SERVICES: Manicure (shiny buff or polish) - $25"></div>
+        <div rel="gr:eligibleCustomerTypes" resource="http://purl.org/goodrelations/v1#Enduser"></div>
+        <div property="gr:eligibleRegions" datatype="xsd:string" content="US"></div>
+      </div>
+    </div>
+  </div>
+  <div typeof="gr:ProductOrServicesSomeInstancesPlaceholder" about="http://plushbeautybar.com/services.html#Service_2">
+    <div property="rdfs:comment" xml:lang="en" content="NAIL SERVICES: Pedicure - $30 in Los Angeles, California USA"></div>
+    <div rel="rdf:type" resource="http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKG492003-tax"></div>
+    <div rel="foaf:page" resource="http://www.plushbeautybar.com/services.html"></div>
+    <div property="rdfs:label" xml:lang="en" content="NAIL SERVICES: Pedicure - $30"></div>
+  </div>
+  <div typeof="gr:UnitPriceSpecification" about="http://plushbeautybar.com/services.html#PriceSpec_1">
+    <div property="gr:hasCurrency" datatype="xsd:string" content="USD"></div>
+    <div property="gr:hasUnitOfMeasurement" datatype="xsd:string" content="C62"></div>
+    <div property="gr:hasCurrencyValue" datatype="xsd:float" content="25.0"></div>
+  </div>
+  <div typeof="gr:ProductOrServicesSomeInstancesPlaceholder" about="http://plushbeautybar.com/services.html#Service_1">
+    <div property="rdfs:label" xml:lang="en" content="NAIL SERVICES: Manicure (shiny buff or polish) - $25"></div>
+    <div rel="foaf:page" resource="http://www.plushbeautybar.com/services.html"></div>
+    <div rel="rdf:type" resource="http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKG492003-tax"></div>
+    <div property="rdfs:comment" xml:lang="en" content="NAIL SERVICES: Manicure (shiny buff or polish) - $25 in Los Angeles, California USA"></div>
+  </div>
+  <div typeof="gr:UnitPriceSpecification" about="http://plushbeautybar.com/services.html#PriceSpec_2">
+    <div property="gr:hasCurrency" datatype="xsd:string" content="USD"></div>
+    <div property="gr:hasUnitOfMeasurement" datatype="xsd:string" content="C62"></div>
+    <div property="gr:hasCurrencyValue" datatype="xsd:float" content="30.0"></div>
+  </div>
+</div>

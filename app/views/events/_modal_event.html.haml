@@ -1,0 +1,117 @@
+:css
+	.datepicker {
+		font-size: 16px;	
+	}
+	.datepicker table {
+		margin: 0;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		width:100px; 
+	}
+ 
+ 
+ 
+#event-modal.modal.hide.fade{"data-focus-on" => "input:first", tabindex: "-1" }
+	.modal-header
+		%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+		%h3 Ajanda İşlemleri
+	.modal-body 
+		.control-group
+			%label.control-label{for: "textarea"} Başlama ve Bitiş Zaman Aralığı
+			.controls
+				%p#eventsExample
+					%input.date.start{type: "text", class:"input-small", id: "date1"}/
+					%input.time.start.ui-timepicker-input{autocomplete: "off", id: "time1", type: "text", style:"width:40px", class:"input-mini"}/
+					%span -
+					%input.time.end.ui-timepicker-input{autocomplete: "off", id: "time2", type: "text", style:"width:40px", class:"input-mini"}/
+					%input.date.end{type: "text", class:"input-small", id: "date2"}/  
+		%ul.nav.nav-tabs{:style => "margin-bottom: 10px;", :id=>"navtabs"}
+			%li.active{id:"pane1_header"}            
+				%a{"data-toggle" => "tab", :href => "#pane1"}  
+					%i.fa.fa-plus-circle.fa-lg 
+					%span{id:"add_event_text"}Randevu Ekle
+			%li{id:"pane2_header"}
+				%a{"data-toggle" => "tab", :href => "#pane2"}           
+					%i.fa.fa-minus-circle.fa-lg 
+					%span Zaman Kapat
+		.tab-content{:style => "margin-bottom: 10px"}
+			#pane1.tab-pane.active{ style:"position:relative;overflow:hidden;height:100%"} 
+				= bootstrap_form_for "event",  html: {  class: 'form-vertical', id:'event_form' } do |f|
+					.control-group
+						= f.label :service, t('events.service_to_give'),  class: 'control-label'
+						.controls
+							=hidden_field_tag :event_service 
+							.input-append{style:"vertical-align:bottom; margin-bottom: 0px"}
+								%span.add-on=label_tag :total_price, 0, :id=>"total_price"
+								%span.add-on TL
+					.control-group
+						= f.label :eventpersonel, t('events.person_servicing'),  class: 'control-label'
+						.controls 
+							= hidden_field_tag :event_personel
+							= link_to new_provider_customer_path(@provider._id, 1), :id=> "new_staff", :target=> "_blank", class: 'btn btn-small btn-warning' do
+								Yeni Personel
+					.control-group
+						= f.label :eventcustomer, t('events.person_to_service'),  class: 'control-label'
+						.controls 
+							= hidden_field_tag :event_customers 
+							= link_to new_provider_customer_path(@provider._id, 0), :id=> "new_customer", :target=> "_blank", class: 'btn btn-small btn-info' do
+								Yeni Müşteri
+					.control-group
+						= f.label :eventtext, t('events.appointment_text'),   class: 'control-label'
+						.controls
+							= text_area_tag :event_text, "",:cols => "3", :rows => "2", :class=>"input-xlarge" 
+					.control-group{style:"margin-top: -10px;"}
+						= f.label :eventstatus, t('events.appointment_status'),   class: 'control-label'
+						.controls
+							= select_tag :event_type, class: 'input-medium'  
+			#pane2.tab-pane{ style:"position:relative;overflow:hidden;height:100%"}
+				= bootstrap_form_for "block",  html: {  class: 'form-vertical', id:'block_form' } do |f|
+					.control-group
+						.controls
+							%p.help-block 
+								%small=t('events.service_close_exp1') 
+								%small
+									%b=t('events.service_close_exp2') 
+					.control-group
+						= f.label :services_to_close, t('events.services_to_close'),  class: 'control-label'
+						.controls
+							=hidden_field_tag :event_block  
+					.control-group
+						= f.label :personel_to_close, t('events.personel_to_block'),  class: 'control-label'
+						.controls
+							=hidden_field_tag :personel_block  
+					.control-group
+						= f.label :close_reason, t('events.close_reason'),  class: 'control-label'
+						.controls
+							= text_area_tag :block_reason, "",:cols => "3", :rows => "2", :class=>"input-xlarge" 
+	.modal-footer{style:"text-align: center;"} 
+		%button.btn.btn-large.btn-primary{type: "button", id:"save_event"} Kaydet
+		=hidden_field_tag :event_date
+		=hidden_field_tag :reservation_id 
+		=hidden_field_tag :block_id
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

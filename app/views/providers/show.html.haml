@@ -1,0 +1,239 @@
+- title @provider.slug
+.row
+	.span12
+		= render 'shared/flash_messages'
+.row
+	.span12
+		.columns.profilecols.js-username{id:"provider_profile"} 
+			.column.one-fourth.vcard 
+				%a.vcard-avatar
+					- if @provider.provider_images.present?
+						%img.avatar.js-avatar{height: "225", width: "225", src: "#{@provider.provider_images["provider_image1"][0]}"}/
+				%h1.vcard-names
+					%span.vcard-fullname.fn=@provider.officialname
+				%ul.vcard-details
+					%li.vcard-detail
+						%i.fa.fa-map-marker
+						&nbsp 
+						=compose_address(@provider.decomposed_address)
+					/ %li.vcard-detail
+					/ 	%i.fa.fa-phone
+					/ 	&nbsp 
+					/ 	=@provider.office_phone
+					/ %li.vcard-detail
+					/ 	%i.fa.fa-link
+					/ 	&nbsp 
+					/ 	=@provider.website 
+					%li.vcard-detail
+						%i.fa.fa-bookmark
+						&nbsp  
+						- if @provider.business_type == 0 
+							=t('templates.providers.person')          
+						- else
+							=t('templates.providers.company')
+						=hidden_field_tag :provider_id, @provider._id
+					%li.vcard-detail
+						- if @provider.verified
+							%i.fa.fa-check-square-o
+							&nbsp 
+							=t('helpers.links.provider.verified')          
+						- else
+							%i.fa.fa-times
+							&nbsp 
+							=t('helpers.links.provider.unverified') 
+				.vcard-stats
+					%span.vcard-statfull
+						%strong.vcard-stat-count=@provider.overall_score
+						=t('templates.providers.appname_score')
+				.vcard-stats 
+					%span.vcard-stat-one
+						.avarage{itemprop: "aggregateRating", itemscope: "", itemtype: "http://schema.org/AggregateRating"}
+							- if @provider.references.count != 0
+								.ratingstars{"data-average" => @provider.references.avg(:rating), "data-id" => "star"}
+								%span{itemprop: "reviewCount"}=@provider.references.count.to_s
+								=t('templates.providers.comment_avg')
+								%span{itemprop: "ratingValue"}=@reviewavarage.to_s
+								=t('templates.providers.star')
+							-else
+								.ratingstars{"data-average" => 0, "data-id" => "star"}
+								=t('templates.providers.no_comment')
+				.vcard-stats
+					%span.vcard-stat-two
+						- if @provider.overall_quote_given != 0
+							%strong.vcard-stat-two-count=@provider.overall_quote_given
+							=t('templates.providers.quote_given')
+						- else
+							%strong.vcard-stat-two-count
+							=t('templates.providers.no_quote_given')
+					%span.vcard-stat-two
+						- if @provider.overall_quote_done != 0
+							%strong.vcard-stat-two-count=@provider.overall_quote_done
+							=t('templates.providers.quote_done')
+						- else
+							%strong.vcard-stat-two-count
+							=t('templates.providers.no_quote_done')      
+			.column.three-fourths{id: "threefourths" }
+				.span9{id: "span7big" }
+					%ul.nav.nav-tabs{:style => "margin-bottom: 10px;"}
+						%li.active            
+							%a{"data-toggle" => "tab", :href => "#pane1"}  
+								%i.fa.fa-bullseye.fa-lg 
+								%span=t("templates.providers.about")
+						%li
+							%a{"data-toggle" => "tab", :href => "#pane2"}           
+								%i.fa.fa-camera-retro.fa-lg 
+								%span=t("templates.providers.quotes")
+						%li
+							%a{"data-toggle" => "tab", :href => "#pane3"} 
+								%i.fa.fa-briefcase.fa-lg 
+								%span=t("templates.providers.photos")
+						%li
+							%a{"data-toggle" => "tab", :href => "#pane4"}
+								%i.fa.fa-file-text-o.fa-lg 
+								%span=t("templates.providers.certificates")
+						%span{id:"span_provider_edit_button"}
+							- if provider_owner(@provider._id)
+								=render "button_list", :locals=>{:provider_id =>@provider._id}
+							- else
+								= link_to new_quote_path, id: "provider_get_quote", disabled: true, style:"float: right;", class: 'btn btn-warning' do
+									= t('quotes.new.get_quote_fast', model: Provider.model_name.human)
+							&nbsp
+							- if current_user.present? && current_user.admin?
+								- if verified(@provider._id) != true
+									= link_to verify_admin_provider_path(params[:id]), method: :post, data: { confirm: t('helpers.links.confirm') }, class: 'btn btn-success' do
+										%i.icon-ok-sign
+										= t('helpers.links.user.verify')    
+								- else
+									= link_to unverify_admin_provider_path(params[:id]), method: :post, data: { confirm: t('helpers.links.confirm') },  class: 'btn btn-danger' do
+										%i.icon-ok-sign
+										= t('helpers.links.user.unverify')  
+			
+					.tab-content{:style => "margin-bottom: 10px"}
+						#pane1.tab-pane.active{ style:"position:relative;overflow:hidden;height:100%"} 
+							- if @business_description.present?
+								.columns.show
+									.column.one 
+										.box.box-small
+											.box-header
+												%h4.box-title=t('templates.providers.overview')
+											.box-body
+												=@business_description
+							.columns.show
+								.column.one 
+									.box.box-small
+										.box-header
+											%h4.box-title=t('templates.providers.expertise')
+										.box-body      
+											.row-fluid
+												%ul.col2.clearfix
+													-@categories.each do |category|
+														%li 
+															=category.title 
+							.columns.show
+								.column.one 
+									.box.box-small
+										.box-header
+											%h4.box-title=t('templates.providers.activities')
+										.box-body#calheat
+											%div
+												#example-g{style: "position:relative;"} 
+												%p
+												%button#example-g-PreviousDomain-selector.btn.btn-mini
+													%i.icon.icon-chevron-left
+												%button#example-g-NextDomain-selector.btn.btn-mini  
+													%i.icon.icon-chevron-right
+												%h5{style:"text-align: center;margin-top: -10px;"}
+													#onClick-placeholder
+						#pane2.tab-pane{ style:"position:relative;overflow:hidden;height:100%"} 
+							- @provider.references.each do |ref|
+								%ul.unstyled.comments.list-hover.list-striped{style:"margin-bottom:4px;"}
+									%li{style:"background-color:white"}
+									.review{itemprop: "review", itemscope: '', itemtype: "http://schema.org/Review"}
+										.avatar1.pull-left
+											%img{:alt => "Avatar", :height => "45", :src => "#{ref.user_image}", :width => "45"}/                                   
+										.body
+											%span{itemprop: "author", itemscope: '', itemtype: "http://schema.org/Person"}
+											.name{itemprop: 'name'}
+												%a.text-contrast=ref.firstname                   
+												%span
+													=t('conversations.messages.time_ago', time: distance_of_time_in_words(ref.created_at, Time.now.utc))               
+													%span{itemprop: "itemReviewed", itemscope: "", itemtype: "http://schema.org/Thing"}
+													%span{itemprop: "name"}	
+														%b
+															=ref.category_name
+													=t("users.show.category",category: ref.category_name) 
+													.rate{itemprop: "reviewRating", itemscope: '', itemtype: "http://schema.org/Rating"}
+														.ratingstars{id:"rating_stars_provider", "data-average" => ref.rating, "data-id" => "star"}                     
+														%meta{content: ref.rating, itemprop: "ratingValue"}
+														%meta{content: "1", itemprop: "worstRating"}
+														%meta{content: "5", itemprop: "bestRating"}
+										.text-left{id:"text_left"}  
+											%p{itemprop: "reviewBody"}
+												%span{id:"show_comment"}=t("users.show.comment",comment: content_tag(:i,ref.comment)).html_safe
+											%meta{content: ref.created_at.strftime("%F"), itemprop: "datePublished"}
+								%hr{style:"margin-top:10px; margin-bottom:10px;"} 
+							- if @fsq_references.present?
+								- @fsq_references.each do |ref|
+									%ul.unstyled.comments.list-hover.list-striped{style:"margin-bottom:4px;"}
+										%li{style:"background-color:white;"}
+										.review{itemprop: "review", itemscope: '', itemtype: "http://schema.org/Review"}
+											.avatar1.pull-left
+												%img{:alt => "Avatar", :style=>"max-height:40px", :height => "30", :width => "30", :src =>  "#{ref.user_image}"}/                                   
+											.body
+												%span{itemprop: "author", itemscope: '', itemtype: "http://schema.org/Person"}
+												.name{itemprop: 'name'}
+													%a.text-contrast=ref.firstname                 
+													%span=ref.day_ago  
+										.text-left{id:"text_left", style:"margin-top:1px"}  
+											%span{itemprop: "reviewBody", style:"margin-bottom:5px"}
+												%span{id:"show_comment"}=t("users.show.comment",comment: content_tag(:i,"#{ref.comment}")).html_safe
+											%meta{content: "#{ref.created_at}", itemprop: "datePublished"}
+										%hr{style:"margin-top:1px; margin-bottom:1px;"} 
+						#pane3.tab-pane{ style:"position:relative;overflow:hidden;height:100%"} 
+							#images{style:"margin-top: 20px;"}
+								- if @provider.provider_images.present? 
+									%a{"data-gallery" => "#blueimp-gallery1", href: "#{@provider.provider_images["provider_image1"][1]}"}
+										%img{alt: "", src: "#{@provider.provider_images["provider_image1"][0]}", height: "200", width: "200"}/
+									-if @provider.provider_images["provider_image2"].present?                  
+										%a{"data-gallery" => "#blueimp-gallery1", href: "#{@provider.provider_images["provider_image2"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["provider_image2"][0]}", height: "200", width: "200"}/ 
+									-if @provider.provider_images["provider_image3"].present?
+										%a{"data-gallery" => "#blueimp-gallery1", href: "#{@provider.provider_images["provider_image3"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["provider_image3"][0]}", height: "200", width: "200"}/ 
+									-if @provider.provider_images["provider_image4"].present?
+										%a{"data-gallery" => "#blueimp-gallery1", href: "#{@provider.provider_images["provider_image4"][1]}"}
+											%img{alt: "", src:"#{@provider.provider_images["provider_image4"][0]}", height: "200", width: "200"}/ 
+									-if @provider.provider_images["provider_image5"].present?
+										%a{"data-gallery" => "#blueimp-gallery1", href: "#{@provider.provider_images["provider_image5"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["provider_image5"][0]}", height: "200", width: "200"}/ 
+									-if @provider.provider_images["provider_image6"].present?
+										%a{"data-gallery" => "#blueimp-gallery1", href: "#{@provider.provider_images["provider_image6"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["provider_image6"][0]}", height: "200", width: "200"}/
+								- if @provider.foursquare_data.present?
+									- @provider.foursquare_data[:photos].each do |photo|
+										%a{"data-gallery" => "#blueimp-gallery1", href: "#{photo}"}
+											%img{alt: "", src: "#{photo}", class: "album_mini"}/ 
+						#pane4.tab-pane{ style:"position:relative;overflow:hidden;height:100%"} 
+							- if @provider.provider_images.present?
+								#certificates{style:"margin-top: 20px;"}
+									-if @provider.provider_images["certificate_image1"].present? 
+										%a{"data-gallery" => "#blueimp-gallery2", href: "#{@provider.provider_images["certificate_image1"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["certificate_image1"][0]}", height: "200", width: "200"}/
+									-if @provider.provider_images["certificate_image2"].present?               
+										%a{"data-gallery" => "#blueimp-gallery2", href: "#{@provider.provider_images["certificate_image2"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["certificate_image2"][0]}", height: "200", width: "200"}/ 
+									-if @provider.provider_images["certificate_image3"].present?
+										%a{"data-gallery" => "#blueimp-gallery2", href: "#{@provider.provider_images["certificate_image3"][1]}"}
+											%img{alt: "", src: "#{@provider.provider_images["certificate_image3"][0]}", height: "200", width: "200"}/ 
+									-if @provider.provider_images["certificate_image4"].present?
+										%a{"data-gallery" => "#blueimp-gallery2", href: "#{@provider.provider_images["certificate_image4"][1]}"}
+											%img{alt: "", src:"#{@provider.provider_images["certificate_image4"][0]}", height: "200", width: "200"}/
+		=render "shared/image_gallery"
+		=render "provider_rdf"
+
+			 
+			 
+			 
+			 
+									
+			 

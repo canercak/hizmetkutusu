@@ -1,0 +1,52 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:dbpedia="http://dbpedia.org/resource/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:foo="http://example.org/#" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vso="http://purl.org/vso/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <div about="http://example.org/#company" typeof="gr:BusinessEntity">
+    <div content="İzmir Perdecilik A.Ş." property="gr:legalName"></div>
+    <div rel="foaf:page" resource="http://hizmetkutusu.com/izmir-perde-as"></div>
+    <div rel="gr:offers">
+      <div about="#offer1" typeof="gr:Offering">
+        <div property="gr:name">Carmen Stor Perde</div>
+        <div property="gr:description">Carmen Stor perdeyle eviniz şık gözüksün</div>
+        <div content="Dekor > Pencere Dekorları > Tüller ve Perdeler > Stor Perde" property="gr:category"></div>
+        <div rel="gr:hasBusinessFunction" resource="http://purl.org/goodrelations/v1#Sell"></div>
+        <div rel="gr:hasPriceSpecification">
+          <div typeof="gr:UnitPriceSpecification">
+            <div content="TRY" datatype="xsd:string" property="gr:hasCurrency"></div>
+            <div content="20" datatype="xsd:float" property="gr:hasCurrencyValue"></div>
+            <div content="MTK" datatype="xsd:string" property="gr:hasUnitOfMeasurement"></div>
+          </div>
+        </div>
+        <div rel="gr:includes">
+          <div about="#perde_155049" typeof="vso:Curtain gr:SomeItems"></div>
+        </div>
+        <div rel="v:hasReview">
+          <span about="#review_data" typeof="v:Review-aggregate">
+            Average rating:
+            <%= succeed "," do %>
+              <span datatype="xsd:string" property="v:rating">4.9</span>
+            <% end %>
+            <span datatype="xsd:string" property="v:count">99</span>
+            reviews
+          </span>
+        </div>
+        <div rel="foaf:depiction">
+          <img alt="text" src="http://example.com/images/pscsi.jpg"/>
+        </div>
+      </div>
+      <div about="#offer2" typeof="gr:Offering">
+        <div rel="gr:hasBusinessFunction" resource="http://purl.org/goodrelations/v1#ConstructionInstallation"></div>
+        <div rel="gr:hasPriceSpecification">
+          <div typeof="gr:UnitPriceSpecification">
+            <div content="TRY" datatype="xsd:string" property="gr:hasCurrency"></div>
+            <div content="26" datatype="xsd:float" property="gr:hasCurrencyValue"></div>
+            <div content="MTK" datatype="xsd:string" property="gr:hasUnitOfMeasurement"></div>
+          </div>
+        </div>
+        <div rel="gr:includes">
+          <div about="#perde_155049" typeof="vso:Curtain gr:SomeItems"></div>
+        </div>
+        <div rel="foaf:page" resource="http://www.agautosalesny.com/details.php?key=71"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

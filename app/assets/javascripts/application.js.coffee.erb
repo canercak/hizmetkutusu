@@ -1,0 +1,245 @@
+
+#= require jquery
+#= require bootstrap-slider
+#= require select2 
+#= require jquery.turbolinks
+#= require jquery_ujs
+#= require handlebars 
+#= require d3
+#= require jquery.validate
+#= require jquery.validate.additional-methods
+#= require bootstrap-modal
+#= require bootstrap-modalmanager
+#= require ajaxspin 
+#= require jquery-ui/core
+#= require jquery-ui/autocomplete 
+#= require jquery-ui/dialog
+
+ 
+
+# FRONT END
+#= require twitter/bootstrap
+ 
+# I18n
+#= require i18n
+#= require i18n/translations
+
+# ALL THE REST
+
+#= require_tree
+
+###global $:false, I18n:false###
+
+'use strict'
+
+window.hizmetkutusu = window.hizmetkutusu || {}
+hizmetkutusu = window.hizmetkutusu
+#require fullcalendar
+I18n.defaultLocale = '<%= I18n.default_locale %>'
+I18n.locale = $('html').attr 'lang'
+String::capitalize = ->
+  this.replace /(?:^|\s)\S/g, (c) ->
+    c.toUpperCase()
+
+String::lpad = (padString, length) ->
+  str = this
+  while str.length < length
+    str = padString + str
+  str
+
+setGeoCookie = (position) ->
+  cookie_val = position.coords.latitude + "|" + position.coords.longitude
+  document.cookie = "geolocation=" + escape(cookie_val)
+
+
+getGeoLocation = ->
+  navigator.geolocation.getCurrentPosition setGeoCookie 
+
+get_ip = -> 
+  $.get "https://freegeoip.net/json/", ((data) -> 
+    cookie_val = data.latitude + "|" + data.longitude
+    document.cookie = "iplcation=" + escape(cookie_val)
+    return
+  ), "jsonp" 
+
+ 
+getCookie = (cname) ->
+  name = cname + "="
+  ca = document.cookie.split(";")
+  i = 0 
+  while i < ca.length
+    c = ca[i]
+    c = c.substring(1)  while c.charAt(0) is " "
+    return c.substring(name.length, c.length)  unless c.indexOf(name) is -1
+    i++
+  ""
+getGeoLocation()
+
+if getCookie("geolocation") is ""
+  get_ip()
+
+startSpinner = ->
+  @spinner ||= setTimeout ->
+    $('#loading-spinner').show()
+  , 250
+ 
+stopSpinner = ->
+  clearTimeout @spinner
+  @spinner = null
+  $('#loading-spinner').hide() 
+  
+# Turbolinks Spinner
+if document.addEventListener?
+  document.addEventListener 'ajax:before page:fetch ajaxStart ', startSpinner
+  document.addEventListener 'ajax:complete page:change ajaxComplete', stopSpinner
+ 
+
+$(document).ready ->
+  # $('#appointment-booking').ajaxSpin
+  #   showEvents: 'ajax:before page:fetch ajaxStart myCustomShowEvent'
+  #   hideEvents: 'ajax:complete page:change ajaxComplete myCustomHideEvent'
+  #   spinjsOpts:
+  #     lines: 15
+  #     length: 6
+  #     width: 3
+  #     radius: 10
+  #     corners: 1
+  #     rotate: 0
+  #     color: '#000'
+  #     speed: 1.1
+  #     trail: 100
+  #     shadow: false
+  #     hwaccel: false
+  #     className: 'spinner'
+  #     zIndex: 2e9
+  #     top: 'auto'
+  #     left: 'auto' 
+
+  $("#ratingstarsadd").jRating
+    isDisabled: false
+    step: true
+    rateMax: 5
+    canRateAgain: true
+    nbRates : 50
+    length: 5
+    decimalLength: 1
+    onClick: (element,rate) ->
+      $("#ratehidden").val(rate)
+      return
+
+
+  - unless is_mobile_device?
+    _glc = _glc or []
+    _glc.push "all_ag9zfmNsaWNrZGVza2NoYXRyDwsSBXVzZXJzGJeg35wBDA"
+    glcpath = ((if ("https:" is document.location.protocol) then "https://my.clickdesk.com/clickdesk-ui/browser/" else "http://my.clickdesk.com/clickdesk-ui/browser/"))
+    glcp = ((if ("https:" is document.location.protocol) then "https://" else "http://"))
+    glcspt = document.createElement("script")
+    glcspt.type = "text/javascript"
+    glcspt.async = true
+    glcspt.src = glcpath + "livechat-new.js"
+    s = document.getElementsByTagName("script")[0]
+    s.parentNode.insertBefore glcspt, s
+ 
+  $("a[disabled=disabled]").click (event) ->
+    event.preventDefault()
+
+  $("#verification_code").setMask() 
+  $("#verification_phone").setMask() 
+  $("#contact_phone").setMask() 
+
+  interval = undefined
+  $("#sendverification").click ->
+    if $("#verification_phone").val().length is 14  
+      time = 30000 #OTP default wait time
+      seconds = Math.ceil(time / 1000)
+      $(this).each ->
+        disabled_elem = $(this)
+        $("#verification_phone").prop "disabled", true     
+        disabled_elem.prop "disabled", true 
+        new_text =  I18n.t('shared.navbar.send_code_again') 
+        disabled_elem.val new_text + " (" + seconds + ")"
+        interval = setInterval(->
+          disabled_elem.val new_text + " (" + --seconds + ")"
+          if seconds is 0
+            $("#verification_phone").prop "disabled", false
+            disabled_elem.prop "disabled", false
+            disabled_elem.val new_text
+            clearInterval interval
+          return
+        , 1000)
+        return
+      $.ajax
+        data: "verification_phone=" + $("#verification_phone").val()
+        type: "get"
+        url: "/sendverification"
+        success: (data) ->
+          if data.result is true
+            $("#verification_code").show()
+            $("#verification_code_button").show()
+            $("#verify_code_label").show()
+            $("#error_mobile_label").hide()  
+            $("#error_code_label").hide()
+            $("#verification_code").val ''
+            $("#otp").val data.otp
+            $("#verification_code").focus() 
+            return
+          else
+            $("#error_mobile_label").text I18n.t('shared.navbar.problem_sending_sms').show() 
+            return
+        error: (data) ->
+            $("#error_mobile_label").text  I18n.t('shared.navbar.problem_sending_request').show()  
+            return
+    return false 
+
+  $("#continue_submit").click ->
+    $("#new_quote_submit").prop "disabled", true 
+    $("#new_quote_submit").prop "value", I18n.t "shared.navbar.pleasewait"  
+    $('#current_phones').val($("#verification_phone").val() )
+    $("#new_quote").submit()
+    return false
+  
+  $("#verification_code_button").click ->
+    data = undefined
+    $.ajax
+      type: "POST"
+      url: "/check_verification_code"
+      data: "verification_code=" + $("#verification_code").val() 
+      success: (data) ->
+        if data.result is true
+          $("#contact_phone").val($("#verification_phone").val())
+          clearInterval(interval)
+          $("#error_code_label").hide()
+          #$("#success_code_label").show()            
+          $("#verification_code").prop "disabled", true
+          $("#verification_code_button").prop "disabled", true
+          $("#verification_code_button").prop "value", I18n.t "shared.navbar.pleasewait" 
+          if $("#new_quote").length is 0    
+            $("#form1_submit").prop "value", I18n.t "shared.navbar.pleasewait" 
+            $("#reg1_form").submit() # provider gets mobile_verified inside
+          else
+            $("#new_quote_submit").prop "disabled", true 
+            $("#new_quote_submit").prop "value", I18n.t "shared.navbar.pleasewait"  
+            $('#current_phones').val($("#verification_phone").val() )
+            $("#new_quote").submit()
+            
+          return
+        else
+          $("#error_code_label").text I18n.t('shared.navbar.error_in_code')
+          $("#error_code_label").show()
+        return
+      error: (data) ->
+          $("#error_code_label").text  I18n.t('shared.navbar.problem_sending_request')
+          $("#error_code_label").show() 
+          return
+    return false
+  jQuery.validator.addMethod "exactlength", ((value, element, param) ->
+    @optional(element) or value.length is param
+    ), jQuery.validator.format( I18n.t('shared.navbar.ukraine'))
+
+
+
+
+
+ 
+
+#= require turbolinks

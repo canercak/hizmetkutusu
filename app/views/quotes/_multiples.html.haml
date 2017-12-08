@@ -1,0 +1,56 @@
+= bootstrap_form_for "@quote"  do |f|
+  - if @multiples.present?
+    %h2=@multiples[:category].title 
+    %i=@multiples[:category].business_function.variations.find(@multiples[:price]._id)
+    %h2=@multiples[:price].price.to_s + " TL"
+    #accordion2.accordion
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseOne"}
+            %span{"data-hide-on" => "collapsed"}
+              %i.icon-minus
+            %span{"data-hide-on" => "expanded"}
+              %i.icon-plus
+            Bu Hizmeti Birden Fazla Kez Alın
+        #collapseOne.accordion-body.collapse.in
+          .accordion-inner
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseTwo"}
+            %span{"data-hide-on" => "collapsed"}
+              %i.icon-minus
+            %span{"data-hide-on" => "expanded"}
+              %i.icon-plus
+            Bu Hizmeti Her Hafta Alın
+        #collapseTwo.accordion-body.collapse
+          .accordion-inner
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseThree"}
+            %span{"data-hide-on" => "collapsed"}
+              %i.icon-minus
+            %span{"data-hide-on" => "expanded"}
+              %i.icon-plus
+            Bu Hizmeti Her Ay Alın
+        #collapseThree.accordion-body.collapse
+          .accordion-inner
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+= hidden_field_tag :selected_multiples_list 
+ 

@@ -1,0 +1,8 @@
+#multiple_list.modal.hide.fade{tabindex: -1, role: 'dialog', 'aria-labelledby' => t('events'), 'aria-hidden' => true }
+  .modal-header
+    %button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+    %h3= t('events') 
+  .modal-body{id: "multiplelistbody"} 
+  .modal-footer
+    = link_to t('close'), '#', 'aria-hidden' => true, data: { dismiss: 'modal' }, class: 'btn'
+ 

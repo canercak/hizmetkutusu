@@ -1,0 +1,14 @@
+- title t('.title')
+.spacer
+.row
+	.span12
+		= render 'shared/flash_messages'
+		%h1= yield :title
+.row
+	.span12
+		= bootstrap_form_for [@provider,@customer],  html: { class: 'form-horizontal' } do |f|
+			= f.error_messages
+			= render 'form', f: f
+			.form-actions
+				= f.submit class: 'btn btn-primary', id: "save_customer", disable_with: t('helpers.disable_with')
+		 

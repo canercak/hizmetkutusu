@@ -1,0 +1,7 @@
+incoming_sms:
+  every:
+    - "10s"
+  class: "SmsReceiver"
+  queue: incoming_sms_queue
+  description: Tasks to perform every 10 s
+ 

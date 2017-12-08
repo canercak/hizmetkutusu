@@ -1,0 +1,223 @@
+- title t('.title')
+.full-block.upper-page
+  .birlestir
+    .column-14
+      %h1=t('.provider1_work_header') 
+    .column-12.body-text
+      %p=t('.provider1_work_body') 
+      .damian.image
+        = image_tag asset_path('provider_header.png'), alt: ''
+      %p
+        %button.btn.btn-large.btn-danger.btn-providerhow1{type: "button"}=t('.provider1_more')
+        %button.btn.btn-large.btn-primary.btn-providerhow2{type: "button"}=t('.provider2_more')
+        %button.btn.btn-large.btn-info.btn-providerhow3{type: "button"}=t('.provider3_more')
+.span{id:"providerhow1_span", style:"margin-top: -25px;"}
+.full-block.anasayfa_adimlar.ilk_adim
+  .birlestir
+    %h2
+      %hr.left>/          
+      =t('.provider1_how_works')
+      %hr.right/ 
+    .satirbasi
+      .takip-adim 01
+      .uzunyazi.body-text
+        %h3=t('.provider1_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider1_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider1_content20', appscore_modal: link_to( t('.appname_score'), '#app-score', data: { toggle: 'modal' } )).html_safe            
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider1_content30')
+      .image
+        = image_tag asset_path('provider_body_1.png'), alt: ''
+.full-block.anasayfa_adimlar.ikincitur
+  .birlestir
+    .satirbasi
+      .takip-adim 02
+      .uzunyazi.body-text
+        %h3=t('.provider2_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider2_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider2_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider2_content30')
+      .image
+        = image_tag asset_path('provider_body_2.png'), alt: ''
+.full-block.anasayfa_adimlar
+  .birlestir
+    .satirbasi
+      .takip-adim 03
+      .uzunyazi.body-text
+        %h3=t('.provider3_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider3_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider3_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider3_content30')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider3_content40')
+      .image
+        = image_tag asset_path('provider_body_3.png'), alt: ''
+.full-block.anasayfa_adimlar.ikincitur
+  .birlestir
+    .satirbasi
+      .takip-adim 04
+      .uzunyazi.body-text
+        %h3=t('.provider4_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider4_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider4_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider4_content30')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider4_content40')
+      .image
+        = image_tag asset_path('provider_body_4.png'), alt: ''
+.full-block.anasayfa_adimlar.ikincitur
+  .birlestir
+    .satirbasi
+      .takip-adim 05
+      .uzunyazi.body-text
+        %h3=t('.provider5_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider5_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider5_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider5_content30')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider5_content40')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider5_content50')
+      .image
+        = image_tag asset_path('provider_body_5.png'), alt: ''
+.full-block.anasayfa_adimlar.ikincitur
+  .birlestir
+    .satirbasi
+      .takip-adim 06
+      .uzunyazi.body-text
+        %h3=t('.provider6_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider6_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider6_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider6_content30')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider6_content40')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider6_content50')
+      .image
+        = image_tag asset_path('provider_body_6.png'), alt: ''
+.full-block.anasayfa_adimlar.ikincitur
+  .birlestir
+    .satirbasi
+      .takip-adim 07
+      .uzunyazi.body-text
+        %h3=t('.provider7_title')
+        %ul.works
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider7_content10')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider7_content20')
+          %li
+            %span.i.fa.fa-check 
+            %p=t('.provider7_content30')
+      .image
+        = image_tag asset_path('provider_body_7.png'), alt: ''
+
+.span{id:"providerhow2_span", style:"margin-top: -25px;"}
+%a#get-hired
+.birlestir.asil_oneriler
+  %h2
+    %hr.left>/          
+    =t('.provider2_more')
+    %hr.right/ 
+  .birlestir
+    .satirbasi
+      .nasilis3
+        %h3=t('.benefits_provider_10') 
+        %p=t('.benefits_provider_20') 
+        %p=t('.benefits_provider_30')
+        %p=t('.benefits_provider_40')
+        %p=t('.benefits_provider_50')
+        %p=t('.benefits_provider_60')
+      .nasilis5
+        %h3=t('.benefits_provider_70') 
+        %p=t('.benefits_provider_80')
+      .nasilis1
+        %h3=t('.benefits_provider_90') 
+        %p=t('.benefits_provider_100')
+      .nasilis2
+        %h3=t('.benefits_provider_110') 
+        %p=t('.benefits_provider_120')
+      .nasilis6
+        %h3=t('.benefits_provider_130') 
+        %p=t('.benefits_provider_140')
+      .nasilis4
+        %h3=t('.benefits_provider_150') 
+        %p=t('.benefits_provider_160') 
+.span{id:"providerhow3_span", style:"margin-top: -25px;"}
+%a#get-hired
+.birlestir.asil_oneriler
+  %h2
+    %hr.left>/          
+    =t('.how_get_hired_title')
+    %hr.right/ 
+  .birlestir
+    .satirbasi
+      .nasilis6
+        %h3=t('.how_get_hired_content10')
+        %p=t('.how_get_hired_content20')  
+      .nasilis6
+        %h3=t('.how_get_hired_content70')
+        %p=t('.how_get_hired_content80', appscore_modal: link_to( t('.appname_score'), '#app-score', data: { toggle: 'modal' } )).html_safe            
+      .nasilis6
+        %h3=t('.how_get_hired_content30')  
+        %p=t('.how_get_hired_content40')  
+      .nasilis6
+        %h3=t('.how_get_hired_content50')
+        %p=t('.how_get_hired_content60')
+      .nasilis6
+        %h3=t('.how_get_hired_content90')
+        %p=t('.how_get_hired_content100')
+
+  %p.footer-text
+    = link_to new_provider_path, class: 'btn btn-large btn-primary' do
+      =t('.provider1_work_button')
+= render 'shared/modal_app_score'

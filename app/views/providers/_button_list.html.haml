@@ -1,0 +1,11 @@
+= link_to edit_provider_path(@provider._id), id: "provider_edit_button", class: 'btn btn-primary' do
+	= t('helpers.titles.edit', model: Provider.model_name.human)
+&nbsp
+= link_to provider_customers_path(@provider._id), class: 'btn btn-info' do
+	Kişilerim
+&nbsp
+= link_to prices_provider_path(@provider._id), class: 'btn btn-twitter' do
+	= t('helpers.titles.prices', model: Quote.model_name.human)
+&nbsp
+= link_to calendar_provider_path(@provider._id), class: 'btn btn-danger' do
+	= t('helpers.titles.appointments', model: Quote.model_name.human)

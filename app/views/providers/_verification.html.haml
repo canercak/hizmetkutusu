@@ -1,0 +1,17 @@
+= bootstrap_form_for @provider, id: @provider.id  do |f|
+	.span{style: 'text-align: center'} 
+		%h4= t('.provider_exp')
+		%h5= t('.provider_exp1')
+		#phone_details
+			= f.label :mobile_phone, class: 'control-label', id: 'verify_phone_label'
+			= f.default_tag :text_field, :verification_phone, placeholder: '05XX XXXXXXX', id: 'verification_phone' ,:class => "{mask:'(0569) 9999999'}", :alt=> "(0569) 9999999'"     
+			= button_to t('.send_code'), "#", :id=> 'sendverification', :class=> 'btn btn-medium btn-success'
+			= f.label :error_mobile_label, class: 'control-label', id: 'error_mobile_label' 
+		%hr
+		#verification_details
+			= f.label :info_label, class: 'control-label', id: 'verify_code_label' , style:"display:none"
+			= f.default_tag :text_field, :verification_code, placeholder: 'XXXXXX', id: 'verification_code' ,:class => "{mask:'999999'}", :alt=> "999999'" 
+			= button_to t('.verify_code'), "#", :id=> 'verification_code_button', :class=> 'btn btn-medium btn-primary'
+			= f.label :error_label, class: 'control-label', id: 'error_code_label' 
+			= f.label :success_label, class: 'control-label', id: 'success_code_label' 
+ 

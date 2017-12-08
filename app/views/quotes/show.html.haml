@@ -1,0 +1,47 @@
+- title  "Randevu Durumu"
+= render 'opengraph_head_contents', quote: @quote
+.row
+	.span12
+		= render 'shared/flash_messages'
+= render 'header'
+.row
+	.span3 
+		.media
+			%h2
+				%small.media-heading=t('quotes.show.who_wants_service')
+			.media-object.pull-left= user_profile_picture @quote.user, style: nil
+			.media-body
+				%h4.media-heading
+					= link_to @quote.user, user_path(@quote.user._id) 
+					%p
+					%span.label.label-warning{ id: "request_sent_user#{@quote.user._id}"}=t('quotes.selected_providers.user_request_sent')
+	.span9 
+		.media
+			%h2
+				%small.media-heading=t('quotes.show.selected_providers')
+			=render 'quotes/selected_providers', provider: @selectedproviders
+	.row
+		%hr
+		.btn-toolbar{style: "text-align: center;"}
+			- if @reservation.status == 0
+				=link_to "#", class: 'btn btn-large btn-primary', id: "pay_quote" do
+					= t('.pay_now') 
+			- elsif @reservation.status == 1
+				- if @reference.present?
+					=link_to edit_reference_path(:id=>@reference.id, :provider_id=>@reference.provider.id), class: 'btn btn-large btn-info' do
+						%i.icon-thumbs-up
+						= t('.edit_reference') 
+				- else
+					=link_to new_reference_path(:id=>@quote.id), class: 'btn btn-large btn-info'  do
+						%i.icon-thumbs-up
+						= t('.new_reference') 
+
+ 
+				
+		
+
+
+
+
+		
+

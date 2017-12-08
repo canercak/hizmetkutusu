@@ -1,0 +1,87 @@
+- title t('.title')
+.row
+	.span12
+		= render 'shared/flash_messages'
+.row
+	.span12
+		%h1
+			=t('.my_prices')
+			= link_to provider_path(params[:id]), style: "float:right", class: 'btn btn-primary' do
+				Profilime Geri Dön
+		%p.help-block 
+			%small
+				=t('.my_prices_exp')
+		= form_for :workdone, :url => update_all_workdone_path, :html => { :method => :put } do
+			%table.table.table-quote{id:"my_prices"}
+				%thead
+					%tr
+						%th
+							%i.fa.fa-filter
+							= t('.category')
+						%th{style:"text-align:center"}
+							%a{href: "#", rel: "tooltip", title: t('.give_price_tooltip')}= t('.give_price')
+						%th
+							= t('.pricing') 
+				%tbody
+					- if @workdones.present?
+						- @workdones.each_with_index do |workdone, index|
+							= fields_for "workdone[]", workdone do |workdone_fields|
+								%tr.vertical-align-middle
+									%td{style:"width:25%"}=get_title([workdone.prices.first.variation_id])
+									%td{style:"width:15%;text-align:center"}
+										=workdone_fields.check_box "give_price",:value=> workdone.give_price, :checked=> workdone.give_price, :tabindex => -1
+									%td{style:"width:60%"} 
+										.row{style:"disabled"}
+											%table.table-bordered.table-responsive 
+												%thead
+													%tr
+														%th
+															= t('.application_type')
+														/ %th{class:"market_prices"}
+														/ 	%a{href: "#", rel: "tooltip", title: t('.market_prices_tooltip')}= t('.market_prices')
+														%th{class:"price"}
+															%a{href: "#", rel: "tooltip", title: t('.price_tooltip')}= t('.price')                                                        
+														%th{class:"hours"}
+															%a{href: "#", rel: "tooltip", title: t('.application_hours_tooltip')}= t('.application_hours')                                                        
+														%th{class:"hours"}
+															%a{href: "#", rel: "tooltip", title: t('.responsible_personel_tooltip')}= t('.responsible_personel')   
+													%tbody
+														- workdone.prices.each_with_index do |price, index| 
+															%tr.vertical-align-middle
+																%td{style:"width:120px"}=Price.get_variation_name(price.variation_id) 
+																/ %td{style:"width:120px"} 
+																/ 	%span{style:"display:none"}=price_trends= Price.get_high_lows(price.variation_id, workdone.provider)
+																/ 	= price_trends.present? ? ("%g" % price_trends[0].to_s + " - "+"%g" % price_trends[1].to_s + " TL") : ""
+																%td
+																	.input-prepend.input-append
+																		=workdone_fields.text_field "price#{index}", :value=> "%g" % price.price, :readonly=>workdone.give_price == true ? false : true,:alt=> "99999",  style:"width:40px", class: "pricevalue {mask:'99999'}"
+																		%span.add-on>TL
+																%td
+																	=workdone_fields.select   "duration#{index}", options_for_select(time_periods,(price.duration)),{},:style => "width:100px",   :readonly=>workdone.give_price == true ? false : true
+																%td 
+																	=workdone_fields.collection_select("staff_ids#{index}", @staff_members, :id, :name, {:selected => price.staff_ids}, {class: 'multiselect', multiple: true})         
+			.form-actions{style:"text-align:center"} 
+				=submit_tag t('providers.new.create'),  id: "save_prices", class: 'btn btn-large btn-primary',disable_with: t('helpers.disable_with')
+
+
+
+/price.duration.total/60)),{},:
+ 
+
+/ %th{class:"discount"}
+/ %a{href: "#", rel: "tooltip", title: t('.discount_tooltip')}= t('.discount')
+														
+
+
+
+/ \TL                                  
+/ %td
+/ .input-prepend.input-append
+/ %span.add-on>
+/ \%
+/ =workdone_fields.text_field "discount#{index}",:readonly=>workdone.give_price == true ? false : true, :value=> "%g" % price.discount, :alt=> "99", style:"width:25px",  class: "discountvalue {mask:'99'}"
+
+
+/ = f.fields_for(@size) do |sf|
+/   = sf.label simple_pluralize(@miniset.scales.count, 'Scale')
+/             |

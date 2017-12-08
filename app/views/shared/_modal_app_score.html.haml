@@ -1,0 +1,52 @@
+/{style:"display: block; width: 60%;margin-left: auto;margin-right: auto; left: 20%;" ,tabindex: -1, role: 'dialog', 'aria-labelledby' => t('whatis_appscore'), 'aria-hidden' => true }
+#app-score.modal.hide.fade
+  .modal-header
+    %button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+    %h3= t('whatis_appscore')
+  .modal-body
+    %h4
+      %strong= t('whatis_appscore05')
+    %p
+      = t('whatis_appscore10')
+      = t('whatis_appscore20')
+    %h4
+      %strong= t('whatis_appscore30')
+    %p
+      %ul
+        %li= t('whatis_appscore40')
+        %li= t('whatis_appscore50')
+        %li= t('whatis_appscore60')
+        %li= t('whatis_appscore70')
+        %li= t('whatis_appscore80')
+        %li= t('whatis_appscore90')
+        %li= t('whatis_appscore100')
+        %li= t('whatis_appscore110')
+    %h4
+      %strong= t('whatis_appscore120')
+    %p
+      %ul
+        %li= t('whatis_appscore130')
+        %li= t('whatis_appscore140')
+        %li= t('whatis_appscore150')
+        %li= t('whatis_appscore160')
+    %h4
+      %strong= t('whatis_appscore170')
+    %p
+      %ul
+        %li= t('whatis_appscore180')
+        %li= t('whatis_appscore190')
+        %li= t('whatis_appscore200')
+        %li= t('whatis_appscore210')
+        %li= t('whatis_appscore220')
+        %li= t('whatis_appscore230') 
+    %h4
+      %strong= t('whatis_appscore240')
+    %p= t('whatis_appscore250') 
+    %p= t('whatis_appscore260') 
+    %h4
+      %strong= t('whatis_appscore270')
+    %p= t('whatis_appscore280')
+    
+    
+  .modal-footer
+    = link_to t('close'), '#', 'aria-hidden' => true, data: { dismiss: 'modal' }, class: 'btn'

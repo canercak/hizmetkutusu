@@ -1,0 +1,203 @@
+en:
+  errors:
+    format: "%{message}"
+    expired: Please check expiry date
+  mongoid:
+    models:
+      user:
+        one: User
+        other: Users
+      reference:
+        one: Reference
+        other: References
+      quote:
+        one: Quote
+        other: Quotes
+      feedback:
+        one: Feedback
+        other: Feedbacks
+      notification:
+        one: Notification
+        other: Notifications
+      conversation:
+        one: Conversation
+        other: Conversations
+      message:
+        one: Message
+        other: Messages
+      provider:
+        one: Provider
+        other: Providers
+    attributes:
+      user:
+        email: Email
+        name: Name
+        facebook_verified: Verified on Facebook
+        about: About
+        username: Username
+        gender: Gender
+        age: Age
+        locale: Localization
+        gender_male: Male
+        gender_female: Female
+        birthday: Birthday
+        education: Education
+        work: Work
+        time_zone: Time zone
+        send_email_messages: You have a message!
+        send_email_statistics: My usage statistics
+        send_email_newsletter: Monthly newsletter
+        send_email_references: References of Users
+        credits_remaining: Credits Remaining
+        add_credits: Add Credits
+      transaction:
+        date: Payment Date
+        type: Payment Type
+        ammount: Ammount
+        success: Status
+      feedback:
+        type: Type
+        status: Status
+        message: Message
+        updated_at: Last modified
+        url: URL
+      quote:
+        customer_address: Customer address
+        category: Which service type you want to get
+        description: Short Description of Service
+        created_at: Tarihi        
+        status: Durumu
+        selectedproviders: Selected Providers 
+        title: Status    
+      reference:
+        body: Message
+        rating: Rating
+        rating_negative: Hayır
+        rating_positive: Evet
+      provider:
+        business_address: Business Address*
+        officialname: Official Name*
+        business_description: Description of Services Offered by Provider*
+        business_address: Buisness Address*
+        business_type: Business Type*
+        tax_office: Tax Office*
+        tax_business_name: Fullname*
+        tax_number: Social Security Number*
+        pin: Pin
+        mobile_phone: Mobile Phone
+        error_label: Wrong code
+        info_label: Please write the code sent to your phone
+    errors:
+      format: "%{message}"
+      models:
+        user:
+          attributes:
+            quotes:
+              associated:
+                blank:ddsds
+            providers:
+              associated:
+                blank:ddsds
+            feedbacks :
+              associated:
+                blank:aaa
+            transactions:
+              associated:
+                blank:aaa
+            conversations:
+              associated:
+                blank:aaa
+            notifications:
+              associated:
+                blank:aaa
+            email:
+              invalid: geçerli eposta değil
+        quote:
+          attributes:
+            reference:
+              associated: dasdsa
+            providers:
+              associated: dasdsa
+            conversations:
+              associated: dasdsa
+        provider:
+          attributes:
+            provider_image:
+              integrity: aaaa
+            quotes:
+              associated: dasdsa
+            workdones:
+              associated: dasdsa
+            references:
+              associated: dasdsa
+            providers:
+              associated: dasdsa
+            conversations:
+              associated: dasdsa
+            officialname:
+              presence: please enter officialname
+              too_long: please enter at most 50 characters.
+              too_short: please enter at least 5 characters.
+            business_description:
+              presence: please enter business description
+              too_long: please enter at most 400 characters.
+              too_short: please enter at least 20 characters.
+            provider_image:
+              blank: Please select profile picture
+            category:
+              blank: please select the services you offer
+              presence: plase select the services you offer
+            tax_office:
+              presence: please enter tax office
+              blank: please enter tax office
+            tax_business_name:  
+              presence: please enter full business name
+              blank: please enter this information
+            tax_number:
+              presence: please enter tax number
+              blank: please enter tax number
+            business_address:
+              presence: lütfen iş yerinizin adresini yazarak haritadan seçiniz. Öncelikle sokak isminizi yazmak konumunuzu bulmayı kolaylaştıracaktır.
+          messages:
+            wrong_size: "is the wrong size (should be %{file_size})"
+            size_too_small: "is too small (should be at least %{file_size})"
+            size_too_big: "is too big (should be at most %{file_size})"
+        conversation:
+          attributes:
+            user_ids:
+              already_exists: you already have a conversation about this quote
+        reference:
+          attributes:
+            user:
+              yourself: you cannot leave a reference for yourself
+            referencing_user_id:
+              already_present: you already left a reference for this user
+  activemodel:
+    attributes:
+      credit_card:
+        first_last_name: Name and Lastname
+        write_amount: Enter Ammount
+        expiry_date: Expiry Date
+        number: Card Number
+        verification_value: CVV
+    errors:
+      models:
+        credit_card:
+          attributes:
+            how_many:
+              blank: Please enter amount
+              not_a_number: Amount is not a number
+            first_name:
+              blank: please enter first name
+            last_name:
+              blank: please enter last name
+            number:
+              blank: please enter number
+            verification_value:
+              blank: please enter verification value
+        login:
+          attributes:
+            email:
+              invalid: is not a valid email
+ 
+              

@@ -1,0 +1,18 @@
+- title t('templates.providers.edit_provider')
+.row
+  .span12
+    = render 'shared/flash_messages'
+    %h1
+      = yield :title
+      = link_to provider_path(@provider.slug), style: "float:right", class: 'btn btn-primary' do
+        Profilime Geri Dön
+.row
+  .span12
+    = bootstrap_form_for @provider,  html: { edit: "true", id: "reg1_form", class: 'form-horizontal' } do |f|
+      = transloadit_jquerify :reg1_form, :wait => true, :modal=>false
+      = f.error_messages
+      = render 'form', f: f
+      .form-actions
+        = f.submit t('.update'), class: 'btn btn-large btn-primary', id: "form1_submit", disable_with: t('helpers.disable_with')
+        %span#general-error.help-inline{style: "display:none;color: #b44337"}=t('helpers.correct')   
+= render 'shared/modal_phone_verification' 

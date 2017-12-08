@@ -1,0 +1,32 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+  prefix="
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    gr: http://purl.org/goodrelations/v1#
+    xsd: http://www.w3.org/2001/XMLSchema#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#"
+  >
+  <div typeof="gr:BusinessEntity" about="http://www.heppnetz.de/ontologies/examples/gr#mybikecom">
+    <div rel="gr:hasPOS">
+      <div typeof="gr:LocationOfSalesOrServiceProvisioning" about="http://www.heppnetz.de/ontologies/examples/gr#mybikestore">
+      </div>
+    </div>
+    <div rel="gr:offers">
+      <div typeof="gr:Offering" about="http://www.heppnetz.de/ontologies/examples/gr#myoffering">
+        <div rel="gr:includes" resource="http://www.heppnetz.de/ontologies/examples/gr#somebikes"></div>
+        <div rel="gr:hasPriceSpecification" resource="http://www.heppnetz.de/ontologies/examples/gr#specialprice"></div>
+        <div property="gr:validFrom" datatype="xsd:dateTime" content="2008-05-30T09:30:10+00:00"></div>
+        <div rel="gr:hasBusinessFunction" resource="http://purl.org/goodrelations/v1#LeaseOut"></div>
+        <div property="gr:validThrough" datatype="xsd:dateTime" content="2008-05-30T09:30:10+00:00"></div>
+      </div>
+    </div>
+  </div>
+  <div typeof="gr:UnitPriceSpecification" about="http://www.heppnetz.de/ontologies/examples/gr#specialprice">
+    <div property="gr:hasUnitOfMeasurement" datatype="xsd:string" content="DAY"></div>
+    <div property="gr:hasCurrencyValue" datatype="xsd:float" content="25.0"></div>
+    <div property="gr:hasCurrency" datatype="xsd:string" content="EUR"></div>
+  </div>
+  <div typeof="gr:ProductOrServicesSomeInstancesPlaceholder" about="http://www.heppnetz.de/ontologies/examples/gr#somebikes">
+    <div property="rdfs:label" xml:lang="de" content="Fahrrad"></div>
+    <div property="rdfs:label" xml:lang="en" content="Bike"></div>
+  </div>
+</div>

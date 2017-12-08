@@ -1,0 +1,15 @@
+#appointment-booking.modal.container.hide.fade{tabindex: "-1", style:"overflow: hidden; top: 5%"} 
+	.modal-header{style:"border-bottom: 0px"}
+		%button.close{ type: 'button', data: { dismiss: 'modal' }, 'aria-hidden' => true } &times;
+	.modal-body{style:"overflow: hidden; max-height:500px"}
+		.row-fluid
+			=render "quotes/booking"
+		.row-fluid
+			%hr{style:"margin-bottom: 10px"}
+			.span{style: 'text-align: center'} 
+				%h4{id: 'booking_first', style:"font-size:21px"} 
+				%h5{id: 'booking_second', style:"font-size:16px"}  
+				%h6{id: 'booking_third', style:"font-style:italic"}  
+	.modal-footer{style:"text-align: center"}
+		%button.btn.btn-large.btn-primary{type: "button", id: "reserve_booking"} Randevuyu Onaylayın
+ 

@@ -1,0 +1,212 @@
+tr:
+  errors:
+    format: "%{message}"
+    expired: lütfen son kullanma tarihi için geçerli bir tarih giriniz.
+  mongoid:
+    models:
+      user:
+        one: Kullanıcı
+        other: Kullanıcılar
+      reference:
+        one: Yorum
+        other: Yorumlar
+      quote:
+        one: Fiyat Al
+        other: Aldığım Fiyatlar
+      feedback:
+        one: Geri Bildirim
+        other: Geri Bildirimler
+      notification:
+        one: Bildirimler
+        other: Bildirimler
+      conversation:
+        one: Sohbet
+        other: Sohbetler 
+      message:
+        one: Mesaj
+        other: Mesajlar
+      provider:
+        one: Hizmet Sağlayıcı
+        other: Hizmet Sağlayıcılar
+      customer:
+        one: Kişi
+        other: Kişi
+    attributes:
+      user:
+        email: E-postanız
+        name: Adınız
+        password: Yeni Şifre
+        password_confirmation: Yeni Şifre Tekrarı
+        old_password: Mevcut Şifreniz
+        new_password: Yeni Şifreniz
+        facebook_verified: Facebook Onaylı
+        app_verified: Hizmetkutusu Onaylı
+        about: Hakkında
+        username: Kullanıcı Adı
+        gender: Cinsiyeti
+        age: Yaşı
+        locale: Konuştuğum Dil
+        gender_male: Erkek
+        telephone: Telefonum
+        gender_female: Bayan
+        birthday: Birthday
+        education: Eğitimi
+        work: İşi    
+        time_zone: Zaman Dilimi
+        send_email_messages: Mesajınız Var
+        send_email_statistics: Kullanım istatistiklerim hakkında
+        send_email_newsletter: Aylık haber dergimiz çıktığında
+        send_email_references: Kullanıcı Yorumları
+        credits_remaining: Kredi Miktarım
+        add_credits: Kredi Ekle
+      transaction:
+        date: Ödeme Tarihi
+        type: Ödeme Türü
+        ammount: TL Miktarı
+        success: Durumu
+      feedback:
+        type: Türü
+        status: Durumu
+        message: Mesaj
+        updated_at: Son düzenleme
+        url: URL
+      quote:
+        customer_address: Konum
+        uid: Numarası
+        variation: Almak İstediğiniz Hizmet
+        proposed_date: Hizmetin Verileceği Tarih
+        category: Hizmet
+        description: Hizmetin Kısa Açıklaması
+        created_at: Tarihi
+        status: Durumu
+        selectedproviders: Seçilen Hizmet Sağlayıcılar
+        title: Başlık
+        provider: Hizmet Sağlayıcı
+        mobile_phone: Cep Telefonunuz
+        error_label: Hatalı kod girdiniz.
+        success_label: Doğru kod girdiniz. Kayıt yapılıyor. Lütfen bekleyiniz...
+        error_mobile_label: Hatalı Telefon numarası girdiniz
+        info_label: lütfen cep telefonunuza gelen onay kodunu yazınız
+      reference:
+        body: Mesaj
+        rating: Puanlama
+        rating_negative: Hayır
+        rating_positive: Evet
+        comment: Yorumunuz
+        pricerating: Ödediğiniz fiyat makul muydu?
+        servicerating: Aldığınız hizmetten memnun kaldınız mı?
+        speedrating: Hizmet veren işi zamanında bitirdi mi?
+      customer:
+        email: E-posta
+        name: Ad Soyad
+        person_type: Kişi Türü
+        address: Adres
+      provider: 
+        officialname: Ticari Ünvanınız*
+        business_description: Sizin ve Hizmetleriniz Hakkınızda Bilgi*
+        business_address: İş Adresinizin Konumu*
+        business_phone: Cep Telefonunuz*
+        business_email: E-postanız*
+        business_type: Şirket Türünüz*
+        office_phone: İş Telefonunuz
+        website: Websiteniz
+        tax_business_name: Resmi Şirket Adınız*
+        tax_office: Vergi Daireniz*
+        tax_number: Vergi Numaranız*
+        tax_pin: TC Kimlik Numaranız*
+        tax_fullname: Adınız ve Soyadınız*
+        pin: TC Kimlik Numaranız
+        mobile_phone: Cep Telefonunuz
+        error_label: Hatalı kod girdiniz.
+        success_label: Doğru kod girdiniz. Kayıt yapılıyor. Lütfen bekleyiniz...
+        error_mobile_label: Hatalı Telefon numarası girdiniz
+        info_label: lütfen cep telefonunuza gelen onay kodunu yazınız
+    errors:
+      format: "%{message}"
+      models:
+        user:
+          attributes:
+            quotes:
+              associated:
+                blank:ddsds
+            providers:
+              associated:
+                blank:ddsds
+            feedbacks :
+              associated:
+                blank:aaa
+            transactions:
+              associated:
+                blank:aaa
+            conversations:
+              associated:
+                blank:aaa
+            notifications:
+              associated:
+                blank:aaa
+            email:
+              invalid: geçerli eposta değil
+        quote:
+          attributes:
+            reference:
+              associated: dasdsa
+            providers:
+              associated: dasdsa
+            conversations:
+              associated: dasdsa
+        provider:
+          attributes:
+            provider_image:
+              integrity: aaaa
+            quotes:
+              associated: dasdsa
+            workdones:
+              associated: dasdsa
+            references:
+              associated: dasdsa
+            providers:
+              associated: dasdsa
+            conversations:
+              associated: dasdsa
+          messages:
+            wrong_size: "yanlış boyut (%{file_size} mb olmalıdır)"
+            size_too_small: "boyut çok küçük (az az %{file_size} mb olmalıdır)"
+            size_too_big: "boyut çok büyük (en fazla %{file_size} mb olmalıdır)"
+        conversation:
+          attributes:
+            user_ids:
+              already_exists:  
+        reference:
+          attributes:
+            user:
+              yourself: kendinize referans bırakamazsınız!
+              associated: a
+            referencing_user_id:
+              already_present: bu kullanıcıya önceden referans bıraktınız
+  activemodel:
+    attributes:
+      credit_card:
+        first_last_name: Adınız ve Soyadınız
+        write_amount: Miktarı Giriniz
+        expiry_date: Son Kullanma Tarihi
+        number: Kredi Kartı Numaranız
+        verification_value: Güvenlik Kodu
+    errors:
+      models:
+        credit_card:
+          attributes:
+            how_many:
+              blank: lütfen ödemek istediğiniz miktarı boş bırakmayınız.
+              not_a_number: lütfen ödemek istediğiniz miktara bir numara giriniz.
+            first_name:
+              blank: lütfen adınızı giriniz.
+            last_name:
+              blank: lütfen soyadınızı giriniz.
+            number:
+              blank: lütfen kredi kartı numaranızı giriniz.
+            verification_value:
+              blank: lütfen güvenlik numaranızı giriniz
+        login:
+          attributes:
+            email:
+              invalid: geçerli bir eposta değil
